@@ -289,6 +289,8 @@ footer{padding:30px 0;color:var(--muted2);font-size:.82rem;text-align:center}
 .vp-novid{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;
   background:var(--card);border:1px dashed var(--line);border-radius:7px;color:var(--muted2);
   font-size:.75rem;margin-bottom:9px}
+.vp-video-link{display:inline-block;margin:-2px 0 8px;color:var(--accent);font-size:.72rem;font-weight:700;text-decoration:none}
+.vp-video-link:hover{text-decoration:underline}
 .vp-s-title{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:7px}
 .vp-s-title code{font-family:var(--mono);font-size:.72rem;color:#cbd4e7}
 .vp-s-title span{font-size:.68rem;color:var(--ok);white-space:nowrap}

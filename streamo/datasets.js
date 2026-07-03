@@ -1,5 +1,5 @@
 // Preparation status — hand-maintained inventory of the 465K + Molmo + VideoTrack sources.
-const DATA_VERSION = "videopoint-videoonly-20260703";
+const DATA_VERSION = "videopoint-absolute-video-20260703";
 const STATUS = [
   ["QVHighlight · narration", "proactive narration", "11,052", "100%", "ready"],
   ["QVHighlight · event_caption", "dense events", "2,469", "100%", "ready"],
@@ -241,7 +241,7 @@ function renderVideoPoint(VP) {
       const events = vpEvents(s);
       VP_EVENTS[sid] = events;
       return `<div class="vp-sample" data-vp-sid="${sid}">
-      ${s.video_url ? `<div class="vp-video-wrap"><video class="vp-video" src="${esc(s.video_url)}" controls muted playsinline preload="metadata"></video><div class="vp-overlay"></div></div>` : `<div class="vp-novid">no public sample video</div>`}
+      ${s.video_url ? `<div class="vp-video-wrap"><video class="vp-video" controls muted playsinline preload="metadata"><source src="${esc(s.video_url)}" type="video/mp4"></video><div class="vp-overlay"></div></div><a class="vp-video-link" href="${esc(s.video_url)}" target="_blank" rel="noopener">open mp4</a>` : `<div class="vp-novid">no public sample video</div>`}
       <div class="vp-s-title"><code>${esc(s.video_id)}</code><span>${s.downloaded ? "local video ready" : "video missing"}</span></div>
       <div class="vp-q">${esc(s.question)}</div>
       <div class="vp-kv"><b>label</b><span>${esc(s.label)}</span></div>

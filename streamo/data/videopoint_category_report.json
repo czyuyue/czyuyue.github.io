@@ -30,7 +30,7 @@
       "samples": [
         {
           "video_id": "3BN9LL4LcoY",
-          "video_url": "videos/videopoint/3BN9LL4LcoY.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/3BN9LL4LcoY.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/3BN9LL4LcoY.mp4",
           "question": "How many times do Roman soldiers hold spears?",
           "label": "Roman soldiers hold spears",
@@ -114,7 +114,7 @@
         },
         {
           "video_id": "-dIxLK8-8Ng",
-          "video_url": "videos/videopoint/-dIxLK8-8Ng.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-dIxLK8-8Ng.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-dIxLK8-8Ng.mp4",
           "question": "How many times does a person hold a green component?",
           "label": "a person holds a green component",
@@ -198,7 +198,7 @@
         },
         {
           "video_id": "-IJMu52FxTo",
-          "video_url": "videos/videopoint/-IJMu52FxTo.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-IJMu52FxTo.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-IJMu52FxTo.mp4",
           "question": "How many times do players high-five each other?",
           "label": "players high-five each other",
@@ -266,7 +266,7 @@
         },
         {
           "video_id": "wKFBJuz5hJA",
-          "video_url": "videos/videopoint/wKFBJuz5hJA.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/wKFBJuz5hJA.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/wKFBJuz5hJA.mp4",
           "question": "How many times does Colin Walsh sign an autograph?",
           "label": "Colin Walsh signs autographs",
@@ -349,7 +349,7 @@
       "samples": [
         {
           "video_id": "VJzelow5nsc",
-          "video_url": "videos/videopoint/VJzelow5nsc.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/VJzelow5nsc.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/VJzelow5nsc.mp4",
           "question": "How many French captions appear on the screen?",
           "label": "French captions",
@@ -677,7 +677,7 @@
         },
         {
           "video_id": "-cLW9Ftsvt4",
-          "video_url": "videos/videopoint/-cLW9Ftsvt4.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-cLW9Ftsvt4.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-cLW9Ftsvt4.mp4",
           "question": "How many caps are visible?",
           "label": "caps",
@@ -761,7 +761,7 @@
         },
         {
           "video_id": "atzxPzKwykg",
-          "video_url": "videos/videopoint/atzxPzKwykg.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/atzxPzKwykg.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/atzxPzKwykg.mp4",
           "question": "How many bamboo steamers appear in the video?",
           "label": "bamboo steamers",
@@ -837,7 +837,7 @@
         },
         {
           "video_id": "-UX050ffNqY",
-          "video_url": "videos/videopoint/-UX050ffNqY.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-UX050ffNqY.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-UX050ffNqY.mp4",
           "question": "How many people are holding cameras or phones in the video?",
           "label": "people holding cameras or phones",
@@ -970,7 +970,7 @@
       "samples": [
         {
           "video_id": "XoUkGaAUWc0",
-          "video_url": "videos/videopoint/XoUkGaAUWc0.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/XoUkGaAUWc0.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/XoUkGaAUWc0.mp4",
           "question": "How many different hares are visible?",
           "label": "hares",
@@ -1039,7 +1039,7 @@
       "samples": [
         {
           "video_id": "-DQiUT8UJKk",
-          "video_url": "videos/videopoint/-DQiUT8UJKk.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-DQiUT8UJKk.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-DQiUT8UJKk.mp4",
           "question": "find the brightest spice bowl",
           "label": "brightest spice bowl",
@@ -1079,7 +1079,7 @@
         },
         {
           "video_id": "-lv1Jk-JfHk",
-          "video_url": "videos/videopoint/-lv1Jk-JfHk.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-lv1Jk-JfHk.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-lv1Jk-JfHk.mp4",
           "question": "find the brightest card",
           "label": "brightest card",
@@ -1119,7 +1119,7 @@
         },
         {
           "video_id": "Wwk_6MD_05I",
-          "video_url": "videos/videopoint/Wwk_6MD_05I.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/Wwk_6MD_05I.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/Wwk_6MD_05I.mp4",
           "question": "find the tallest person",
           "label": "tallest person",
@@ -1159,7 +1159,7 @@
         },
         {
           "video_id": "5hYCQKR-cIA",
-          "video_url": "videos/videopoint/5hYCQKR-cIA.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/5hYCQKR-cIA.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/5hYCQKR-cIA.mp4",
           "question": "find the smallest of the three additional characters",
           "label": "smallest of the three additional characters",
@@ -1228,7 +1228,7 @@
       "samples": [
         {
           "video_id": "PdjjKjt88Xw",
-          "video_url": "videos/videopoint/PdjjKjt88Xw.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/PdjjKjt88Xw.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/PdjjKjt88Xw.mp4",
           "question": "find the tool that would dry out without a cap",
           "label": "tool that would dry out without a cap",
@@ -1268,7 +1268,7 @@
         },
         {
           "video_id": "-RX1uh9_HEA",
-          "video_url": "videos/videopoint/-RX1uh9_HEA.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-RX1uh9_HEA.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-RX1uh9_HEA.mp4",
           "question": "find the spherical item on the wire shelf that would bounce off the floor",
           "label": "spherical item on the wire shelf that would bounce off the floor",
@@ -1316,7 +1316,7 @@
         },
         {
           "video_id": "7PUxlyGZ9CQ",
-          "video_url": "videos/videopoint/7PUxlyGZ9CQ.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/7PUxlyGZ9CQ.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/7PUxlyGZ9CQ.mp4",
           "question": "find the control you would move to change from park to drive",
           "label": "control you would move to change from park to drive",
@@ -1356,7 +1356,7 @@
         },
         {
           "video_id": "-FOs-kawS5k",
-          "video_url": "videos/videopoint/-FOs-kawS5k.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-FOs-kawS5k.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-FOs-kawS5k.mp4",
           "question": "find the object that dispenses cleaner when its trigger is squeezed",
           "label": "thing that dispenses cleaner when its trigger is squeezed",
@@ -1425,7 +1425,7 @@
       "samples": [
         {
           "video_id": "-kapRKfbWZE",
-          "video_url": "videos/videopoint/-kapRKfbWZE.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-kapRKfbWZE.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-kapRKfbWZE.mp4",
           "question": "find the bouquet of flowers that is shown in both a clear glass vase with a red and white striped ribbon and a vase with a red and white polka dot pattern",
           "label": "bouquet that appears with both striped and polka dot vases",
@@ -1465,7 +1465,7 @@
         },
         {
           "video_id": "0B31XMXQHLI",
-          "video_url": "videos/videopoint/0B31XMXQHLI.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/0B31XMXQHLI.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0B31XMXQHLI.mp4",
           "question": "find the man in a black hoodie who is carrying a black bag",
           "label": "man in black hoodie carrying black bag",
@@ -1505,7 +1505,7 @@
         },
         {
           "video_id": "8FGk8_kwFpY",
-          "video_url": "videos/videopoint/8FGk8_kwFpY.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/8FGk8_kwFpY.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/8FGk8_kwFpY.mp4",
           "question": "find the man who is shown standing in the field at both the beginning and end of the video",
           "label": "man who appears both at the start and end standing in the field",
@@ -1559,7 +1559,7 @@
         },
         {
           "video_id": "0MthcMsAVfg",
-          "video_url": "videos/videopoint/0MthcMsAVfg.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/0MthcMsAVfg.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0MthcMsAVfg.mp4",
           "question": "find the first moment when Rihanna appears with her hair styled in a ponytail",
           "label": "first appearance of Rihanna in a ponytail",
@@ -1628,7 +1628,7 @@
       "samples": [
         {
           "video_id": "0ALVqjePV2Q",
-          "video_url": "videos/videopoint/0ALVqjePV2Q.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/0ALVqjePV2Q.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0ALVqjePV2Q.mp4",
           "question": "find the people on the green mattresses",
           "label": "people on green mattresses",
@@ -1730,7 +1730,7 @@
         },
         {
           "video_id": "-wuZqXDMszw",
-          "video_url": "videos/videopoint/-wuZqXDMszw.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-wuZqXDMszw.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-wuZqXDMszw.mp4",
           "question": "find the man to the right of the table",
           "label": "man right of table",
@@ -1770,7 +1770,7 @@
         },
         {
           "video_id": "-C9DAh0aCvw",
-          "video_url": "videos/videopoint/-C9DAh0aCvw.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-C9DAh0aCvw.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-C9DAh0aCvw.mp4",
           "question": "find the cars behind Jay",
           "label": "cars behind Jay",
@@ -1824,7 +1824,7 @@
         },
         {
           "video_id": "-o8ndJRX_bw",
-          "video_url": "videos/videopoint/-o8ndJRX_bw.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-o8ndJRX_bw.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-o8ndJRX_bw.mp4",
           "question": "find the beans to the left of the espresso machine",
           "label": "beans left of espresso machine",
@@ -1893,7 +1893,7 @@
       "samples": [
         {
           "video_id": "sora2/text_and_symbols_127_v0",
-          "video_url": "videos/videopoint/sora2_text_and_symbols_127_v0.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/sora2_text_and_symbols_127_v0.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/text_and_symbols/text_and_symbols_127_v0.mp4",
           "question": "find the visual artifacts in the video",
           "label": "visual artifacts",
@@ -1933,7 +1933,7 @@
         },
         {
           "video_id": "sora2/temporal_and_continuity_121_v0",
-          "video_url": "videos/videopoint/sora2_temporal_and_continuity_121_v0.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/sora2_temporal_and_continuity_121_v0.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/temporal_and_continuity/temporal_and_continuity_121_v0.mp4",
           "question": "find the visual glitches in the video",
           "label": "visual glitches",
@@ -1987,7 +1987,7 @@
         },
         {
           "video_id": "sora2/text_and_symbols_109_v1",
-          "video_url": "videos/videopoint/sora2_text_and_symbols_109_v1.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/sora2_text_and_symbols_109_v1.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/text_and_symbols/text_and_symbols_109_v1.mp4",
           "question": "find the visual distortions in the video",
           "label": "visual distortions",
@@ -2027,7 +2027,7 @@
         },
         {
           "video_id": "sora2/temporal_and_continuity_102_v0",
-          "video_url": "videos/videopoint/sora2_temporal_and_continuity_102_v0.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/sora2_temporal_and_continuity_102_v0.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/temporal_and_continuity/temporal_and_continuity_102_v0.mp4",
           "question": "find the glitches in the video",
           "label": "glitches",
@@ -2128,7 +2128,7 @@
       "samples": [
         {
           "video_id": "I23qe88sy_E",
-          "video_url": "videos/videopoint/I23qe88sy_E.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/I23qe88sy_E.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/I23qe88sy_E.mp4",
           "question": "How many times do women pose for the camera at an event or in front of a backdrop?",
           "label": "women pose for the camera at an event or in front of a backdrop",
@@ -2260,7 +2260,7 @@
         },
         {
           "video_id": "-VuJHNjvRKg",
-          "video_url": "videos/videopoint/-VuJHNjvRKg.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-VuJHNjvRKg.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-VuJHNjvRKg.mp4",
           "question": "How many times do fans cheer in the stands?",
           "label": "fans cheer in the stands",
