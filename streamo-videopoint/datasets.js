@@ -1,5 +1,5 @@
 // Preparation status — hand-maintained inventory of the 465K + Molmo + VideoTrack sources.
-const DATA_VERSION = "videopoint-absolute-video-20260703";
+const DATA_VERSION = "videopoint-h264-valid-20260703";
 const STATUS = [
   ["QVHighlight · narration", "proactive narration", "11,052", "100%", "ready"],
   ["QVHighlight · event_caption", "dense events", "2,469", "100%", "ready"],

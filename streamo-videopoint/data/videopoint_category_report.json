@@ -6,7 +6,7 @@
       "rows": 175168,
       "unique_video": 66062,
       "covered_rows": 31425,
-      "covered_unique_video": 9052,
+      "covered_unique_video": 4,
       "multi_timestamp_rows": 106572,
       "count_timestamp_mismatch_rows": 22964,
       "point_array_len_hist": {
@@ -25,12 +25,12 @@
       "note": {
         "class": "event/action count",
         "streaming": "Usually suitable. Count each event when its annotated timestamp is reached.",
-        "caveat": "Best category for Streamo-style counting; timestamps and points usually align one-to-one."
+        "caveat": "Preview filters corrupt/black videos and uses browser-friendly H.264 transcodes."
       },
       "samples": [
         {
           "video_id": "3BN9LL4LcoY",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/3BN9LL4LcoY.mp4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/3BN9LL4LcoY.mp4",
           "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/3BN9LL4LcoY.mp4",
           "question": "How many times do Roman soldiers hold spears?",
           "label": "Roman soldiers hold spears",
@@ -110,222 +110,275 @@
           "annotator_unsure": true,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "action_or_event"
+          "category": "action_or_event",
+          "web_video_transcoded": true,
+          "quality_luma": 23.176518485915494
         },
         {
-          "video_id": "-dIxLK8-8Ng",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-dIxLK8-8Ng.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-dIxLK8-8Ng.mp4",
-          "question": "How many times does a person hold a green component?",
-          "label": "a person holds a green component",
-          "count": 5,
-          "timestamp_count": 5,
+          "video_id": "TXm4QHgXfxA",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/TXm4QHgXfxA.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/TXm4QHgXfxA.mp4",
+          "question": "How many times do the security guards restrain the armed man?",
+          "label": "security guards restrain the armed man",
+          "count": 6,
+          "timestamp_count": 6,
           "timestamps": [
-            1.0,
-            7.0,
+            2.5,
+            5.0,
+            12.5,
+            15.0,
+            18.0,
+            24.0
+          ],
+          "raw_timestamps": [
+            2.5025,
+            5.005,
+            12.5125,
+            15.015,
+            18.018,
+            24.024
+          ],
+          "points_full": [
+            [
+              {
+                "x": 63.4,
+                "y": 23.27
+              }
+            ],
+            [
+              {
+                "x": 57.48,
+                "y": 38.3
+              }
+            ],
+            [
+              {
+                "x": 57.08,
+                "y": 38.19
+              }
+            ],
+            [
+              {
+                "x": 53.53,
+                "y": 33.55
+              }
+            ],
+            [
+              {
+                "x": 50.37,
+                "y": 44.79
+              }
+            ],
+            [
+              {
+                "x": 51.75,
+                "y": 33.04
+              }
+            ]
+          ],
+          "points_count": 6,
+          "points_preview": [
+            [
+              {
+                "x": 63.4,
+                "y": 23.27
+              }
+            ],
+            [
+              {
+                "x": 57.48,
+                "y": 38.3
+              }
+            ],
+            [
+              {
+                "x": 57.08,
+                "y": 38.19
+              }
+            ]
+          ],
+          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
+          "clip_start": 0.0,
+          "clip_end": 29.0,
+          "video_duration": 29.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "category": "action_or_event",
+          "web_video_transcoded": true,
+          "quality_luma": 94.15191461267605
+        },
+        {
+          "video_id": "6UmEHPMCZ60",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/6UmEHPMCZ60.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/6UmEHPMCZ60.mp4",
+          "question": "How many times are different houses shown in the video?",
+          "label": "different houses are shown",
+          "count": 11,
+          "timestamp_count": 6,
+          "timestamps": [
+            3.0,
+            9.0,
             10.5,
-            27.5,
-            32.0
+            13.0,
+            14.5,
+            16.5
           ],
           "raw_timestamps": [
-            1.001,
-            7.007,
-            10.5105,
-            27.5275,
-            32.032
+            3.0,
+            9.0,
+            10.5,
+            13.0,
+            14.5,
+            16.5
           ],
           "points_full": [
             [
               {
-                "x": 45.93,
-                "y": 58.2
+                "x": 76.41,
+                "y": 62.22
               }
             ],
             [
               {
-                "x": 50.67,
-                "y": 64.53
+                "x": 77.99,
+                "y": 41.6
+              },
+              {
+                "x": 74.44,
+                "y": 82.9
               }
             ],
             [
               {
-                "x": 47.7,
-                "y": 59.87
+                "x": 74.44,
+                "y": 30.85
+              },
+              {
+                "x": 78.39,
+                "y": 61.83
               }
             ],
             [
               {
-                "x": 13.15,
-                "y": 53.42
+                "x": 70.69,
+                "y": 25.95
+              },
+              {
+                "x": 77.6,
+                "y": 61.29
+              },
+              {
+                "x": 75.03,
+                "y": 90.95
               }
             ],
             [
               {
-                "x": 58.76,
-                "y": 63.86
+                "x": 77.01,
+                "y": 31.63
+              },
+              {
+                "x": 77.8,
+                "y": 65.2
+              }
+            ],
+            [
+              {
+                "x": 77.2,
+                "y": 69.16
               }
             ]
           ],
-          "points_count": 5,
+          "points_count": 6,
           "points_preview": [
             [
               {
-                "x": 45.93,
-                "y": 58.2
+                "x": 76.41,
+                "y": 62.22
               }
             ],
             [
               {
-                "x": 50.67,
-                "y": 64.53
+                "x": 77.99,
+                "y": 41.6
+              },
+              {
+                "x": 74.44,
+                "y": 82.9
               }
             ],
             [
               {
-                "x": 47.7,
-                "y": 59.87
+                "x": 74.44,
+                "y": 30.85
+              },
+              {
+                "x": 78.39,
+                "y": 61.83
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 43.5,
-          "video_duration": 43.5,
+          "clip_end": 30.0,
+          "video_duration": 30.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "action_or_event"
+          "category": "action_or_event",
+          "web_video_transcoded": true,
+          "quality_luma": 168.390625
         },
         {
-          "video_id": "-IJMu52FxTo",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-IJMu52FxTo.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-IJMu52FxTo.mp4",
-          "question": "How many times do players high-five each other?",
-          "label": "players high-five each other",
-          "count": 3,
-          "timestamp_count": 3,
+          "video_id": "3KFDn3JCdvA",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/3KFDn3JCdvA.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/3KFDn3JCdvA.mp4",
+          "question": "How many times does the police officer speak into a microphone?",
+          "label": "the police officer speaks into a microphone",
+          "count": 1,
+          "timestamp_count": 1,
           "timestamps": [
-            28.0,
-            30.5,
-            39.0
+            42.0
           ],
           "raw_timestamps": [
-            28.028,
-            30.5305,
-            39.039
+            42.042
           ],
           "points_full": [
             [
               {
-                "x": 63.03,
-                "y": 21.61
-              }
-            ],
-            [
-              {
-                "x": 67.97,
-                "y": 30.69
-              }
-            ],
-            [
-              {
-                "x": 34.2,
-                "y": 31.7
+                "x": 56.05,
+                "y": 67.95
               }
             ]
           ],
-          "points_count": 3,
+          "points_count": 1,
           "points_preview": [
             [
               {
-                "x": 63.03,
-                "y": 21.61
-              }
-            ],
-            [
-              {
-                "x": 67.97,
-                "y": 30.69
-              }
-            ],
-            [
-              {
-                "x": 34.2,
-                "y": 31.7
+                "x": 56.05,
+                "y": 67.95
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 0.0,
-          "clip_end": 43.0,
-          "video_duration": 43.0,
-          "annotator_unsure": true,
-          "video_source": "youtube",
-          "downloaded": true,
-          "category": "action_or_event"
-        },
-        {
-          "video_id": "wKFBJuz5hJA",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/wKFBJuz5hJA.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/wKFBJuz5hJA.mp4",
-          "question": "How many times does Colin Walsh sign an autograph?",
-          "label": "Colin Walsh signs autographs",
-          "count": 2,
-          "timestamp_count": 2,
-          "timestamps": [
-            18.5,
-            22.0
-          ],
-          "raw_timestamps": [
-            18.5185,
-            22.022
-          ],
-          "points_full": [
-            [
-              {
-                "x": 51.94,
-                "y": 61.74
-              }
-            ],
-            [
-              {
-                "x": 45.22,
-                "y": 68.0
-              }
-            ]
-          ],
-          "points_count": 2,
-          "points_preview": [
-            [
-              {
-                "x": 51.94,
-                "y": 61.74
-              }
-            ],
-            [
-              {
-                "x": 45.22,
-                "y": 68.0
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 0.0,
-          "clip_end": 50.5,
-          "video_duration": 50.5,
+          "clip_start": 40.5,
+          "clip_end": 48.8,
+          "video_duration": 128.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "action_or_event"
+          "category": "action_or_event",
+          "web_video_transcoded": true,
+          "quality_luma": 85.30479166666667
         }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
+      ]
     },
     "object": {
       "rows": 267749,
       "unique_video": 115992,
       "covered_rows": 34885,
-      "covered_unique_video": 10810,
+      "covered_unique_video": 4,
       "multi_timestamp_rows": 104549,
       "count_timestamp_mismatch_rows": 193978,
       "point_array_len_hist": {
@@ -344,609 +397,400 @@
       "note": {
         "class": "object set count",
         "streaming": "Not safe as first-seen count without extra tracking.",
-        "caveat": "Often marks visible objects in one/few frames; timestamp is representative, not necessarily first appearance."
+        "caveat": "Often marks visible objects in one/few frames; timestamp is representative."
       },
       "samples": [
         {
-          "video_id": "VJzelow5nsc",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/VJzelow5nsc.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/VJzelow5nsc.mp4",
-          "question": "How many French captions appear on the screen?",
-          "label": "French captions",
-          "count": 38,
-          "timestamp_count": 32,
+          "video_id": "-tX10-uqLgE",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/-tX10-uqLgE.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-tX10-uqLgE.mp4",
+          "question": "How many podium poles are visible?",
+          "label": "podium poles",
+          "count": 2,
+          "timestamp_count": 1,
           "timestamps": [
-            0.0,
-            1.0,
-            2.0,
-            3.0,
-            3.5,
-            4.0,
-            4.5,
-            6.5,
-            7.5,
-            8.0,
-            8.5,
-            9.0,
-            9.5,
-            10.0,
-            11.5,
-            12.0,
-            14.5,
-            15.0,
-            15.5,
-            16.0,
-            17.5,
-            18.0,
-            19.0,
-            19.5,
-            20.0,
-            22.0,
-            23.0,
-            24.0,
-            24.5,
-            25.0,
-            26.0,
-            26.5
+            1.0
           ],
           "raw_timestamps": [
-            0.0,
-            1.0,
-            2.0,
-            3.0,
-            3.5,
-            4.0,
-            4.5,
-            6.5,
-            7.5,
-            8.0,
-            8.5,
-            9.0,
-            9.5,
-            10.0,
-            11.5,
-            12.0,
-            14.5,
-            15.0,
-            15.5,
-            16.0,
-            17.5,
-            18.0,
-            19.0,
-            19.5,
-            20.0,
-            22.0,
-            23.0,
-            24.0,
-            24.5,
-            25.0,
-            26.0,
-            26.5
+            1.001
           ],
           "points_full": [
             [
               {
-                "x": 39.46,
-                "y": 66.98
-              }
-            ],
-            [
-              {
-                "x": 52.19,
-                "y": 67.37
-              }
-            ],
-            [
-              {
-                "x": 48.87,
-                "y": 63.31
+                "x": 29.03,
+                "y": 85.01
               },
               {
-                "x": 52.92,
-                "y": 74.0
-              }
-            ],
-            [
-              {
-                "x": 51.08,
-                "y": 67.75
-              }
-            ],
-            [
-              {
-                "x": 46.28,
-                "y": 69.5
-              }
-            ],
-            [
-              {
-                "x": 51.82,
-                "y": 67.92
-              }
-            ],
-            [
-              {
-                "x": 51.63,
-                "y": 68.11
-              }
-            ],
-            [
-              {
-                "x": 52.74,
-                "y": 66.22
-              }
-            ],
-            [
-              {
-                "x": 47.76,
-                "y": 66.73
-              }
-            ],
-            [
-              {
-                "x": 47.94,
-                "y": 68.26
-              }
-            ],
-            [
-              {
-                "x": 51.63,
-                "y": 68.45
-              }
-            ],
-            [
-              {
-                "x": 51.08,
-                "y": 68.54
-              }
-            ],
-            [
-              {
-                "x": 51.63,
-                "y": 67.69
-              },
-              {
-                "x": 55.69,
-                "y": 69.1
-              }
-            ],
-            [
-              {
-                "x": 50.16,
-                "y": 66.42
-              },
-              {
-                "x": 46.1,
-                "y": 66.91
-              }
-            ],
-            [
-              {
-                "x": 51.26,
-                "y": 74.25
-              }
-            ],
-            [
-              {
-                "x": 48.5,
-                "y": 68.01
-              }
-            ],
-            [
-              {
-                "x": 45.73,
-                "y": 62.8
-              }
-            ],
-            [
-              {
-                "x": 45.73,
-                "y": 67.97
-              }
-            ],
-            [
-              {
-                "x": 44.62,
-                "y": 69.3
-              }
-            ],
-            [
-              {
-                "x": 48.87,
-                "y": 65.03
-              }
-            ],
-            [
-              {
-                "x": 47.76,
-                "y": 65.74
-              }
-            ],
-            [
-              {
-                "x": 46.65,
-                "y": 66.13
-              }
-            ],
-            [
-              {
-                "x": 51.26,
-                "y": 68.29
-              }
-            ],
-            [
-              {
-                "x": 51.63,
-                "y": 68.48
-              },
-              {
-                "x": 49.6,
-                "y": 73.36
-              }
-            ],
-            [
-              {
-                "x": 55.14,
-                "y": 67.63
-              },
-              {
-                "x": 51.08,
-                "y": 72.93
-              }
-            ],
-            [
-              {
-                "x": 47.39,
-                "y": 66.79
-              }
-            ],
-            [
-              {
-                "x": 48.5,
-                "y": 66.46
-              }
-            ],
-            [
-              {
-                "x": 45.55,
-                "y": 68.1
-              }
-            ],
-            [
-              {
-                "x": 52.92,
-                "y": 65.8
-              },
-              {
-                "x": 54.03,
-                "y": 73.58
-              }
-            ],
-            [
-              {
-                "x": 49.6,
-                "y": 68.27
-              }
-            ],
-            [
-              {
-                "x": 44.99,
-                "y": 68.66
-              }
-            ],
-            [
-              {
-                "x": 51.26,
-                "y": 67.3
+                "x": 89.45,
+                "y": 86.9
               }
             ]
           ],
-          "points_count": 32,
+          "points_count": 1,
           "points_preview": [
             [
               {
-                "x": 39.46,
-                "y": 66.98
-              }
-            ],
-            [
-              {
-                "x": 52.19,
-                "y": 67.37
-              }
-            ],
-            [
-              {
-                "x": 48.87,
-                "y": 63.31
+                "x": 29.03,
+                "y": 85.01
               },
               {
-                "x": 52.92,
-                "y": 74.0
+                "x": 89.45,
+                "y": 86.9
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 27.5,
-          "video_duration": 27.5,
-          "annotator_unsure": true,
+          "clip_end": 58.0,
+          "video_duration": 58.0,
+          "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "object"
+          "category": "object",
+          "web_video_transcoded": true,
+          "quality_luma": 155.3580985915493
         },
         {
-          "video_id": "-cLW9Ftsvt4",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-cLW9Ftsvt4.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-cLW9Ftsvt4.mp4",
-          "question": "How many caps are visible?",
-          "label": "caps",
-          "count": 5,
+          "video_id": "taZYrAxqVik",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/taZYrAxqVik.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/taZYrAxqVik.mp4",
+          "question": "How many green frogs are visible?",
+          "label": "green frogs",
+          "count": 15,
           "timestamp_count": 5,
           "timestamps": [
-            8.5,
+            7.5,
+            11.5,
+            18.5,
+            21.0,
+            28.5
+          ],
+          "raw_timestamps": [
+            7.5,
+            11.5,
+            18.5,
+            21.0,
+            28.5
+          ],
+          "points_full": [
+            [
+              {
+                "x": 75.88,
+                "y": 62.98
+              },
+              {
+                "x": 49.52,
+                "y": 61.84
+              },
+              {
+                "x": 29.42,
+                "y": 60.49
+              }
+            ],
+            [
+              {
+                "x": 79.94,
+                "y": 59.57
+              },
+              {
+                "x": 27.57,
+                "y": 59.47
+              }
+            ],
+            [
+              {
+                "x": 54.13,
+                "y": 53.98
+              },
+              {
+                "x": 91.56,
+                "y": 31.26
+              },
+              {
+                "x": 54.49,
+                "y": 33.23
+              },
+              {
+                "x": 30.15,
+                "y": 28.98
+              },
+              {
+                "x": 14.85,
+                "y": 32.2
+              },
+              {
+                "x": 5.26,
+                "y": 42.78
+              }
+            ],
+            [
+              {
+                "x": 57.81,
+                "y": 49.63
+              }
+            ],
+            [
+              {
+                "x": 49.52,
+                "y": 62.5
+              },
+              {
+                "x": 17.43,
+                "y": 79.51
+              },
+              {
+                "x": 86.03,
+                "y": 77.75
+              }
+            ]
+          ],
+          "points_count": 5,
+          "points_preview": [
+            [
+              {
+                "x": 75.88,
+                "y": 62.98
+              },
+              {
+                "x": 49.52,
+                "y": 61.84
+              },
+              {
+                "x": 29.42,
+                "y": 60.49
+              }
+            ],
+            [
+              {
+                "x": 79.94,
+                "y": 59.57
+              },
+              {
+                "x": 27.57,
+                "y": 59.47
+              }
+            ],
+            [
+              {
+                "x": 54.13,
+                "y": 53.98
+              },
+              {
+                "x": 91.56,
+                "y": 31.26
+              },
+              {
+                "x": 54.49,
+                "y": 33.23
+              },
+              {
+                "x": 30.15,
+                "y": 28.98
+              },
+              {
+                "x": 14.85,
+                "y": 32.2
+              },
+              {
+                "x": 5.26,
+                "y": 42.78
+              }
+            ]
+          ],
+          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
+          "clip_start": 0.0,
+          "clip_end": 42.0,
+          "video_duration": 42.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "category": "object",
+          "web_video_transcoded": true,
+          "quality_luma": 86.00684419014084
+        },
+        {
+          "video_id": "-B5r696lJgM",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/-B5r696lJgM.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-B5r696lJgM.mp4",
+          "question": "How many phones are visible in the audience?",
+          "label": "phones in the audience",
+          "count": 11,
+          "timestamp_count": 6,
+          "timestamps": [
             13.5,
-            19.5,
-            28.0,
-            38.0
+            14.0,
+            21.0,
+            25.0,
+            29.0,
+            34.5
           ],
           "raw_timestamps": [
-            8.5085,
-            13.5135,
-            19.5195,
-            28.028,
-            38.038
+            13.5,
+            14.0,
+            21.0,
+            25.0,
+            29.0,
+            34.5
           ],
           "points_full": [
             [
               {
-                "x": 1.0,
-                "y": 12.22
+                "x": 13.28,
+                "y": 84.47
               }
             ],
             [
               {
-                "x": 34.37,
-                "y": 6.33
+                "x": 43.88,
+                "y": 77.03
               }
             ],
             [
               {
-                "x": 76.83,
-                "y": 3.55
+                "x": 36.38,
+                "y": 59.14
+              },
+              {
+                "x": 75.08,
+                "y": 57.59
+              },
+              {
+                "x": 0.84,
+                "y": 59.03
+              },
+              {
+                "x": 88.71,
+                "y": 58.15
               }
             ],
             [
               {
-                "x": 31.61,
-                "y": 15.33
+                "x": 18.41,
+                "y": 69.92
+              },
+              {
+                "x": 83.97,
+                "y": 72.25
               }
             ],
             [
               {
-                "x": 7.91,
-                "y": 4.0
+                "x": 71.92,
+                "y": 55.59
+              },
+              {
+                "x": 2.02,
+                "y": 56.59
+              }
+            ],
+            [
+              {
+                "x": 8.14,
+                "y": 49.48
               }
             ]
           ],
-          "points_count": 5,
+          "points_count": 6,
           "points_preview": [
             [
               {
-                "x": 1.0,
-                "y": 12.22
+                "x": 13.28,
+                "y": 84.47
               }
             ],
             [
               {
-                "x": 34.37,
-                "y": 6.33
+                "x": 43.88,
+                "y": 77.03
               }
             ],
             [
               {
-                "x": 76.83,
-                "y": 3.55
+                "x": 36.38,
+                "y": 59.14
+              },
+              {
+                "x": 75.08,
+                "y": 57.59
+              },
+              {
+                "x": 0.84,
+                "y": 59.03
+              },
+              {
+                "x": 88.71,
+                "y": 58.15
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 40.0,
-          "video_duration": 40.0,
+          "clip_end": 46.0,
+          "video_duration": 46.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "object"
+          "category": "object",
+          "web_video_transcoded": true,
+          "quality_luma": 127.20856073943662
         },
         {
-          "video_id": "atzxPzKwykg",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/atzxPzKwykg.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/atzxPzKwykg.mp4",
-          "question": "How many bamboo steamers appear in the video?",
-          "label": "bamboo steamers",
-          "count": 4,
-          "timestamp_count": 3,
+          "video_id": "Zmb8ilbgwPg",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/Zmb8ilbgwPg.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/Zmb8ilbgwPg.mp4",
+          "question": "How many black microphones are on the podium?",
+          "label": "black microphones",
+          "count": 2,
+          "timestamp_count": 1,
           "timestamps": [
-            1.5,
-            11.5,
-            45.0
+            0.0
           ],
           "raw_timestamps": [
-            1.5,
-            11.5,
-            45.0
+            0.0
           ],
           "points_full": [
             [
               {
-                "x": 47.94,
-                "y": 85.81
-              }
-            ],
-            [
-              {
-                "x": 33.09,
-                "y": 90.46
-              }
-            ],
-            [
-              {
-                "x": 54.26,
-                "y": 82.23
+                "x": 64.99,
+                "y": 41.67
               },
               {
-                "x": 86.94,
-                "y": 87.97
+                "x": 72.92,
+                "y": 45.5
               }
             ]
           ],
-          "points_count": 3,
+          "points_count": 1,
           "points_preview": [
             [
               {
-                "x": 47.94,
-                "y": 85.81
-              }
-            ],
-            [
-              {
-                "x": 33.09,
-                "y": 90.46
-              }
-            ],
-            [
-              {
-                "x": 54.26,
-                "y": 82.23
+                "x": 64.99,
+                "y": 41.67
               },
               {
-                "x": 86.94,
-                "y": 87.97
+                "x": 72.92,
+                "y": 45.5
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 49.5,
-          "video_duration": 49.5,
+          "clip_end": 62.0,
+          "video_duration": 62.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "object"
-        },
-        {
-          "video_id": "-UX050ffNqY",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-UX050ffNqY.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-UX050ffNqY.mp4",
-          "question": "How many people are holding cameras or phones in the video?",
-          "label": "people holding cameras or phones",
-          "count": 8,
-          "timestamp_count": 5,
-          "timestamps": [
-            5.5,
-            10.5,
-            11.0,
-            12.5,
-            16.0
-          ],
-          "raw_timestamps": [
-            5.5055,
-            10.5105,
-            11.011,
-            12.5125,
-            16.016
-          ],
-          "points_full": [
-            [
-              {
-                "x": 38.56,
-                "y": 42.26
-              }
-            ],
-            [
-              {
-                "x": 25.98,
-                "y": 57.26
-              },
-              {
-                "x": 44.39,
-                "y": 49.9
-              },
-              {
-                "x": 68.77,
-                "y": 77.44
-              }
-            ],
-            [
-              {
-                "x": 29.66,
-                "y": 37.63
-              }
-            ],
-            [
-              {
-                "x": 91.17,
-                "y": 61.9
-              },
-              {
-                "x": 67.7,
-                "y": 43.63
-              }
-            ],
-            [
-              {
-                "x": 92.55,
-                "y": 57.53
-              }
-            ]
-          ],
-          "points_count": 5,
-          "points_preview": [
-            [
-              {
-                "x": 38.56,
-                "y": 42.26
-              }
-            ],
-            [
-              {
-                "x": 25.98,
-                "y": 57.26
-              },
-              {
-                "x": 44.39,
-                "y": 49.9
-              },
-              {
-                "x": 68.77,
-                "y": 77.44
-              }
-            ],
-            [
-              {
-                "x": 29.66,
-                "y": 37.63
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 0.0,
-          "clip_end": 60.0,
-          "video_duration": 60.0,
-          "annotator_unsure": true,
-          "video_source": "youtube",
-          "downloaded": true,
-          "category": "object"
+          "category": "object",
+          "web_video_transcoded": true,
+          "quality_luma": 118.33298855633802
         }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
+      ]
     },
     "animal": {
       "rows": 23750,
       "unique_video": 17917,
       "covered_rows": 1,
-      "covered_unique_video": 1,
+      "covered_unique_video": 0,
       "multi_timestamp_rows": 3894,
       "count_timestamp_mismatch_rows": 9961,
       "point_array_len_hist": {
@@ -965,57 +809,15 @@
       "note": {
         "class": "object/entity set count",
         "streaming": "Not safe as first-seen count without identity tracking.",
-        "caveat": "MammalNet rows mostly do not have public YouTube mapping; only locally available videos can be previewed."
+        "caveat": "MammalNet rows mostly do not have public YouTube mapping; only valid local videos are previewed."
       },
-      "samples": [
-        {
-          "video_id": "XoUkGaAUWc0",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/XoUkGaAUWc0.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/XoUkGaAUWc0.mp4",
-          "question": "How many different hares are visible?",
-          "label": "hares",
-          "count": 1,
-          "timestamp_count": 1,
-          "timestamps": [
-            103.5
-          ],
-          "raw_timestamps": [
-            103.6035
-          ],
-          "points_full": [
-            [
-              {
-                "x": 34.2,
-                "y": 55.33
-              }
-            ]
-          ],
-          "points_count": 1,
-          "points_preview": [
-            [
-              {
-                "x": 34.2,
-                "y": 55.33
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 81.0,
-          "clip_end": 103.8,
-          "video_duration": 107.0,
-          "annotator_unsure": false,
-          "video_source": "MammalNet",
-          "downloaded": true,
-          "category": "animal"
-        }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (1/4 kept)."
+      "samples": []
     },
     "comparative reference": {
       "rows": 48015,
       "unique_video": 48015,
       "covered_rows": 1732,
-      "covered_unique_video": 1732,
+      "covered_unique_video": 4,
       "multi_timestamp_rows": 1154,
       "count_timestamp_mismatch_rows": 1575,
       "point_array_len_hist": {
@@ -1038,24 +840,24 @@
       },
       "samples": [
         {
-          "video_id": "-DQiUT8UJKk",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-DQiUT8UJKk.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-DQiUT8UJKk.mp4",
-          "question": "find the brightest spice bowl",
-          "label": "brightest spice bowl",
+          "video_id": "p6jAexO1jrg",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/p6jAexO1jrg.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/p6jAexO1jrg.mp4",
+          "question": "find the largest building",
+          "label": "largest building",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            44.0
+            13.5
           ],
           "raw_timestamps": [
-            44.0
+            12.96
           ],
           "points_full": [
             [
               {
-                "x": 16.32,
-                "y": 13.95
+                "x": 26.83,
+                "y": 51.38
               }
             ]
           ],
@@ -1063,79 +865,41 @@
           "points_preview": [
             [
               {
-                "x": 16.32,
-                "y": 13.95
+                "x": 26.83,
+                "y": 51.38
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 57.5,
-          "video_duration": 57.5,
-          "annotator_unsure": true,
-          "video_source": "youtube",
-          "downloaded": true,
-          "category": "comparative reference"
-        },
-        {
-          "video_id": "-lv1Jk-JfHk",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-lv1Jk-JfHk.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-lv1Jk-JfHk.mp4",
-          "question": "find the brightest card",
-          "label": "brightest card",
-          "count": 1,
-          "timestamp_count": 1,
-          "timestamps": [
-            82.5
-          ],
-          "raw_timestamps": [
-            82.5
-          ],
-          "points_full": [
-            [
-              {
-                "x": 47.61,
-                "y": 44.03
-              }
-            ]
-          ],
-          "points_count": 1,
-          "points_preview": [
-            [
-              {
-                "x": 47.61,
-                "y": 44.03
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": null,
-          "clip_end": null,
-          "video_duration": 170.0,
+          "clip_end": 15.5,
+          "video_duration": 15.5,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "comparative reference"
+          "category": "comparative reference",
+          "web_video_transcoded": true,
+          "quality_luma": 140.76952024647886
         },
         {
-          "video_id": "Wwk_6MD_05I",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/Wwk_6MD_05I.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/Wwk_6MD_05I.mp4",
-          "question": "find the tallest person",
-          "label": "tallest person",
+          "video_id": "bwOW1zShkUI",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/bwOW1zShkUI.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/bwOW1zShkUI.mp4",
+          "question": "find the lowest hand",
+          "label": "lowest hand",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            2.5
+            5.0
           ],
           "raw_timestamps": [
-            2.5
+            5.005
           ],
           "points_full": [
             [
               {
-                "x": 35.85,
-                "y": 40.24
+                "x": 30.13,
+                "y": 84.49
               }
             ]
           ],
@@ -1143,39 +907,41 @@
           "points_preview": [
             [
               {
-                "x": 35.85,
-                "y": 40.24
+                "x": 30.13,
+                "y": 84.49
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 10.5,
-          "video_duration": 10.5,
+          "clip_end": 17.0,
+          "video_duration": 17.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "comparative reference"
+          "category": "comparative reference",
+          "web_video_transcoded": true,
+          "quality_luma": 50.29055897887324
         },
         {
-          "video_id": "5hYCQKR-cIA",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/5hYCQKR-cIA.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/5hYCQKR-cIA.mp4",
-          "question": "find the smallest of the three additional characters",
-          "label": "smallest of the three additional characters",
+          "video_id": "0NiEpvrJlK4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/0NiEpvrJlK4.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0NiEpvrJlK4.mp4",
+          "question": "find the longest potato",
+          "label": "longest potato",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            11.5
+            12.5
           ],
           "raw_timestamps": [
-            11.5
+            12.5125
           ],
           "points_full": [
             [
               {
-                "x": 19.64,
-                "y": 52.64
+                "x": 50.53,
+                "y": 56.71
               }
             ]
           ],
@@ -1183,28 +949,71 @@
           "points_preview": [
             [
               {
-                "x": 19.64,
-                "y": 52.64
+                "x": 50.53,
+                "y": 56.71
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 12.5,
-          "video_duration": 12.5,
+          "clip_end": 56.0,
+          "video_duration": 56.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "comparative reference"
+          "category": "comparative reference",
+          "web_video_transcoded": true,
+          "quality_luma": 148.0968309859155
+        },
+        {
+          "video_id": "0BK2YwhlFGI",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/0BK2YwhlFGI.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0BK2YwhlFGI.mp4",
+          "question": "find the highest red bar",
+          "label": "highest red bar",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            2.0
+          ],
+          "raw_timestamps": [
+            2.0
+          ],
+          "points_full": [
+            [
+              {
+                "x": 60.03,
+                "y": 40.74
+              }
+            ]
+          ],
+          "points_count": 1,
+          "points_preview": [
+            [
+              {
+                "x": 60.03,
+                "y": 40.74
+              }
+            ]
+          ],
+          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
+          "clip_start": 0.0,
+          "clip_end": 24.0,
+          "video_duration": 24.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "category": "comparative reference",
+          "web_video_transcoded": true,
+          "quality_luma": 87.13116197183099
         }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
+      ]
     },
     "indirect reference": {
       "rows": 39567,
       "unique_video": 13389,
       "covered_rows": 8354,
-      "covered_unique_video": 2827,
+      "covered_unique_video": 4,
       "multi_timestamp_rows": 2409,
       "count_timestamp_mismatch_rows": 2410,
       "point_array_len_hist": {
@@ -1227,24 +1036,24 @@
       },
       "samples": [
         {
-          "video_id": "PdjjKjt88Xw",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/PdjjKjt88Xw.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/PdjjKjt88Xw.mp4",
-          "question": "find the tool that would dry out without a cap",
-          "label": "tool that would dry out without a cap",
+          "video_id": "JWLKBTT0l2M",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/JWLKBTT0l2M.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/JWLKBTT0l2M.mp4",
+          "question": "find the object that stores electrical energy to start the engine",
+          "label": "thing that stores electrical energy to start the engine",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            31.0
+            4.5
           ],
           "raw_timestamps": [
-            31.031
+            4.5
           ],
           "points_full": [
             [
               {
-                "x": 31.64,
-                "y": 58.33
+                "x": 47.39,
+                "y": 30.66
               }
             ]
           ],
@@ -1252,87 +1061,201 @@
           "points_preview": [
             [
               {
-                "x": 31.64,
-                "y": 58.33
+                "x": 47.39,
+                "y": 30.66
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 20.0,
-          "clip_end": 34.8,
-          "video_duration": 66.0,
+          "clip_start": 0.5,
+          "clip_end": 5.9,
+          "video_duration": 154.5,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "indirect reference"
+          "category": "indirect reference",
+          "web_video_transcoded": true,
+          "quality_luma": 82.71972222222222
         },
         {
-          "video_id": "-RX1uh9_HEA",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-RX1uh9_HEA.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-RX1uh9_HEA.mp4",
-          "question": "find the spherical item on the wire shelf that would bounce off the floor",
-          "label": "spherical item on the wire shelf that would bounce off the floor",
-          "count": 2,
+          "video_id": "LbcOiIa1lPE",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/LbcOiIa1lPE.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/LbcOiIa1lPE.mp4",
+          "question": "find the object you would turn to open the entrance",
+          "label": "thing you would turn to open the entrance",
+          "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            14.0
+            11.5
           ],
           "raw_timestamps": [
-            14.014
+            11.5115
           ],
           "points_full": [
             [
               {
-                "x": 68.55,
-                "y": 85.45
+                "x": 6.32,
+                "y": 41.52
+              }
+            ]
+          ],
+          "points_count": 1,
+          "points_preview": [
+            [
+              {
+                "x": 6.32,
+                "y": 41.52
+              }
+            ]
+          ],
+          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
+          "clip_start": 0.0,
+          "clip_end": 54.5,
+          "video_duration": 54.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "category": "indirect reference",
+          "web_video_transcoded": true,
+          "quality_luma": 45.35208333333333
+        },
+        {
+          "video_id": "-BXYZwfYaXw",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/-BXYZwfYaXw.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-BXYZwfYaXw.mp4",
+          "question": "find the control closest to the blue flame",
+          "label": "control closest to the blue flame",
+          "count": 9,
+          "timestamp_count": 3,
+          "timestamps": [
+            18.5,
+            56.5,
+            167.0
+          ],
+          "raw_timestamps": [
+            18.5,
+            56.5,
+            167.0
+          ],
+          "points_full": [
+            [
+              {
+                "x": 20.4,
+                "y": 76.09
               },
               {
-                "x": 81.56,
-                "y": 84.59
-              }
-            ]
-          ],
-          "points_count": 1,
-          "points_preview": [
-            [
-              {
-                "x": 68.55,
-                "y": 85.45
+                "x": 19.27,
+                "y": 78.76
               },
               {
-                "x": 81.56,
-                "y": 84.59
+                "x": 24.34,
+                "y": 75.76
+              }
+            ],
+            [
+              {
+                "x": 20.59,
+                "y": 76.09
+              },
+              {
+                "x": 24.72,
+                "y": 72.75
+              },
+              {
+                "x": 22.65,
+                "y": 78.88
+              }
+            ],
+            [
+              {
+                "x": 22.65,
+                "y": 78.76
+              },
+              {
+                "x": 19.27,
+                "y": 78.09
+              },
+              {
+                "x": 21.9,
+                "y": 72.42
+              }
+            ]
+          ],
+          "points_count": 3,
+          "points_preview": [
+            [
+              {
+                "x": 20.4,
+                "y": 76.09
+              },
+              {
+                "x": 19.27,
+                "y": 78.76
+              },
+              {
+                "x": 24.34,
+                "y": 75.76
+              }
+            ],
+            [
+              {
+                "x": 20.59,
+                "y": 76.09
+              },
+              {
+                "x": 24.72,
+                "y": 72.75
+              },
+              {
+                "x": 22.65,
+                "y": 78.88
+              }
+            ],
+            [
+              {
+                "x": 22.65,
+                "y": 78.76
+              },
+              {
+                "x": 19.27,
+                "y": 78.09
+              },
+              {
+                "x": 21.9,
+                "y": 72.42
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 10.0,
-          "clip_end": 20.5,
-          "video_duration": 172.5,
-          "annotator_unsure": false,
+          "clip_start": null,
+          "clip_end": null,
+          "video_duration": 178.5,
+          "annotator_unsure": true,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "indirect reference"
+          "category": "indirect reference",
+          "web_video_transcoded": true,
+          "quality_luma": 188.33909722222222
         },
         {
-          "video_id": "7PUxlyGZ9CQ",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/7PUxlyGZ9CQ.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/7PUxlyGZ9CQ.mp4",
-          "question": "find the control you would move to change from park to drive",
-          "label": "control you would move to change from park to drive",
+          "video_id": "0Z97PIxhdPU",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/0Z97PIxhdPU.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0Z97PIxhdPU.mp4",
+          "question": "find the object that would spill if tilted",
+          "label": "thing that would spill if tilted",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            92.0
+            0.0
           ],
           "raw_timestamps": [
-            92.092
+            0.0
           ],
           "points_full": [
             [
               {
-                "x": 60.01,
-                "y": 74.76
+                "x": 53.93,
+                "y": 32.56
               }
             ]
           ],
@@ -1340,68 +1263,29 @@
           "points_preview": [
             [
               {
-                "x": 60.01,
-                "y": 74.76
+                "x": 53.93,
+                "y": 32.56
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 69.5,
-          "clip_end": 96.5,
-          "video_duration": 150.5,
+          "clip_start": 0.0,
+          "clip_end": 58.5,
+          "video_duration": 58.5,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "indirect reference"
-        },
-        {
-          "video_id": "-FOs-kawS5k",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-FOs-kawS5k.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-FOs-kawS5k.mp4",
-          "question": "find the object that dispenses cleaner when its trigger is squeezed",
-          "label": "thing that dispenses cleaner when its trigger is squeezed",
-          "count": 1,
-          "timestamp_count": 1,
-          "timestamps": [
-            36.5
-          ],
-          "raw_timestamps": [
-            36.5365
-          ],
-          "points_full": [
-            [
-              {
-                "x": 49.76,
-                "y": 50.95
-              }
-            ]
-          ],
-          "points_count": 1,
-          "points_preview": [
-            [
-              {
-                "x": 49.76,
-                "y": 50.95
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 7.0,
-          "clip_end": 37.3,
-          "video_duration": 169.0,
-          "annotator_unsure": false,
-          "video_source": "youtube",
-          "downloaded": true,
-          "category": "indirect reference"
+          "category": "indirect reference",
+          "web_video_transcoded": true,
+          "quality_luma": 117.50261883802817
         }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
+      ]
     },
     "referring expression": {
       "rows": 60902,
       "unique_video": 20846,
       "covered_rows": 9264,
-      "covered_unique_video": 3157,
+      "covered_unique_video": 4,
       "multi_timestamp_rows": 3404,
       "count_timestamp_mismatch_rows": 2783,
       "point_array_len_hist": {
@@ -1424,24 +1308,24 @@
       },
       "samples": [
         {
-          "video_id": "-kapRKfbWZE",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-kapRKfbWZE.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-kapRKfbWZE.mp4",
-          "question": "find the bouquet of flowers that is shown in both a clear glass vase with a red and white striped ribbon and a vase with a red and white polka dot pattern",
-          "label": "bouquet that appears with both striped and polka dot vases",
+          "video_id": "ipWmD20rJkw",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/ipWmD20rJkw.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/ipWmD20rJkw.mp4",
+          "question": "find the deer that grazes near the small tree with yellow leaves",
+          "label": "deer that grazes near yellow-leaved tree",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            40.5
+            35.5
           ],
           "raw_timestamps": [
-            40.5
+            35.5355
           ],
           "points_full": [
             [
               {
-                "x": 35.29,
-                "y": 53.2
+                "x": 56.42,
+                "y": 60.87
               }
             ]
           ],
@@ -1449,39 +1333,41 @@
           "points_preview": [
             [
               {
-                "x": 35.29,
-                "y": 53.2
+                "x": 56.42,
+                "y": 60.87
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 40.5,
-          "clip_end": 47.9,
-          "video_duration": 111.0,
+          "clip_start": 7.0,
+          "clip_end": 36.3,
+          "video_duration": 92.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "referring expression"
+          "category": "referring expression",
+          "web_video_transcoded": true,
+          "quality_luma": 237.67979166666666
         },
         {
-          "video_id": "0B31XMXQHLI",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/0B31XMXQHLI.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0B31XMXQHLI.mp4",
-          "question": "find the man in a black hoodie who is carrying a black bag",
-          "label": "man in black hoodie carrying black bag",
+          "video_id": "0JJYdHw7Lu4",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/0JJYdHw7Lu4.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0JJYdHw7Lu4.mp4",
+          "question": "find the woman who bows her head and presses her temples",
+          "label": "woman who bows her head and presses her temples",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            23.5
+            37.0
           ],
           "raw_timestamps": [
-            23.5235
+            37.0
           ],
           "points_full": [
             [
               {
-                "x": 25.02,
-                "y": 53.52
+                "x": 52.0,
+                "y": 48.91
               }
             ]
           ],
@@ -1489,93 +1375,83 @@
           "points_preview": [
             [
               {
-                "x": 25.02,
-                "y": 53.52
+                "x": 52.0,
+                "y": 48.91
+              }
+            ]
+          ],
+          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
+          "clip_start": 0.0,
+          "clip_end": 55.5,
+          "video_duration": 55.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "category": "referring expression",
+          "web_video_transcoded": true,
+          "quality_luma": 97.49051496478873
+        },
+        {
+          "video_id": "C4BegtvNdvg",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/C4BegtvNdvg.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/C4BegtvNdvg.mp4",
+          "question": "find the bird that flies closest to the camera during the video",
+          "label": "bird that flies closest to the camera",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            29.5
+          ],
+          "raw_timestamps": [
+            29.5
+          ],
+          "points_full": [
+            [
+              {
+                "x": 56.21,
+                "y": 51.43
+              }
+            ]
+          ],
+          "points_count": 1,
+          "points_preview": [
+            [
+              {
+                "x": 56.21,
+                "y": 51.43
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 20.0,
-          "clip_end": 30.1,
-          "video_duration": 113.5,
+          "clip_end": 33.5,
+          "video_duration": 66.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "referring expression"
+          "category": "referring expression",
+          "web_video_transcoded": true,
+          "quality_luma": 99.69911458333333
         },
         {
-          "video_id": "8FGk8_kwFpY",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/8FGk8_kwFpY.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/8FGk8_kwFpY.mp4",
-          "question": "find the man who is shown standing in the field at both the beginning and end of the video",
-          "label": "man who appears both at the start and end standing in the field",
-          "count": 2,
-          "timestamp_count": 2,
-          "timestamps": [
-            2.5,
-            102.0
-          ],
-          "raw_timestamps": [
-            2.5025,
-            102.102
-          ],
-          "points_full": [
-            [
-              {
-                "x": 76.02,
-                "y": 55.28
-              }
-            ],
-            [
-              {
-                "x": 72.42,
-                "y": 56.11
-              }
-            ]
-          ],
-          "points_count": 2,
-          "points_preview": [
-            [
-              {
-                "x": 76.02,
-                "y": 55.28
-              }
-            ],
-            [
-              {
-                "x": 72.42,
-                "y": 56.11
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": null,
-          "clip_end": null,
-          "video_duration": 108.5,
-          "annotator_unsure": false,
-          "video_source": "youtube",
-          "downloaded": true,
-          "category": "referring expression"
-        },
-        {
-          "video_id": "0MthcMsAVfg",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/0MthcMsAVfg.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0MthcMsAVfg.mp4",
-          "question": "find the first moment when Rihanna appears with her hair styled in a ponytail",
-          "label": "first appearance of Rihanna in a ponytail",
+          "video_id": "5scDop0TAUo",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/5scDop0TAUo.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/5scDop0TAUo.mp4",
+          "question": "find the Godzilla whose spikes glow bright blue",
+          "label": "Godzilla with glowing blue spikes",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            11.0
+            38.0
           ],
           "raw_timestamps": [
-            11.011
+            38.0
           ],
           "points_full": [
             [
               {
-                "x": 26.02,
-                "y": 26.18
+                "x": 57.27,
+                "y": 32.86
               }
             ]
           ],
@@ -1583,28 +1459,29 @@
           "points_preview": [
             [
               {
-                "x": 26.02,
-                "y": 26.18
+                "x": 57.27,
+                "y": 32.86
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 10.0,
-          "clip_end": 17.9,
-          "video_duration": 117.5,
-          "annotator_unsure": true,
+          "clip_start": 7.0,
+          "clip_end": 38.7,
+          "video_duration": 67.0,
+          "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "referring expression"
+          "category": "referring expression",
+          "web_video_transcoded": true,
+          "quality_luma": 63.105555555555554
         }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
+      ]
     },
     "spatial reference": {
       "rows": 27985,
       "unique_video": 9640,
       "covered_rows": 3298,
-      "covered_unique_video": 1130,
+      "covered_unique_video": 4,
       "multi_timestamp_rows": 3841,
       "count_timestamp_mismatch_rows": 10409,
       "point_array_len_hist": {
@@ -1627,113 +1504,11 @@
       },
       "samples": [
         {
-          "video_id": "0ALVqjePV2Q",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/0ALVqjePV2Q.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0ALVqjePV2Q.mp4",
-          "question": "find the people on the green mattresses",
-          "label": "people on green mattresses",
-          "count": 8,
-          "timestamp_count": 2,
-          "timestamps": [
-            15.5,
-            23.0
-          ],
-          "raw_timestamps": [
-            15.5152,
-            23.0233
-          ],
-          "points_full": [
-            [
-              {
-                "x": 59.48,
-                "y": 38.44
-              },
-              {
-                "x": 50.98,
-                "y": 57.99
-              },
-              {
-                "x": 38.71,
-                "y": 44.35
-              },
-              {
-                "x": 39.41,
-                "y": 33.73
-              },
-              {
-                "x": 32.16,
-                "y": 37.2
-              },
-              {
-                "x": 64.36,
-                "y": 38.19
-              }
-            ],
-            [
-              {
-                "x": 52.09,
-                "y": 58.83
-              },
-              {
-                "x": 58.92,
-                "y": 30.31
-              }
-            ]
-          ],
-          "points_count": 2,
-          "points_preview": [
-            [
-              {
-                "x": 59.48,
-                "y": 38.44
-              },
-              {
-                "x": 50.98,
-                "y": 57.99
-              },
-              {
-                "x": 38.71,
-                "y": 44.35
-              },
-              {
-                "x": 39.41,
-                "y": 33.73
-              },
-              {
-                "x": 32.16,
-                "y": 37.2
-              },
-              {
-                "x": 64.36,
-                "y": 38.19
-              }
-            ],
-            [
-              {
-                "x": 52.09,
-                "y": 58.83
-              },
-              {
-                "x": 58.92,
-                "y": 30.31
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 0.0,
-          "clip_end": 60.5,
-          "video_duration": 60.5,
-          "annotator_unsure": true,
-          "video_source": "youtube",
-          "downloaded": true,
-          "category": "spatial reference"
-        },
-        {
-          "video_id": "-wuZqXDMszw",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-wuZqXDMszw.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-wuZqXDMszw.mp4",
-          "question": "find the man to the right of the table",
-          "label": "man right of table",
+          "video_id": "Zia24PptGPE",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/Zia24PptGPE.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/Zia24PptGPE.mp4",
+          "question": "find the top of the Chelsea logo",
+          "label": "top of Chelsea logo",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
@@ -1745,8 +1520,8 @@
           "points_full": [
             [
               {
-                "x": 65.87,
-                "y": 26.26
+                "x": 9.15,
+                "y": 6.55
               }
             ]
           ],
@@ -1754,47 +1529,53 @@
           "points_preview": [
             [
               {
-                "x": 65.87,
-                "y": 26.26
+                "x": 9.15,
+                "y": 6.55
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
           "clip_end": 2.0,
-          "video_duration": 108.0,
+          "video_duration": 76.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "spatial reference"
+          "category": "spatial reference",
+          "web_video_transcoded": true,
+          "quality_luma": 122.10861111111112
         },
         {
-          "video_id": "-C9DAh0aCvw",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-C9DAh0aCvw.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-C9DAh0aCvw.mp4",
-          "question": "find the cars behind Jay",
-          "label": "cars behind Jay",
-          "count": 2,
+          "video_id": "09ShmrUG6_k",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/09ShmrUG6_k.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/09ShmrUG6_k.mp4",
+          "question": "find the coins to the right of Mario",
+          "label": "coins right of Mario",
+          "count": 3,
           "timestamp_count": 2,
           "timestamps": [
-            13.0,
-            144.0
+            13.5,
+            15.5
           ],
           "raw_timestamps": [
-            13.013,
-            144.144
+            13.5,
+            15.5
           ],
           "points_full": [
             [
               {
-                "x": 21.61,
-                "y": 81.42
+                "x": 77.33,
+                "y": 55.52
+              },
+              {
+                "x": 86.58,
+                "y": 52.55
               }
             ],
             [
               {
-                "x": 42.16,
-                "y": 57.4
+                "x": 60.6,
+                "y": 43.2
               }
             ]
           ],
@@ -1802,45 +1583,51 @@
           "points_preview": [
             [
               {
-                "x": 21.61,
-                "y": 81.42
+                "x": 77.33,
+                "y": 55.52
+              },
+              {
+                "x": 86.58,
+                "y": 52.55
               }
             ],
             [
               {
-                "x": 42.16,
-                "y": 57.4
+                "x": 60.6,
+                "y": 43.2
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": null,
-          "clip_end": null,
-          "video_duration": 146.0,
-          "annotator_unsure": false,
+          "clip_start": 0.0,
+          "clip_end": 29.0,
+          "video_duration": 29.0,
+          "annotator_unsure": true,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "spatial reference"
+          "category": "spatial reference",
+          "web_video_transcoded": true,
+          "quality_luma": 65.744375
         },
         {
-          "video_id": "-o8ndJRX_bw",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-o8ndJRX_bw.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-o8ndJRX_bw.mp4",
-          "question": "find the beans to the left of the espresso machine",
-          "label": "beans left of espresso machine",
+          "video_id": "0Zi1GhcaXWU",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/0Zi1GhcaXWU.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0Zi1GhcaXWU.mp4",
+          "question": "find the rooster in front of the window",
+          "label": "rooster in front of window",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            38.5
+            6.5
           ],
           "raw_timestamps": [
-            38.5
+            6.5065
           ],
           "points_full": [
             [
               {
-                "x": 49.44,
-                "y": 58.38
+                "x": 62.29,
+                "y": 45.23
               }
             ]
           ],
@@ -1848,28 +1635,71 @@
           "points_preview": [
             [
               {
-                "x": 49.44,
-                "y": 58.38
+                "x": 62.29,
+                "y": 45.23
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 7.0,
-          "clip_end": 39.2,
-          "video_duration": 123.0,
+          "clip_start": 0.0,
+          "clip_end": 24.0,
+          "video_duration": 24.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "spatial reference"
+          "category": "spatial reference",
+          "web_video_transcoded": true,
+          "quality_luma": 123.27119278169015
+        },
+        {
+          "video_id": "-E9jSgjgLlk",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/-E9jSgjgLlk.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-E9jSgjgLlk.mp4",
+          "question": "find the center of the white plate",
+          "label": "center of white plate",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            12.5
+          ],
+          "raw_timestamps": [
+            12.5125
+          ],
+          "points_full": [
+            [
+              {
+                "x": 55.34,
+                "y": 72.18
+              }
+            ]
+          ],
+          "points_count": 1,
+          "points_preview": [
+            [
+              {
+                "x": 55.34,
+                "y": 72.18
+              }
+            ]
+          ],
+          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
+          "clip_start": 10.0,
+          "clip_end": 19.2,
+          "video_duration": 115.5,
+          "annotator_unsure": true,
+          "video_source": "youtube",
+          "downloaded": true,
+          "category": "spatial reference",
+          "web_video_transcoded": true,
+          "quality_luma": 120.44430555555556
         }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
+      ]
     },
     "anomaly": {
       "rows": 15204,
       "unique_video": 15204,
-      "covered_rows": 5396,
-      "covered_unique_video": 5396,
+      "covered_rows": 0,
+      "covered_unique_video": 4,
       "multi_timestamp_rows": 3456,
       "count_timestamp_mismatch_rows": 6134,
       "point_array_len_hist": {
@@ -1888,28 +1718,70 @@
       "note": {
         "class": "generated anomaly localization",
         "streaming": "Possible as anomaly detection, but separate from counting.",
-        "caveat": "Generated videos are now previewed when the local generated mp4 is present."
+        "caveat": "Generated videos are previewed only when non-black and decodable."
       },
       "samples": [
         {
-          "video_id": "sora2/text_and_symbols_127_v0",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/sora2_text_and_symbols_127_v0.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/text_and_symbols/text_and_symbols_127_v0.mp4",
+          "video_id": "sora2-1128/temporal_and_continuity_130_v1",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/sora2-1128_temporal_and_continuity_130_v1.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2-1128/temporal_and_continuity/temporal_and_continuity_130_v1.mp4",
+          "question": "find the visual anomalies in the video",
+          "label": "visual anomalies",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            0.0
+          ],
+          "raw_timestamps": [
+            0.0
+          ],
+          "points_full": [
+            [
+              {
+                "x": 17.39,
+                "y": 59.76
+              }
+            ]
+          ],
+          "points_count": 1,
+          "points_preview": [
+            [
+              {
+                "x": 17.39,
+                "y": 59.76
+              }
+            ]
+          ],
+          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
+          "clip_start": 0.0,
+          "clip_end": 12.0,
+          "video_duration": 12.0,
+          "annotator_unsure": false,
+          "video_source": "generated",
+          "downloaded": true,
+          "category": "anomaly",
+          "web_video_transcoded": true,
+          "quality_luma": 102.20706426056339
+        },
+        {
+          "video_id": "sora2/temporal_and_continuity_136_v1",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/sora2_temporal_and_continuity_136_v1.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/temporal_and_continuity/temporal_and_continuity_136_v1.mp4",
           "question": "find the visual artifacts in the video",
           "label": "visual artifacts",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
-            1.0
+            6.0
           ],
           "raw_timestamps": [
-            1.0
+            6.0
           ],
           "points_full": [
             [
               {
-                "x": 35.54,
-                "y": 59.83
+                "x": 47.78,
+                "y": 63.77
               }
             ]
           ],
@@ -1917,47 +1789,49 @@
           "points_preview": [
             [
               {
-                "x": 35.54,
-                "y": 59.83
+                "x": 47.78,
+                "y": 63.77
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 4.0,
-          "video_duration": 4.0,
+          "clip_end": 8.0,
+          "video_duration": 8.0,
           "annotator_unsure": false,
           "video_source": "generated",
           "downloaded": true,
-          "category": "anomaly"
+          "category": "anomaly",
+          "web_video_transcoded": true,
+          "quality_luma": 62.73222222222222
         },
         {
-          "video_id": "sora2/temporal_and_continuity_121_v0",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/sora2_temporal_and_continuity_121_v0.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/temporal_and_continuity/temporal_and_continuity_121_v0.mp4",
-          "question": "find the visual glitches in the video",
-          "label": "visual glitches",
+          "video_id": "sora2-1128/text_and_symbols_46_v1",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/sora2-1128_text_and_symbols_46_v1.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2-1128/text_and_symbols/text_and_symbols_46_v1.mp4",
+          "question": "find the flaws in the video",
+          "label": "flaws",
           "count": 2,
           "timestamp_count": 2,
           "timestamps": [
-            3.0,
-            3.5
+            2.5,
+            4.5
           ],
           "raw_timestamps": [
-            3.0,
-            3.5
+            2.5,
+            4.5
           ],
           "points_full": [
             [
               {
-                "x": 61.29,
-                "y": 36.46
+                "x": 44.17,
+                "y": 37.5
               }
             ],
             [
               {
-                "x": 53.43,
-                "y": 40.6
+                "x": 37.55,
+                "y": 30.22
               }
             ]
           ],
@@ -1965,32 +1839,34 @@
           "points_preview": [
             [
               {
-                "x": 61.29,
-                "y": 36.46
+                "x": 44.17,
+                "y": 37.5
               }
             ],
             [
               {
-                "x": 53.43,
-                "y": 40.6
+                "x": 37.55,
+                "y": 30.22
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 4.0,
-          "video_duration": 4.0,
-          "annotator_unsure": true,
+          "clip_end": 8.0,
+          "video_duration": 8.0,
+          "annotator_unsure": false,
           "video_source": "generated",
           "downloaded": true,
-          "category": "anomaly"
+          "category": "anomaly",
+          "web_video_transcoded": true,
+          "quality_luma": 85.90333333333334
         },
         {
-          "video_id": "sora2/text_and_symbols_109_v1",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/sora2_text_and_symbols_109_v1.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/text_and_symbols/text_and_symbols_109_v1.mp4",
-          "question": "find the visual distortions in the video",
-          "label": "visual distortions",
+          "video_id": "sora2-1128/geometry_and_camera_motion_167_v1",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/sora2-1128_geometry_and_camera_motion_167_v1.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2-1128/geometry_and_camera_motion/geometry_and_camera_motion_167_v1.mp4",
+          "question": "find the distortions in the video",
+          "label": "distortions",
           "count": 1,
           "timestamp_count": 1,
           "timestamps": [
@@ -2002,8 +1878,8 @@
           "points_full": [
             [
               {
-                "x": 79.22,
-                "y": 7.57
+                "x": 47.21,
+                "y": 81.0
               }
             ]
           ],
@@ -2011,8 +1887,8 @@
           "points_preview": [
             [
               {
-                "x": 79.22,
-                "y": 7.57
+                "x": 47.21,
+                "y": 81.0
               }
             ]
           ],
@@ -2023,86 +1899,17 @@
           "annotator_unsure": false,
           "video_source": "generated",
           "downloaded": true,
-          "category": "anomaly"
-        },
-        {
-          "video_id": "sora2/temporal_and_continuity_102_v0",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/sora2_temporal_and_continuity_102_v0.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/generated_videos/sora2/temporal_and_continuity/temporal_and_continuity_102_v0.mp4",
-          "question": "find the glitches in the video",
-          "label": "glitches",
-          "count": 4,
-          "timestamp_count": 2,
-          "timestamps": [
-            0.0,
-            3.5
-          ],
-          "raw_timestamps": [
-            0.0,
-            3.5
-          ],
-          "points_full": [
-            [
-              {
-                "x": 39.62,
-                "y": 54.66
-              },
-              {
-                "x": 51.91,
-                "y": 57.33
-              }
-            ],
-            [
-              {
-                "x": 46.7,
-                "y": 51.37
-              },
-              {
-                "x": 50.42,
-                "y": 52.03
-              }
-            ]
-          ],
-          "points_count": 2,
-          "points_preview": [
-            [
-              {
-                "x": 39.62,
-                "y": 54.66
-              },
-              {
-                "x": 51.91,
-                "y": 57.33
-              }
-            ],
-            [
-              {
-                "x": 46.7,
-                "y": 51.37
-              },
-              {
-                "x": 50.42,
-                "y": 52.03
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 0.0,
-          "clip_end": 4.0,
-          "video_duration": 4.0,
-          "annotator_unsure": true,
-          "video_source": "generated",
-          "downloaded": true,
-          "category": "anomaly"
+          "category": "anomaly",
+          "web_video_transcoded": true,
+          "quality_luma": 59.80398327464789
         }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
+      ]
     },
     "data": {
       "rows": 658340,
       "unique_video": 275837,
-      "covered_rows": 94355,
-      "covered_unique_video": 23553,
+      "covered_rows": 88959,
+      "covered_unique_video": 2,
       "multi_timestamp_rows": 229279,
       "count_timestamp_mismatch_rows": 250214,
       "point_array_len_hist": {
@@ -2127,223 +1934,154 @@
       },
       "samples": [
         {
-          "video_id": "I23qe88sy_E",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/I23qe88sy_E.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/I23qe88sy_E.mp4",
-          "question": "How many times do women pose for the camera at an event or in front of a backdrop?",
-          "label": "women pose for the camera at an event or in front of a backdrop",
-          "count": 11,
-          "timestamp_count": 11,
+          "video_id": "1t5wIhQ_9yQ",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/1t5wIhQ_9yQ.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/1t5wIhQ_9yQ.mp4",
+          "question": "How many shirt buttons are visible?",
+          "label": "shirt buttons",
+          "count": 3,
+          "timestamp_count": 1,
           "timestamps": [
-            0.0,
-            8.0,
-            14.5,
-            17.0,
-            22.5,
-            26.0,
-            29.5,
-            35.0,
-            45.5,
-            49.0,
-            61.5
+            43.5
           ],
           "raw_timestamps": [
-            0.0,
-            8.0,
-            14.5,
-            17.0,
-            22.5,
-            26.0,
-            29.5,
-            35.0,
-            45.5,
-            49.0,
-            61.5
+            43.5
           ],
           "points_full": [
-            [
-              {
-                "x": 48.55,
-                "y": 70.72
-              }
-            ],
-            [
-              {
-                "x": 46.33,
-                "y": 54.78
-              }
-            ],
-            [
-              {
-                "x": 40.32,
-                "y": 68.1
-              }
-            ],
             [
               {
                 "x": 44.33,
-                "y": 54.4
-              }
-            ],
-            [
+                "y": 66.36
+              },
               {
-                "x": 50.66,
-                "y": 63.41
-              }
-            ],
-            [
+                "x": 45.07,
+                "y": 74.45
+              },
               {
-                "x": 51.29,
-                "y": 64.34
-              }
-            ],
-            [
-              {
-                "x": 51.93,
-                "y": 64.72
-              }
-            ],
-            [
-              {
-                "x": 35.57,
-                "y": 74.29
-              }
-            ],
-            [
-              {
-                "x": 56.04,
-                "y": 66.03
-              }
-            ],
-            [
-              {
-                "x": 56.15,
-                "y": 76.35
-              }
-            ],
-            [
-              {
-                "x": 34.73,
-                "y": 91.73
+                "x": 45.81,
+                "y": 85.85
               }
             ]
           ],
-          "points_count": 11,
+          "points_count": 1,
           "points_preview": [
             [
               {
-                "x": 48.55,
-                "y": 70.72
-              }
-            ],
-            [
+                "x": 44.33,
+                "y": 66.36
+              },
               {
-                "x": 46.33,
-                "y": 54.78
-              }
-            ],
-            [
+                "x": 45.07,
+                "y": 74.45
+              },
               {
-                "x": 40.32,
-                "y": 68.1
+                "x": 45.81,
+                "y": 85.85
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 61.5,
-          "video_duration": 75.5,
+          "clip_end": 51.0,
+          "video_duration": 51.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "data"
+          "category": "data",
+          "web_video_transcoded": true,
+          "quality_luma": 88.16996038732394
         },
         {
-          "video_id": "-VuJHNjvRKg",
-          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint/-VuJHNjvRKg.mp4",
-          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-VuJHNjvRKg.mp4",
-          "question": "How many times do fans cheer in the stands?",
-          "label": "fans cheer in the stands",
-          "count": 5,
-          "timestamp_count": 5,
+          "video_id": "AgG9pI0ryHU",
+          "video_url": "https://czyuyue.github.io/streamo-videopoint/videos/videopoint_h264/AgG9pI0ryHU.mp4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/AgG9pI0ryHU.mp4",
+          "question": "How many houses are visible?",
+          "label": "houses",
+          "count": 7,
+          "timestamp_count": 1,
           "timestamps": [
-            7.5,
-            23.5,
-            36.0,
-            40.0,
-            55.5
+            7.5
           ],
           "raw_timestamps": [
-            7.5075,
-            23.5235,
-            36.036,
-            40.04,
-            55.5555
+            7.5075
           ],
           "points_full": [
             [
               {
-                "x": 38.63,
-                "y": 47.11
-              }
-            ],
-            [
+                "x": 20.13,
+                "y": 57.24
+              },
               {
-                "x": 44.79,
-                "y": 55.63
-              }
-            ],
-            [
+                "x": 38.65,
+                "y": 51.55
+              },
               {
-                "x": 48.21,
-                "y": 42.07
-              }
-            ],
-            [
+                "x": 49.43,
+                "y": 47.66
+              },
               {
-                "x": 58.87,
-                "y": 65.19
-              }
-            ],
-            [
+                "x": 65.1,
+                "y": 56.04
+              },
               {
-                "x": 58.58,
-                "y": 67.97
+                "x": 41.52,
+                "y": 37.48
+              },
+              {
+                "x": 10.19,
+                "y": 34.19
+              },
+              {
+                "x": 8.84,
+                "y": 51.85
               }
             ]
           ],
-          "points_count": 5,
+          "points_count": 1,
           "points_preview": [
             [
               {
-                "x": 38.63,
-                "y": 47.11
-              }
-            ],
-            [
+                "x": 20.13,
+                "y": 57.24
+              },
               {
-                "x": 44.79,
-                "y": 55.63
-              }
-            ],
-            [
+                "x": 38.65,
+                "y": 51.55
+              },
               {
-                "x": 48.21,
-                "y": 42.07
+                "x": 49.43,
+                "y": 47.66
+              },
+              {
+                "x": 65.1,
+                "y": 56.04
+              },
+              {
+                "x": 41.52,
+                "y": 37.48
+              },
+              {
+                "x": 10.19,
+                "y": 34.19
+              },
+              {
+                "x": 8.84,
+                "y": 51.85
               }
             ]
           ],
           "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
           "clip_start": 0.0,
-          "clip_end": 61.5,
-          "video_duration": 61.5,
+          "clip_end": 18.0,
+          "video_duration": 18.0,
           "annotator_unsure": false,
           "video_source": "youtube",
           "downloaded": true,
-          "category": "data"
+          "category": "data",
+          "web_video_transcoded": true,
+          "quality_luma": 111.94708333333334
         }
-      ],
-      "preview_note": "Preview shows only samples with public/local video (2/2 kept)."
+      ]
     }
   }
 }
