@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Streamo · Dataset Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="hero" style="padding:60px 0 36px">
+    <div class="wrap">
+      <div class="badge">Training data · proactive streaming + pointing + tracking</div>
+      <h1>Dataset Preview<span class="dot">.</span></h1>
+      <p class="tagline">Sample videos and annotation JSON for each dataset being prepared for streaming SFT — open-domain proactive data to boost generalization.</p>
+      <div class="hero-links">
+        <a class="lnk ghost" href="index.html">← Results</a>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="sources">
+      <div class="sec-head"><h2>All streaming-instruction data sources</h2>
+        <p class="muted" id="srcSub"></p></div>
+      <div id="srcWrap"></div>
+      <div class="rhythm-note" id="rhythmNote"></div>
+    </section>
+    <section id="joyaiBreakdown">
+      <div class="sec-head"><h2>JoyAI Annotation Breakdown</h2>
+        <p class="muted" id="joyaiSub"></p></div>
+      <div id="joyaiTaskBars"></div>
+      <div class="joyai-controls" id="joyaiControls"></div>
+      <div id="joyaiSourceBars"></div>
+    </section>
+    <section id="status">
+      <div class="sec-head"><h2>Preparation status</h2>
+        <p class="muted">What is ready, in progress, or still missing (videos not downloaded).</p></div>
+      <div class="table-card"><div id="statusTable"></div></div>
+    </section>
+    <section id="videopoint">
+      <div class="sec-head"><h2>Molmo2-VideoPoint Category Taxonomy</h2>
+        <p class="muted" id="videopointSub"></p></div>
+      <div id="videopointWrap"></div>
+    </section>
+    <section id="ds">
+      <div class="sec-head"><h2>Samples</h2>
+        <p class="muted">Sample videos + the full annotation per dataset, with timestamped events synced to the clip.</p></div>
+      <div id="dsWrap"></div>
+    </section>
+  </main>
+  <footer><div class="wrap">Streamo dataset preview · behavior-rhythm stats from the converted training JSON</div></footer>
+  <script src="datasets.js?v=videopoint-videos-20260703"></script>
+</body>
+</html>
