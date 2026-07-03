@@ -1,0 +1,2897 @@
+{
+  "root": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint",
+  "downloaded_mp4": 16449,
+  "categories": {
+    "action_or_event": {
+      "rows": 175168,
+      "unique_video": 66062,
+      "covered_rows": 28083,
+      "covered_unique_video": 8132,
+      "multi_timestamp_rows": 106572,
+      "count_timestamp_mismatch_rows": 22964,
+      "point_array_len_hist": {
+        "1": 50965,
+        "2": 32351,
+        "3": 22181,
+        "0": 17631,
+        "4": 14608,
+        "5": 9978,
+        "6": 6720,
+        "7": 4584
+      },
+      "video_sources": {
+        "youtube": 175168
+      },
+      "note": {
+        "class": "event/action count",
+        "streaming": "Usually suitable. Count each event when its annotated timestamp is reached.",
+        "caveat": "Some rows have count != len(timestamps), so use timestamps as supervision but keep count as final answer."
+      },
+      "samples": [
+        {
+          "video_id": "3BN9LL4LcoY",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/3BN9LL4LcoY.mp4",
+          "question": "How many times do Roman soldiers hold spears?",
+          "label": "Roman soldiers hold spears",
+          "count": 5,
+          "timestamp_count": 5,
+          "timestamps": [
+            9.5,
+            19.5,
+            24.5,
+            41.5,
+            59.5
+          ],
+          "raw_timestamps": [
+            9.5,
+            19.5,
+            24.5,
+            41.5,
+            59.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 24.84,
+                "y": 37.13
+              }
+            ],
+            [
+              {
+                "x": 14.77,
+                "y": 83.94
+              }
+            ],
+            [
+              {
+                "x": 5.19,
+                "y": 84.49
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 60.0,
+          "video_duration": 60.0,
+          "annotator_unsure": true,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/3BN9LL4LcoY.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "3BN9LL4LcoY",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/3BN9LL4LcoY.mp4",
+          "question": "How many times do Roman soldiers wear helmets with mohawk-like crests?",
+          "label": "Roman soldiers wear helmets with mohawk-like crests",
+          "count": 10,
+          "timestamp_count": 10,
+          "timestamps": [
+            0.5,
+            4.5,
+            9.0,
+            14.5,
+            29.5,
+            35.5,
+            42.0,
+            47.5,
+            58.0,
+            59.0
+          ],
+          "raw_timestamps": [
+            0.5,
+            4.5,
+            9.0,
+            14.5,
+            29.5,
+            35.5,
+            42.0,
+            47.5,
+            58.0,
+            59.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 47.92,
+                "y": 26.57
+              }
+            ],
+            [
+              {
+                "x": 52.42,
+                "y": 8.64
+              }
+            ],
+            [
+              {
+                "x": 46.65,
+                "y": 31.63
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 60.0,
+          "video_duration": 60.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/3BN9LL4LcoY.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "3BN9LL4LcoY",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/3BN9LL4LcoY.mp4",
+          "question": "How many times does motivational text appear on screen?",
+          "label": "motivational text appears on screen",
+          "count": 12,
+          "timestamp_count": 12,
+          "timestamps": [
+            2.0,
+            5.5,
+            9.5,
+            16.0,
+            19.5,
+            25.0,
+            31.0,
+            35.5,
+            41.5,
+            48.5,
+            54.0,
+            59.0
+          ],
+          "raw_timestamps": [
+            2.0,
+            5.5,
+            9.5,
+            16.0,
+            19.5,
+            25.0,
+            31.0,
+            35.5,
+            41.5,
+            48.5,
+            54.0,
+            59.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 46.26,
+                "y": 57.81
+              }
+            ],
+            [
+              {
+                "x": 52.42,
+                "y": 58.47
+              }
+            ],
+            [
+              {
+                "x": 28.46,
+                "y": 54.62
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 60.0,
+          "video_duration": 60.0,
+          "annotator_unsure": true,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/3BN9LL4LcoY.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "3BN9LL4LcoY",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/3BN9LL4LcoY.mp4",
+          "question": "How many times are Roman soldiers shown with shields?",
+          "label": "Roman soldiers are shown with shields",
+          "count": 4,
+          "timestamp_count": 4,
+          "timestamps": [
+            9.0,
+            14.0,
+            42.0,
+            59.0
+          ],
+          "raw_timestamps": [
+            9.0,
+            14.0,
+            42.0,
+            59.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 73.54,
+                "y": 72.72
+              }
+            ],
+            [
+              {
+                "x": 80.97,
+                "y": 82.23
+              }
+            ],
+            [
+              {
+                "x": 87.62,
+                "y": 69.36
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 60.0,
+          "video_duration": 60.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/3BN9LL4LcoY.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "6UmEHPMCZ60",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/6UmEHPMCZ60.mp4",
+          "question": "How many times are different houses shown in the video?",
+          "label": "different houses are shown",
+          "count": 11,
+          "timestamp_count": 6,
+          "timestamps": [
+            3.0,
+            9.0,
+            10.5,
+            13.0,
+            14.5,
+            16.5
+          ],
+          "raw_timestamps": [
+            3.0,
+            9.0,
+            10.5,
+            13.0,
+            14.5,
+            16.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 76.41,
+                "y": 62.22
+              }
+            ],
+            [
+              {
+                "x": 77.99,
+                "y": 41.6
+              },
+              {
+                "x": 74.44,
+                "y": 82.9
+              }
+            ],
+            [
+              {
+                "x": 74.44,
+                "y": 30.85
+              },
+              {
+                "x": 78.39,
+                "y": 61.83
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 30.0,
+          "video_duration": 30.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    },
+    "object": {
+      "rows": 267749,
+      "unique_video": 115992,
+      "covered_rows": 30916,
+      "covered_unique_video": 9724,
+      "multi_timestamp_rows": 104549,
+      "count_timestamp_mismatch_rows": 193978,
+      "point_array_len_hist": {
+        "1": 134738,
+        "2": 41523,
+        "0": 28462,
+        "3": 21145,
+        "4": 12515,
+        "5": 7811,
+        "6": 5128,
+        "7": 3557
+      },
+      "video_sources": {
+        "youtube": 267749
+      },
+      "note": {
+        "class": "object set count",
+        "streaming": "Not safe as first-seen count without extra tracking.",
+        "caveat": "Often one annotated frame with multiple points. It marks where objects are visible, not necessarily first appearance."
+      },
+      "samples": [
+        {
+          "video_id": "-tX10-uqLgE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-tX10-uqLgE.mp4",
+          "question": "How many black music stands are visible?",
+          "label": "black music stands",
+          "count": 0,
+          "timestamp_count": 0,
+          "timestamps": [],
+          "raw_timestamps": [],
+          "points_preview": [],
+          "clip_start": 0.0,
+          "clip_end": 58.0,
+          "video_duration": 58.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/-tX10-uqLgE.mp4"
+        },
+        {
+          "video_id": "-tX10-uqLgE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-tX10-uqLgE.mp4",
+          "question": "How many podium poles are visible?",
+          "label": "podium poles",
+          "count": 2,
+          "timestamp_count": 1,
+          "timestamps": [
+            1.0
+          ],
+          "raw_timestamps": [
+            1.0010000467300415
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 29.03,
+                "y": 85.01
+              },
+              {
+                "x": 89.45,
+                "y": 86.9
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 58.0,
+          "video_duration": 58.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/-tX10-uqLgE.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "-tX10-uqLgE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-tX10-uqLgE.mp4",
+          "question": "How many wall bricks are visible?",
+          "label": "wall bricks",
+          "count": 111,
+          "timestamp_count": 1,
+          "timestamps": [
+            6.5
+          ],
+          "raw_timestamps": [
+            6.506499767303467
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 1.97,
+                "y": 0.49
+              },
+              {
+                "x": 0.99,
+                "y": 1.6
+              },
+              {
+                "x": 7.5,
+                "y": 3.04
+              },
+              {
+                "x": 2.37,
+                "y": 4.93
+              },
+              {
+                "x": 5.13,
+                "y": 10.04
+              },
+              {
+                "x": 0.2,
+                "y": 12.71
+              },
+              {
+                "x": 5.92,
+                "y": 12.26
+              },
+              {
+                "x": 0.79,
+                "y": 15.26
+              },
+              {
+                "x": 1.38,
+                "y": 19.93
+              },
+              {
+                "x": 0.39,
+                "y": 17.7
+              },
+              {
+                "x": 5.53,
+                "y": 17.59
+              },
+              {
+                "x": 8.29,
+                "y": 7.49
+              },
+              {
+                "x": 1.97,
+                "y": 25.7
+              },
+              {
+                "x": 1.97,
+                "y": 22.37
+              },
+              {
+                "x": 2.17,
+                "y": 27.48
+              },
+              {
+                "x": 1.97,
+                "y": 30.26
+              },
+              {
+                "x": 0.2,
+                "y": 32.7
+              },
+              {
+                "x": 4.54,
+                "y": 32.81
+              },
+              {
+                "x": 2.17,
+                "y": 37.92
+              },
+              {
+                "x": 2.76,
+                "y": 35.25
+              },
+              {
+                "x": 2.17,
+                "y": 40.36
+              },
+              {
+                "x": 55.88,
+                "y": 0.38
+              },
+              {
+                "x": 71.48,
+                "y": 0.04
+              },
+              {
+                "x": 89.65,
+                "y": 0.38
+              },
+              {
+                "x": 65.95,
+                "y": 2.15
+              },
+              {
+                "x": 87.87,
+                "y": 1.38
+              },
+              {
+                "x": 82.54,
+                "y": 2.6
+              },
+              {
+                "x": 60.62,
+                "y": 5.04
+              },
+              {
+                "x": 76.22,
+                "y": 4.82
+              },
+              {
+                "x": 98.34,
+                "y": 4.71
+              },
+              {
+                "x": 54.7,
+                "y": 7.71
+              },
+              {
+                "x": 71.88,
+                "y": 7.26
+              },
+              {
+                "x": 98.93,
+                "y": 7.04
+              },
+              {
+                "x": 52.72,
+                "y": 10.15
+              },
+              {
+                "x": 61.61,
+                "y": 9.6
+              },
+              {
+                "x": 72.47,
+                "y": 10.04
+              },
+              {
+                "x": 98.14,
+                "y": 9.71
+              },
+              {
+                "x": 63.78,
+                "y": 12.26
+              },
+              {
+                "x": 92.21,
+                "y": 11.71
+              },
+              {
+                "x": 53.12,
+                "y": 12.04
+              },
+              {
+                "x": 53.12,
+                "y": 14.7
+              },
+              {
+                "x": 53.12,
+                "y": 16.82
+              },
+              {
+                "x": 53.91,
+                "y": 19.37
+              },
+              {
+                "x": 53.91,
+                "y": 21.48
+              },
+              {
+                "x": 53.71,
+                "y": 24.04
+              },
+              {
+                "x": 57.07,
+                "y": 26.92
+              },
+              {
+                "x": 55.49,
+                "y": 30.03
+              },
+              {
+                "x": 54.7,
+                "y": 32.14
+              },
+              {
+                "x": 55.09,
+                "y": 35.03
+              },
+              {
+                "x": 57.07,
+                "y": 37.03
+              },
+              {
+                "x": 71.88,
+                "y": 24.37
+              },
+              {
+                "x": 72.27,
+                "y": 29.37
+              },
+              {
+                "x": 78.39,
+                "y": 26.7
+              },
+              {
+                "x": 69.11,
+                "y": 32.14
+              },
+              {
+                "x": 70.1,
+                "y": 36.59
+              },
+              {
+                "x": 69.11,
+                "y": 39.47
+              },
+              {
+                "x": 78.39,
+                "y": 41.92
+              },
+              {
+                "x": 85.11,
+                "y": 36.48
+              },
+              {
+                "x": 82.54,
+                "y": 39.47
+              },
+              {
+                "x": 77.8,
+                "y": 44.47
+              },
+              {
+                "x": 88.66,
+                "y": 44.69
+              },
+              {
+                "x": 83.72,
+                "y": 17.04
+              },
+              {
+                "x": 96.16,
+                "y": 14.7
+              },
+              {
+                "x": 69.9,
+                "y": 14.04
+              },
+              {
+                "x": 77.4,
+                "y": 19.26
+              },
+              {
+                "x": 88.66,
+                "y": 21.48
+              },
+              {
+                "x": 90.24,
+                "y": 24.04
+              },
+              {
+                "x": 94.58,
+                "y": 26.37
+              },
+              {
+                "x": 91.42,
+                "y": 29.03
+              },
+              {
+                "x": 84.12,
+                "y": 31.92
+              },
+              {
+                "x": 99.52,
+                "y": 31.25
+              },
+              {
+                "x": 89.65,
+                "y": 34.36
+              },
+              {
+                "x": 97.94,
+                "y": 34.03
+              },
+              {
+                "x": 99.32,
+                "y": 36.59
+              },
+              {
+                "x": 99.92,
+                "y": 39.14
+              },
+              {
+                "x": 96.36,
+                "y": 41.7
+              },
+              {
+                "x": 98.34,
+                "y": 46.8
+              },
+              {
+                "x": 85.3,
+                "y": 46.92
+              },
+              {
+                "x": 92.02,
+                "y": 49.47
+              },
+              {
+                "x": 87.67,
+                "y": 53.91
+              },
+              {
+                "x": 96.36,
+                "y": 52.36
+              },
+              {
+                "x": 96.36,
+                "y": 54.14
+              },
+              {
+                "x": 91.23,
+                "y": 56.14
+              },
+              {
+                "x": 98.93,
+                "y": 56.47
+              },
+              {
+                "x": 94.58,
+                "y": 58.36
+              },
+              {
+                "x": 99.72,
+                "y": 59.02
+              },
+              {
+                "x": 98.53,
+                "y": 61.8
+              },
+              {
+                "x": 68.91,
+                "y": 64.74
+              },
+              {
+                "x": 69.7,
+                "y": 67.08
+              },
+              {
+                "x": 74.84,
+                "y": 68.96
+              },
+              {
+                "x": 70.49,
+                "y": 70.85
+              },
+              {
+                "x": 66.35,
+                "y": 69.07
+              },
+              {
+                "x": 79.97,
+                "y": 71.07
+              },
+              {
+                "x": 68.72,
+                "y": 75.41
+              },
+              {
+                "x": 77.4,
+                "y": 89.4
+              },
+              {
+                "x": 81.55,
+                "y": 87.4
+              },
+              {
+                "x": 96.16,
+                "y": 87.29
+              },
+              {
+                "x": 96.76,
+                "y": 89.51
+              },
+              {
+                "x": 95.77,
+                "y": 91.29
+              },
+              {
+                "x": 99.32,
+                "y": 91.51
+              },
+              {
+                "x": 65.36,
+                "y": 94.29
+              },
+              {
+                "x": 84.71,
+                "y": 94.18
+              },
+              {
+                "x": 72.86,
+                "y": 91.73
+              },
+              {
+                "x": 70.3,
+                "y": 99.29
+              },
+              {
+                "x": 74.05,
+                "y": 94.07
+              },
+              {
+                "x": 73.26,
+                "y": 96.4
+              },
+              {
+                "x": 78.39,
+                "y": 99.06
+              },
+              {
+                "x": 83.72,
+                "y": 96.51
+              },
+              {
+                "x": 96.56,
+                "y": 93.84
+              },
+              {
+                "x": 96.56,
+                "y": 96.73
+              },
+              {
+                "x": 96.76,
+                "y": 99.4
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 58.0,
+          "video_duration": 58.0,
+          "annotator_unsure": true,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/-tX10-uqLgE.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "taZYrAxqVik",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/taZYrAxqVik.mp4",
+          "question": "How many green frogs are visible?",
+          "label": "green frogs",
+          "count": 15,
+          "timestamp_count": 5,
+          "timestamps": [
+            7.5,
+            11.5,
+            18.5,
+            21.0,
+            28.5
+          ],
+          "raw_timestamps": [
+            7.5,
+            11.5,
+            18.5,
+            21.0,
+            28.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 75.88,
+                "y": 62.98
+              },
+              {
+                "x": 49.52,
+                "y": 61.84
+              },
+              {
+                "x": 29.42,
+                "y": 60.49
+              }
+            ],
+            [
+              {
+                "x": 79.94,
+                "y": 59.57
+              },
+              {
+                "x": 27.57,
+                "y": 59.47
+              }
+            ],
+            [
+              {
+                "x": 54.13,
+                "y": 53.98
+              },
+              {
+                "x": 91.56,
+                "y": 31.26
+              },
+              {
+                "x": 54.49,
+                "y": 33.23
+              },
+              {
+                "x": 30.15,
+                "y": 28.98
+              },
+              {
+                "x": 14.85,
+                "y": 32.2
+              },
+              {
+                "x": 5.26,
+                "y": 42.78
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 42.0,
+          "video_duration": 42.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "taZYrAxqVik",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/taZYrAxqVik.mp4",
+          "question": "How many birds are flying in the sky?",
+          "label": "birds in the sky",
+          "count": 25,
+          "timestamp_count": 1,
+          "timestamps": [
+            11.5
+          ],
+          "raw_timestamps": [
+            11.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 2.13,
+                "y": 31.8
+              },
+              {
+                "x": 7.1,
+                "y": 29.21
+              },
+              {
+                "x": 15.4,
+                "y": 33.15
+              },
+              {
+                "x": 19.09,
+                "y": 31.39
+              },
+              {
+                "x": 23.15,
+                "y": 33.15
+              },
+              {
+                "x": 21.12,
+                "y": 43.52
+              },
+              {
+                "x": 8.4,
+                "y": 52.03
+              },
+              {
+                "x": 26.28,
+                "y": 28.17
+              },
+              {
+                "x": 17.98,
+                "y": 17.7
+              },
+              {
+                "x": 34.58,
+                "y": 17.8
+              },
+              {
+                "x": 31.63,
+                "y": 30.25
+              },
+              {
+                "x": 36.98,
+                "y": 34.91
+              },
+              {
+                "x": 44.54,
+                "y": 34.71
+              },
+              {
+                "x": 40.85,
+                "y": 31.18
+              },
+              {
+                "x": 42.32,
+                "y": 26.51
+              },
+              {
+                "x": 48.96,
+                "y": 31.7
+              },
+              {
+                "x": 55.6,
+                "y": 39.37
+              },
+              {
+                "x": 59.66,
+                "y": 35.64
+              },
+              {
+                "x": 72.57,
+                "y": 34.71
+              },
+              {
+                "x": 73.67,
+                "y": 31.8
+              },
+              {
+                "x": 71.64,
+                "y": 28.07
+              },
+              {
+                "x": 76.81,
+                "y": 21.22
+              },
+              {
+                "x": 65.37,
+                "y": 20.81
+              },
+              {
+                "x": 71.83,
+                "y": 18.42
+              },
+              {
+                "x": 81.97,
+                "y": 18.21
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 42.0,
+          "video_duration": 42.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    },
+    "animal": {
+      "rows": 23750,
+      "unique_video": 17917,
+      "covered_rows": 0,
+      "covered_unique_video": 0,
+      "multi_timestamp_rows": 3894,
+      "count_timestamp_mismatch_rows": 9961,
+      "point_array_len_hist": {
+        "1": 18254,
+        "2": 2296,
+        "0": 1602,
+        "3": 737,
+        "4": 355,
+        "5": 195,
+        "6": 105,
+        "7": 53
+      },
+      "video_sources": {
+        "MammalNet": 23750
+      },
+      "note": {
+        "class": "object/entity set count",
+        "streaming": "Not safe as first-seen count without identity tracking.",
+        "caveat": "Usually counts distinct animals in a frame/clip; timestamp may be representative, not first appearance."
+      },
+      "samples": [
+        {
+          "video_id": "93iDUGAcY3s",
+          "video_path": null,
+          "question": "How many different chimpanzees are visible?",
+          "label": "chimpanzees",
+          "count": 2,
+          "timestamp_count": 1,
+          "timestamps": [
+            28.5
+          ],
+          "raw_timestamps": [
+            28.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 40.23,
+                "y": 46.93
+              },
+              {
+                "x": 92.32,
+                "y": 47.46
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 35.0,
+          "video_duration": 35.0,
+          "annotator_unsure": false,
+          "video_source": "MammalNet",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "32GWBC-5zgI",
+          "video_path": null,
+          "question": "How many different white-tailed deer are visible?",
+          "label": "white-tailed deer",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            4.5
+          ],
+          "raw_timestamps": [
+            4.504499912261963
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 37.53,
+                "y": 26.53
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 16.0,
+          "video_duration": 16.0,
+          "annotator_unsure": false,
+          "video_source": "MammalNet",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "F1HlqYqhlHA_2",
+          "video_path": null,
+          "question": "How many different lions are visible?",
+          "label": "lions",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            1.0
+          ],
+          "raw_timestamps": [
+            1.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 52.91,
+                "y": 27.71
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 13.0,
+          "video_duration": 13.0,
+          "annotator_unsure": false,
+          "video_source": "MammalNet",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "F1HlqYqhlHA_2",
+          "video_path": null,
+          "question": "How many different giraffes are visible?",
+          "label": "giraffes",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            6.5
+          ],
+          "raw_timestamps": [
+            6.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 38.14,
+                "y": 34.4
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 13.0,
+          "video_duration": 13.0,
+          "annotator_unsure": false,
+          "video_source": "MammalNet",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "KAGMnDcqlp4",
+          "video_path": null,
+          "question": "How many different moose are visible?",
+          "label": "moose",
+          "count": 2,
+          "timestamp_count": 2,
+          "timestamps": [
+            0.0,
+            2.5
+          ],
+          "raw_timestamps": [
+            0.0,
+            2.4000000953674316
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 37.06,
+                "y": 40.82
+              }
+            ],
+            [
+              {
+                "x": 58.0,
+                "y": 49.98
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 7.5,
+          "video_duration": 7.5,
+          "annotator_unsure": false,
+          "video_source": "MammalNet",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    },
+    "comparative reference": {
+      "rows": 48015,
+      "unique_video": 48015,
+      "covered_rows": 1645,
+      "covered_unique_video": 1645,
+      "multi_timestamp_rows": 1154,
+      "count_timestamp_mismatch_rows": 1575,
+      "point_array_len_hist": {
+        "1": 46192,
+        "2": 741,
+        "0": 669,
+        "3": 184,
+        "4": 89,
+        "5": 52,
+        "6": 19,
+        "7": 17
+      },
+      "video_sources": {
+        "youtube": 48015
+      },
+      "note": {
+        "class": "single-object localization",
+        "streaming": "Not a count task. Can be converted to 'respond when target is visible' localization.",
+        "caveat": "Mostly count=1; annotation is target point for a comparative phrase."
+      },
+      "samples": [
+        {
+          "video_id": "1mXG7stIHaA",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/1mXG7stIHaA.mp4",
+          "question": "find the highest floating island",
+          "label": "highest floating island",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            15.0
+          ],
+          "raw_timestamps": [
+            15.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 20.74,
+                "y": 37.29
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 60.0,
+          "video_duration": 60.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/1mXG7stIHaA.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "p6jAexO1jrg",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/p6jAexO1jrg.mp4",
+          "question": "find the largest building",
+          "label": "largest building",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            13.5
+          ],
+          "raw_timestamps": [
+            12.960000038146973
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 26.83,
+                "y": 51.38
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 15.5,
+          "video_duration": 15.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "bwOW1zShkUI",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/bwOW1zShkUI.mp4",
+          "question": "find the lowest hand",
+          "label": "lowest hand",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            5.0
+          ],
+          "raw_timestamps": [
+            5.005000114440918
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 30.13,
+                "y": 84.49
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 17.0,
+          "video_duration": 17.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "0NiEpvrJlK4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0NiEpvrJlK4.mp4",
+          "question": "find the longest potato",
+          "label": "longest potato",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            12.5
+          ],
+          "raw_timestamps": [
+            12.512499809265137
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 50.53,
+                "y": 56.71
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 56.0,
+          "video_duration": 56.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "0BK2YwhlFGI",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0BK2YwhlFGI.mp4",
+          "question": "find the highest red bar",
+          "label": "highest red bar",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            2.0
+          ],
+          "raw_timestamps": [
+            2.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 60.03,
+                "y": 40.74
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 24.0,
+          "video_duration": 24.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    },
+    "indirect reference": {
+      "rows": 39567,
+      "unique_video": 13389,
+      "covered_rows": 7927,
+      "covered_unique_video": 2683,
+      "multi_timestamp_rows": 2409,
+      "count_timestamp_mismatch_rows": 2410,
+      "point_array_len_hist": {
+        "1": 35627,
+        "0": 1531,
+        "2": 1462,
+        "3": 441,
+        "4": 191,
+        "5": 121,
+        "6": 59,
+        "7": 45
+      },
+      "video_sources": {
+        "youtube": 39567
+      },
+      "note": {
+        "class": "single-object localization",
+        "streaming": "Not a count task. Can be converted to first confident target visibility.",
+        "caveat": "Requires resolving an indirect description."
+      },
+      "samples": [
+        {
+          "video_id": "JWLKBTT0l2M",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/JWLKBTT0l2M.mp4",
+          "question": "find the object that stores electrical energy to start the engine",
+          "label": "thing that stores electrical energy to start the engine",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            4.5
+          ],
+          "raw_timestamps": [
+            4.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 47.39,
+                "y": 30.66
+              }
+            ]
+          ],
+          "clip_start": 0.5,
+          "clip_end": 5.9,
+          "video_duration": 154.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/JWLKBTT0l2M.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "JWLKBTT0l2M",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/JWLKBTT0l2M.mp4",
+          "question": "find the mirror-like circle at the wheel center",
+          "label": "mirror-like circle at the wheel center",
+          "count": 3,
+          "timestamp_count": 1,
+          "timestamps": [
+            121.0
+          ],
+          "raw_timestamps": [
+            121.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 56.47,
+                "y": 81.53
+              },
+              {
+                "x": 50.75,
+                "y": 91.35
+              },
+              {
+                "x": 58.45,
+                "y": 97.65
+              }
+            ]
+          ],
+          "clip_start": 98.5,
+          "clip_end": 124.7,
+          "video_duration": 154.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/JWLKBTT0l2M.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "JWLKBTT0l2M",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/JWLKBTT0l2M.mp4",
+          "question": "find the support that would hold the car up after a lift",
+          "label": "support that would hold the car up after a lift",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            132.5
+          ],
+          "raw_timestamps": [
+            132.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 51.14,
+                "y": 76.23
+              }
+            ]
+          ],
+          "clip_start": 110.0,
+          "clip_end": 134.9,
+          "video_duration": 154.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/JWLKBTT0l2M.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "LbcOiIa1lPE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/LbcOiIa1lPE.mp4",
+          "question": "find the object you would turn to open the entrance",
+          "label": "thing you would turn to open the entrance",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            11.5
+          ],
+          "raw_timestamps": [
+            11.511500358581543
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 6.32,
+                "y": 41.52
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 54.5,
+          "video_duration": 54.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "LbcOiIa1lPE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/LbcOiIa1lPE.mp4",
+          "question": "find the container whose inside gleams like metal atop the black book",
+          "label": "container whose inside gleams like metal atop the black book",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            16.5
+          ],
+          "raw_timestamps": [
+            16.51650047302246
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 39.71,
+                "y": 48.71
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 54.5,
+          "video_duration": 54.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    },
+    "referring expression": {
+      "rows": 60902,
+      "unique_video": 20846,
+      "covered_rows": 8720,
+      "covered_unique_video": 2971,
+      "multi_timestamp_rows": 3404,
+      "count_timestamp_mismatch_rows": 2783,
+      "point_array_len_hist": {
+        "1": 54990,
+        "0": 2508,
+        "2": 2268,
+        "3": 509,
+        "4": 230,
+        "5": 128,
+        "6": 93,
+        "7": 46
+      },
+      "video_sources": {
+        "youtube": 60902
+      },
+      "note": {
+        "class": "single-object localization",
+        "streaming": "Not a count task. Can be converted to target grounding when visible.",
+        "caveat": "Usually one target selected by language expression."
+      },
+      "samples": [
+        {
+          "video_id": "ipWmD20rJkw",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/ipWmD20rJkw.mp4",
+          "question": "find the deer that grazes near the small tree with yellow leaves",
+          "label": "deer that grazes near yellow-leaved tree",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            35.5
+          ],
+          "raw_timestamps": [
+            35.535499572753906
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 56.42,
+                "y": 60.87
+              }
+            ]
+          ],
+          "clip_start": 7.0,
+          "clip_end": 36.3,
+          "video_duration": 92.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/ipWmD20rJkw.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "ipWmD20rJkw",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/ipWmD20rJkw.mp4",
+          "question": "find the buck with the largest antlers visible in the video",
+          "label": "buck with largest antlers",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            73.5
+          ],
+          "raw_timestamps": [
+            73.57350158691406
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 58.81,
+                "y": 63.45
+              }
+            ]
+          ],
+          "clip_start": 51.0,
+          "clip_end": 75.5,
+          "video_duration": 92.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/ipWmD20rJkw.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "ipWmD20rJkw",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/ipWmD20rJkw.mp4",
+          "question": "find the deer lying down beneath a bush in the snow",
+          "label": "deer lying beneath bush in snow",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            19.5
+          ],
+          "raw_timestamps": [
+            19.519500732421875
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 37.04,
+                "y": 52.38
+              }
+            ]
+          ],
+          "clip_start": 3.5,
+          "clip_end": 20.6,
+          "video_duration": 92.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/ipWmD20rJkw.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "0JJYdHw7Lu4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0JJYdHw7Lu4.mp4",
+          "question": "find the woman who bows her head and presses her temples",
+          "label": "woman who bows her head and presses her temples",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            37.0
+          ],
+          "raw_timestamps": [
+            37.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 52.0,
+                "y": 48.91
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 55.5,
+          "video_duration": 55.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "0JJYdHw7Lu4",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/0JJYdHw7Lu4.mp4",
+          "question": "find the man who eats a sandwich while glancing to his left",
+          "label": "man who eats a sandwich while glancing left",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            40.0
+          ],
+          "raw_timestamps": [
+            40.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 53.38,
+                "y": 28.36
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 55.5,
+          "video_duration": 55.5,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    },
+    "spatial reference": {
+      "rows": 27985,
+      "unique_video": 9640,
+      "covered_rows": 3010,
+      "covered_unique_video": 1031,
+      "multi_timestamp_rows": 3841,
+      "count_timestamp_mismatch_rows": 10409,
+      "point_array_len_hist": {
+        "1": 22701,
+        "2": 2260,
+        "0": 1443,
+        "3": 759,
+        "4": 330,
+        "5": 160,
+        "6": 106,
+        "7": 57
+      },
+      "video_sources": {
+        "youtube": 27985
+      },
+      "note": {
+        "class": "single-object/part localization",
+        "streaming": "Not a count task. Can be converted to spatial grounding when visible.",
+        "caveat": "Often points to an object part or spatially-defined target."
+      },
+      "samples": [
+        {
+          "video_id": "Zia24PptGPE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/Zia24PptGPE.mp4",
+          "question": "find the top of the Chelsea logo",
+          "label": "top of Chelsea logo",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            0.0
+          ],
+          "raw_timestamps": [
+            0.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 9.15,
+                "y": 6.55
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 2.0,
+          "video_duration": 76.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/Zia24PptGPE.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "Zia24PptGPE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/Zia24PptGPE.mp4",
+          "question": "find the player atop the pole",
+          "label": "player atop pole",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            31.0
+          ],
+          "raw_timestamps": [
+            31.0310001373291
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 64.04,
+                "y": 52.72
+              }
+            ]
+          ],
+          "clip_start": 20.0,
+          "clip_end": 36.0,
+          "video_duration": 76.0,
+          "annotator_unsure": true,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/Zia24PptGPE.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "Zia24PptGPE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/Zia24PptGPE.mp4",
+          "question": "find the buildings near the stadium",
+          "label": "buildings near stadium",
+          "count": 2,
+          "timestamp_count": 1,
+          "timestamps": [
+            6.0
+          ],
+          "raw_timestamps": [
+            6.00600004196167
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 1.42,
+                "y": 42.24
+              },
+              {
+                "x": 85.04,
+                "y": 24.56
+              }
+            ]
+          ],
+          "clip_start": 5.0,
+          "clip_end": 12.9,
+          "video_duration": 76.0,
+          "annotator_unsure": true,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/Zia24PptGPE.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "09ShmrUG6_k",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/09ShmrUG6_k.mp4",
+          "question": "find the entry of the brown tunnel",
+          "label": "entry of brown tunnel",
+          "count": 0,
+          "timestamp_count": 0,
+          "timestamps": [],
+          "raw_timestamps": [],
+          "points_preview": [],
+          "clip_start": 0.0,
+          "clip_end": 29.0,
+          "video_duration": 29.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true
+        },
+        {
+          "video_id": "09ShmrUG6_k",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/09ShmrUG6_k.mp4",
+          "question": "find the coins to the right of Mario",
+          "label": "coins right of Mario",
+          "count": 3,
+          "timestamp_count": 2,
+          "timestamps": [
+            13.5,
+            15.5
+          ],
+          "raw_timestamps": [
+            13.5,
+            15.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 77.33,
+                "y": 55.52
+              },
+              {
+                "x": 86.58,
+                "y": 52.55
+              }
+            ],
+            [
+              {
+                "x": 60.6,
+                "y": 43.2
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 29.0,
+          "video_duration": 29.0,
+          "annotator_unsure": true,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    },
+    "anomaly": {
+      "rows": 15204,
+      "unique_video": 15204,
+      "covered_rows": 0,
+      "covered_unique_video": 0,
+      "multi_timestamp_rows": 3456,
+      "count_timestamp_mismatch_rows": 6134,
+      "point_array_len_hist": {
+        "1": 10491,
+        "2": 2195,
+        "0": 1257,
+        "3": 726,
+        "4": 311,
+        "5": 100,
+        "6": 52,
+        "7": 26
+      },
+      "video_sources": {
+        "generated": 15204
+      },
+      "note": {
+        "class": "generated anomaly localization",
+        "streaming": "Possible as anomaly detection, but separate from counting.",
+        "caveat": "Generated videos; some rows have count=0 and no points."
+      },
+      "samples": [
+        {
+          "video_id": "sora2-1128/temporal_and_continuity_130_v1",
+          "video_path": null,
+          "question": "find the visual anomalies in the video",
+          "label": "visual anomalies",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            0.0
+          ],
+          "raw_timestamps": [
+            0.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 17.39,
+                "y": 59.76
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 12.0,
+          "video_duration": 12.0,
+          "annotator_unsure": false,
+          "video_source": "generated",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "sora2/human_anatomy_and_interaction_119_v1",
+          "video_path": null,
+          "question": "find the visual issues in the video",
+          "label": "visual issues",
+          "count": 0,
+          "timestamp_count": 0,
+          "timestamps": [],
+          "raw_timestamps": [],
+          "points_preview": [],
+          "clip_start": 0.0,
+          "clip_end": 4.0,
+          "video_duration": 4.0,
+          "annotator_unsure": false,
+          "video_source": "generated",
+          "downloaded": false
+        },
+        {
+          "video_id": "sora2/text_and_symbols_31_v1",
+          "video_path": null,
+          "question": "find the visual anomalies in the video",
+          "label": "visual anomalies",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            1.0
+          ],
+          "raw_timestamps": [
+            1.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 29.44,
+                "y": 61.5
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 4.0,
+          "video_duration": 4.0,
+          "annotator_unsure": false,
+          "video_source": "generated",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "sora2/temporal_and_continuity_136_v1",
+          "video_path": null,
+          "question": "find the visual artifacts in the video",
+          "label": "visual artifacts",
+          "count": 1,
+          "timestamp_count": 1,
+          "timestamps": [
+            6.0
+          ],
+          "raw_timestamps": [
+            6.0
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 47.78,
+                "y": 63.77
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 8.0,
+          "video_duration": 8.0,
+          "annotator_unsure": false,
+          "video_source": "generated",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "sora2-1128/text_and_symbols_46_v1",
+          "video_path": null,
+          "question": "find the flaws in the video",
+          "label": "flaws",
+          "count": 2,
+          "timestamp_count": 2,
+          "timestamps": [
+            2.5,
+            4.5
+          ],
+          "raw_timestamps": [
+            2.5,
+            4.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 44.17,
+                "y": 37.5
+              }
+            ],
+            [
+              {
+                "x": 37.55,
+                "y": 30.22
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 8.0,
+          "video_duration": 8.0,
+          "annotator_unsure": false,
+          "video_source": "generated",
+          "downloaded": false,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    },
+    "data": {
+      "rows": 658340,
+      "unique_video": 275837,
+      "covered_rows": 80301,
+      "covered_unique_video": 16359,
+      "multi_timestamp_rows": 229279,
+      "count_timestamp_mismatch_rows": 250214,
+      "point_array_len_hist": {
+        "1": 373958,
+        "2": 85096,
+        "0": 55103,
+        "3": 46682,
+        "4": 28629,
+        "5": 18545,
+        "6": 12282,
+        "7": 8385
+      },
+      "video_sources": {
+        "youtube": 619386,
+        "MammalNet": 23750,
+        "generated": 15204
+      },
+      "note": {
+        "class": "mixed aggregate",
+        "streaming": "Do not use directly; split by category/video_source first.",
+        "caveat": "This appears to be an aggregate parquet containing multiple source categories."
+      },
+      "samples": [
+        {
+          "video_id": "-tX10-uqLgE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-tX10-uqLgE.mp4",
+          "question": "How many black music stands are visible?",
+          "label": "black music stands",
+          "count": 0,
+          "timestamp_count": 0,
+          "timestamps": [],
+          "raw_timestamps": [],
+          "points_preview": [],
+          "clip_start": 0.0,
+          "clip_end": 58.0,
+          "video_duration": 58.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/-tX10-uqLgE.mp4"
+        },
+        {
+          "video_id": "-tX10-uqLgE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-tX10-uqLgE.mp4",
+          "question": "How many podium poles are visible?",
+          "label": "podium poles",
+          "count": 2,
+          "timestamp_count": 1,
+          "timestamps": [
+            1.0
+          ],
+          "raw_timestamps": [
+            1.0010000467300415
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 29.03,
+                "y": 85.01
+              },
+              {
+                "x": 89.45,
+                "y": 86.9
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 58.0,
+          "video_duration": 58.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/-tX10-uqLgE.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "-tX10-uqLgE",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/-tX10-uqLgE.mp4",
+          "question": "How many wall bricks are visible?",
+          "label": "wall bricks",
+          "count": 111,
+          "timestamp_count": 1,
+          "timestamps": [
+            6.5
+          ],
+          "raw_timestamps": [
+            6.506499767303467
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 1.97,
+                "y": 0.49
+              },
+              {
+                "x": 0.99,
+                "y": 1.6
+              },
+              {
+                "x": 7.5,
+                "y": 3.04
+              },
+              {
+                "x": 2.37,
+                "y": 4.93
+              },
+              {
+                "x": 5.13,
+                "y": 10.04
+              },
+              {
+                "x": 0.2,
+                "y": 12.71
+              },
+              {
+                "x": 5.92,
+                "y": 12.26
+              },
+              {
+                "x": 0.79,
+                "y": 15.26
+              },
+              {
+                "x": 1.38,
+                "y": 19.93
+              },
+              {
+                "x": 0.39,
+                "y": 17.7
+              },
+              {
+                "x": 5.53,
+                "y": 17.59
+              },
+              {
+                "x": 8.29,
+                "y": 7.49
+              },
+              {
+                "x": 1.97,
+                "y": 25.7
+              },
+              {
+                "x": 1.97,
+                "y": 22.37
+              },
+              {
+                "x": 2.17,
+                "y": 27.48
+              },
+              {
+                "x": 1.97,
+                "y": 30.26
+              },
+              {
+                "x": 0.2,
+                "y": 32.7
+              },
+              {
+                "x": 4.54,
+                "y": 32.81
+              },
+              {
+                "x": 2.17,
+                "y": 37.92
+              },
+              {
+                "x": 2.76,
+                "y": 35.25
+              },
+              {
+                "x": 2.17,
+                "y": 40.36
+              },
+              {
+                "x": 55.88,
+                "y": 0.38
+              },
+              {
+                "x": 71.48,
+                "y": 0.04
+              },
+              {
+                "x": 89.65,
+                "y": 0.38
+              },
+              {
+                "x": 65.95,
+                "y": 2.15
+              },
+              {
+                "x": 87.87,
+                "y": 1.38
+              },
+              {
+                "x": 82.54,
+                "y": 2.6
+              },
+              {
+                "x": 60.62,
+                "y": 5.04
+              },
+              {
+                "x": 76.22,
+                "y": 4.82
+              },
+              {
+                "x": 98.34,
+                "y": 4.71
+              },
+              {
+                "x": 54.7,
+                "y": 7.71
+              },
+              {
+                "x": 71.88,
+                "y": 7.26
+              },
+              {
+                "x": 98.93,
+                "y": 7.04
+              },
+              {
+                "x": 52.72,
+                "y": 10.15
+              },
+              {
+                "x": 61.61,
+                "y": 9.6
+              },
+              {
+                "x": 72.47,
+                "y": 10.04
+              },
+              {
+                "x": 98.14,
+                "y": 9.71
+              },
+              {
+                "x": 63.78,
+                "y": 12.26
+              },
+              {
+                "x": 92.21,
+                "y": 11.71
+              },
+              {
+                "x": 53.12,
+                "y": 12.04
+              },
+              {
+                "x": 53.12,
+                "y": 14.7
+              },
+              {
+                "x": 53.12,
+                "y": 16.82
+              },
+              {
+                "x": 53.91,
+                "y": 19.37
+              },
+              {
+                "x": 53.91,
+                "y": 21.48
+              },
+              {
+                "x": 53.71,
+                "y": 24.04
+              },
+              {
+                "x": 57.07,
+                "y": 26.92
+              },
+              {
+                "x": 55.49,
+                "y": 30.03
+              },
+              {
+                "x": 54.7,
+                "y": 32.14
+              },
+              {
+                "x": 55.09,
+                "y": 35.03
+              },
+              {
+                "x": 57.07,
+                "y": 37.03
+              },
+              {
+                "x": 71.88,
+                "y": 24.37
+              },
+              {
+                "x": 72.27,
+                "y": 29.37
+              },
+              {
+                "x": 78.39,
+                "y": 26.7
+              },
+              {
+                "x": 69.11,
+                "y": 32.14
+              },
+              {
+                "x": 70.1,
+                "y": 36.59
+              },
+              {
+                "x": 69.11,
+                "y": 39.47
+              },
+              {
+                "x": 78.39,
+                "y": 41.92
+              },
+              {
+                "x": 85.11,
+                "y": 36.48
+              },
+              {
+                "x": 82.54,
+                "y": 39.47
+              },
+              {
+                "x": 77.8,
+                "y": 44.47
+              },
+              {
+                "x": 88.66,
+                "y": 44.69
+              },
+              {
+                "x": 83.72,
+                "y": 17.04
+              },
+              {
+                "x": 96.16,
+                "y": 14.7
+              },
+              {
+                "x": 69.9,
+                "y": 14.04
+              },
+              {
+                "x": 77.4,
+                "y": 19.26
+              },
+              {
+                "x": 88.66,
+                "y": 21.48
+              },
+              {
+                "x": 90.24,
+                "y": 24.04
+              },
+              {
+                "x": 94.58,
+                "y": 26.37
+              },
+              {
+                "x": 91.42,
+                "y": 29.03
+              },
+              {
+                "x": 84.12,
+                "y": 31.92
+              },
+              {
+                "x": 99.52,
+                "y": 31.25
+              },
+              {
+                "x": 89.65,
+                "y": 34.36
+              },
+              {
+                "x": 97.94,
+                "y": 34.03
+              },
+              {
+                "x": 99.32,
+                "y": 36.59
+              },
+              {
+                "x": 99.92,
+                "y": 39.14
+              },
+              {
+                "x": 96.36,
+                "y": 41.7
+              },
+              {
+                "x": 98.34,
+                "y": 46.8
+              },
+              {
+                "x": 85.3,
+                "y": 46.92
+              },
+              {
+                "x": 92.02,
+                "y": 49.47
+              },
+              {
+                "x": 87.67,
+                "y": 53.91
+              },
+              {
+                "x": 96.36,
+                "y": 52.36
+              },
+              {
+                "x": 96.36,
+                "y": 54.14
+              },
+              {
+                "x": 91.23,
+                "y": 56.14
+              },
+              {
+                "x": 98.93,
+                "y": 56.47
+              },
+              {
+                "x": 94.58,
+                "y": 58.36
+              },
+              {
+                "x": 99.72,
+                "y": 59.02
+              },
+              {
+                "x": 98.53,
+                "y": 61.8
+              },
+              {
+                "x": 68.91,
+                "y": 64.74
+              },
+              {
+                "x": 69.7,
+                "y": 67.08
+              },
+              {
+                "x": 74.84,
+                "y": 68.96
+              },
+              {
+                "x": 70.49,
+                "y": 70.85
+              },
+              {
+                "x": 66.35,
+                "y": 69.07
+              },
+              {
+                "x": 79.97,
+                "y": 71.07
+              },
+              {
+                "x": 68.72,
+                "y": 75.41
+              },
+              {
+                "x": 77.4,
+                "y": 89.4
+              },
+              {
+                "x": 81.55,
+                "y": 87.4
+              },
+              {
+                "x": 96.16,
+                "y": 87.29
+              },
+              {
+                "x": 96.76,
+                "y": 89.51
+              },
+              {
+                "x": 95.77,
+                "y": 91.29
+              },
+              {
+                "x": 99.32,
+                "y": 91.51
+              },
+              {
+                "x": 65.36,
+                "y": 94.29
+              },
+              {
+                "x": 84.71,
+                "y": 94.18
+              },
+              {
+                "x": 72.86,
+                "y": 91.73
+              },
+              {
+                "x": 70.3,
+                "y": 99.29
+              },
+              {
+                "x": 74.05,
+                "y": 94.07
+              },
+              {
+                "x": 73.26,
+                "y": 96.4
+              },
+              {
+                "x": 78.39,
+                "y": 99.06
+              },
+              {
+                "x": 83.72,
+                "y": 96.51
+              },
+              {
+                "x": 96.56,
+                "y": 93.84
+              },
+              {
+                "x": 96.56,
+                "y": 96.73
+              },
+              {
+                "x": 96.76,
+                "y": 99.4
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 58.0,
+          "video_duration": 58.0,
+          "annotator_unsure": true,
+          "video_source": "youtube",
+          "downloaded": true,
+          "video_url": "videos/videopoint/-tX10-uqLgE.mp4",
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "taZYrAxqVik",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/taZYrAxqVik.mp4",
+          "question": "How many green frogs are visible?",
+          "label": "green frogs",
+          "count": 15,
+          "timestamp_count": 5,
+          "timestamps": [
+            7.5,
+            11.5,
+            18.5,
+            21.0,
+            28.5
+          ],
+          "raw_timestamps": [
+            7.5,
+            11.5,
+            18.5,
+            21.0,
+            28.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 75.88,
+                "y": 62.98
+              },
+              {
+                "x": 49.52,
+                "y": 61.84
+              },
+              {
+                "x": 29.42,
+                "y": 60.49
+              }
+            ],
+            [
+              {
+                "x": 79.94,
+                "y": 59.57
+              },
+              {
+                "x": 27.57,
+                "y": 59.47
+              }
+            ],
+            [
+              {
+                "x": 54.13,
+                "y": 53.98
+              },
+              {
+                "x": 91.56,
+                "y": 31.26
+              },
+              {
+                "x": 54.49,
+                "y": 33.23
+              },
+              {
+                "x": 30.15,
+                "y": 28.98
+              },
+              {
+                "x": 14.85,
+                "y": 32.2
+              },
+              {
+                "x": 5.26,
+                "y": 42.78
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 42.0,
+          "video_duration": 42.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        },
+        {
+          "video_id": "taZYrAxqVik",
+          "video_path": "/mnt/home/DDN_Copy/nyu/jihanyang/yueyu/datasets/Molmo2-VideoPoint/youtube_videos/taZYrAxqVik.mp4",
+          "question": "How many birds are flying in the sky?",
+          "label": "birds in the sky",
+          "count": 25,
+          "timestamp_count": 1,
+          "timestamps": [
+            11.5
+          ],
+          "raw_timestamps": [
+            11.5
+          ],
+          "points_preview": [
+            [
+              {
+                "x": 2.13,
+                "y": 31.8
+              },
+              {
+                "x": 7.1,
+                "y": 29.21
+              },
+              {
+                "x": 15.4,
+                "y": 33.15
+              },
+              {
+                "x": 19.09,
+                "y": 31.39
+              },
+              {
+                "x": 23.15,
+                "y": 33.15
+              },
+              {
+                "x": 21.12,
+                "y": 43.52
+              },
+              {
+                "x": 8.4,
+                "y": 52.03
+              },
+              {
+                "x": 26.28,
+                "y": 28.17
+              },
+              {
+                "x": 17.98,
+                "y": 17.7
+              },
+              {
+                "x": 34.58,
+                "y": 17.8
+              },
+              {
+                "x": 31.63,
+                "y": 30.25
+              },
+              {
+                "x": 36.98,
+                "y": 34.91
+              },
+              {
+                "x": 44.54,
+                "y": 34.71
+              },
+              {
+                "x": 40.85,
+                "y": 31.18
+              },
+              {
+                "x": 42.32,
+                "y": 26.51
+              },
+              {
+                "x": 48.96,
+                "y": 31.7
+              },
+              {
+                "x": 55.6,
+                "y": 39.37
+              },
+              {
+                "x": 59.66,
+                "y": 35.64
+              },
+              {
+                "x": 72.57,
+                "y": 34.71
+              },
+              {
+                "x": 73.67,
+                "y": 31.8
+              },
+              {
+                "x": 71.64,
+                "y": 28.07
+              },
+              {
+                "x": 76.81,
+                "y": 21.22
+              },
+              {
+                "x": 65.37,
+                "y": 20.81
+              },
+              {
+                "x": 71.83,
+                "y": 18.42
+              },
+              {
+                "x": 81.97,
+                "y": 18.21
+              }
+            ]
+          ],
+          "clip_start": 0.0,
+          "clip_end": 42.0,
+          "video_duration": 42.0,
+          "annotator_unsure": false,
+          "video_source": "youtube",
+          "downloaded": true,
+          "points_preview_note": "points_preview is truncated to the first 3 annotated timestamp frames; each tN aligns with the Nth displayed timestamp, not with every timestamp when the count is larger."
+        }
+      ]
+    }
+  }
+}

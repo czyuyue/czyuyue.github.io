@@ -1,0 +1,5278 @@
+{
+  "datasets": [
+    {
+      "id": "vstat_make_coffee",
+      "name": "V-STAT · Make Coffee",
+      "task": "Count coffee-making steps",
+      "icon": "☕",
+      "format": "synthetic streaming (per-frame Silence/Standby/Response + counting)",
+      "samples": [
+        {
+          "video": "videos/datasets/vstat_make_coffee/s0.mp4",
+          "question": "There is first a water-pouring phase and then a separate espresso-pouring phase. A cup counts as successful only if it receives both water in the first phase and espresso in the second phase. How many",
+          "events": [
+            {
+              "t": 3.25,
+              "text": "</Response> Water into cup 0. watered = [0]."
+            },
+            {
+              "t": 6.5,
+              "text": "</Response> Water into cup 1. watered = [0, 1]."
+            },
+            {
+              "t": 9.25,
+              "text": "</Response> Water misses cup 2."
+            },
+            {
+              "t": 12.0,
+              "text": "</Response> Water misses cup 3."
+            },
+            {
+              "t": 14.0,
+              "text": "</Response> Water misses cup 4."
+            },
+            {
+              "t": 14.75,
+              "text": "</Response> Water phase done. Watered: [0, 1]."
+            },
+            {
+              "t": 18.0,
+              "text": "</Response> Espresso into cup 0, already watered — success! count = 1."
+            },
+            {
+              "t": 21.75,
+              "text": "</Response> Espresso into cup 1, already watered — success! count = 2."
+            },
+            {
+              "t": 28.5,
+              "text": "</Response> <answer>2</answer>"
+            }
+          ],
+          "n_frames": 115
+        }
+      ]
+    },
+    {
+      "id": "vstat_tighten_untighten",
+      "name": "V-STAT · Tighten/Untighten",
+      "task": "Count clockwise turns",
+      "icon": "🔩",
+      "format": "synthetic streaming (per-frame Silence/Standby/Response + counting)",
+      "samples": [
+        {
+          "video": "videos/datasets/vstat_tighten_untighten/s0.mp4",
+          "question": "How many tightening actions (turning clockwise) were performed in the video?",
+          "events": [
+            {
+              "t": 6.5,
+              "text": "</Response> Screw 3 turned counter-clockwise — loosen, not tighten. count = 0."
+            },
+            {
+              "t": 11.0,
+              "text": "</Response> Screw 1 turned counter-clockwise — loosen, not tighten. count = 0."
+            },
+            {
+              "t": 15.0,
+              "text": "</Response> Screw 5 inspected, no turn. count = 0."
+            },
+            {
+              "t": 19.5,
+              "text": "</Response> Screw 9 (loose) turned clockwise — tighten. count = 1."
+            },
+            {
+              "t": 24.0,
+              "text": "</Response> Screw 0 (loose) turned clockwise — tighten. count = 2."
+            },
+            {
+              "t": 26.25,
+              "text": "</Response> <answer>2</answer>"
+            }
+          ],
+          "n_frames": 106
+        }
+      ]
+    },
+    {
+      "id": "vstat_tilt_box",
+      "name": "V-STAT · Tilt Box",
+      "task": "Count box tilts",
+      "icon": "📦",
+      "format": "synthetic streaming (per-frame Silence/Standby/Response + counting)",
+      "samples": [
+        {
+          "video": "videos/datasets/vstat_tilt_box/s0.mp4",
+          "question": "A ball was placed at corner 2 (Top-Right). After the lid was closed and the box was tilted 9 times, at which corner (1-4) is the ball now?  Corner mapping: 1=Top-Left, 2=Top-Right, 3=Bottom-Right, 4=B",
+          "events": [
+            {
+              "t": 5.25,
+              "text": "</Response> Tilt Right, ball already on that side. Still corner 2."
+            },
+            {
+              "t": 8.0,
+              "text": "</Response> Tilt Down. Ball -> corner 3 (Bottom-Right)."
+            },
+            {
+              "t": 10.25,
+              "text": "</Response> Tilt Up. Ball -> corner 2 (Top-Right)."
+            },
+            {
+              "t": 13.0,
+              "text": "</Response> Tilt Right, ball already on that side. Still corner 2."
+            },
+            {
+              "t": 15.5,
+              "text": "</Response> Tilt Left. Ball -> corner 1 (Top-Left)."
+            },
+            {
+              "t": 18.0,
+              "text": "</Response> Tilt Down. Ball -> corner 4 (Bottom-Left)."
+            },
+            {
+              "t": 20.5,
+              "text": "</Response> Tilt Up. Ball -> corner 1 (Top-Left)."
+            },
+            {
+              "t": 23.0,
+              "text": "</Response> Tilt Left, ball already on that side. Still corner 1."
+            },
+            {
+              "t": 25.25,
+              "text": "</Response> Tilt Up, ball already on that side. Still corner 1."
+            },
+            {
+              "t": 25.75,
+              "text": "</Response> <answer>1</answer>"
+            }
+          ],
+          "n_frames": 104
+        }
+      ]
+    },
+    {
+      "id": "vstat_memory_sliding_puzzle",
+      "name": "V-STAT · Sliding Puzzle",
+      "task": "Count puzzle moves",
+      "icon": "🧩",
+      "format": "synthetic streaming (per-frame Silence/Standby/Response + counting)",
+      "samples": [
+        {
+          "video": "videos/datasets/vstat_memory_sliding_puzzle/s0.mp4",
+          "question": "Where is the letter C tile located on the 3x3 board? Please answer in 'Row x, Column y' format, where x and y start from 1.",
+          "events": [
+            {
+              "t": 5.5,
+              "text": "</Response> Tile F moves, not C. C still (1,3)."
+            },
+            {
+              "t": 6.0,
+              "text": "</Response> Tile E moves, not C. C still (1,3)."
+            },
+            {
+              "t": 6.5,
+              "text": "</Response> Tile E moves, not C. C still (1,3)."
+            },
+            {
+              "t": 7.0,
+              "text": "</Response> Tile F moves, not C. C still (1,3)."
+            },
+            {
+              "t": 7.5,
+              "text": "</Response> Tile H moves, not C. C still (1,3)."
+            },
+            {
+              "t": 8.0,
+              "text": "</Response> Tile G moves, not C. C still (1,3)."
+            },
+            {
+              "t": 8.5,
+              "text": "</Response> Tile D moves, not C. C still (1,3)."
+            },
+            {
+              "t": 9.0,
+              "text": "</Response> Tile D moves, not C. C still (1,3)."
+            },
+            {
+              "t": 9.5,
+              "text": "</Response> Tile G moves, not C. C still (1,3)."
+            },
+            {
+              "t": 10.0,
+              "text": "</Response> Tile E moves, not C. C still (1,3)."
+            },
+            {
+              "t": 10.5,
+              "text": "</Response> Tile B moves, not C. C still (1,3)."
+            },
+            {
+              "t": 11.0,
+              "text": "</Response> C slides (1,3) -> (1,2)."
+            },
+            {
+              "t": 11.5,
+              "text": "</Response> Tile F moves, not C. C still (1,2)."
+            },
+            {
+              "t": 12.0,
+              "text": "</Response> Tile B moves, not C. C still (1,2)."
+            },
+            {
+              "t": 12.5,
+              "text": "</Response> Tile E moves, not C. C still (1,2)."
+            },
+            {
+              "t": 13.0,
+              "text": "</Response> Tile G moves, not C. C still (1,2)."
+            },
+            {
+              "t": 13.5,
+              "text": "</Response> Tile G moves, not C. C still (1,2)."
+            },
+            {
+              "t": 14.0,
+              "text": "</Response> Tile E moves, not C. C still (1,2)."
+            },
+            {
+              "t": 14.5,
+              "text": "</Response> Tile E moves, not C. C still (1,2)."
+            },
+            {
+              "t": 15.0,
+              "text": "</Response> Tile H moves, not C. C still (1,2)."
+            },
+            {
+              "t": 15.5,
+              "text": "</Response> Tile H moves, not C. C still (1,2)."
+            },
+            {
+              "t": 16.0,
+              "text": "</Response> Tile H moves, not C. C still (1,2)."
+            },
+            {
+              "t": 16.5,
+              "text": "</Response> Tile B moves, not C. C still (1,2)."
+            },
+            {
+              "t": 17.0,
+              "text": "</Response> Tile F moves, not C. C still (1,2)."
+            },
+            {
+              "t": 17.5,
+              "text": "</Response> C slides (1,2) -> (1,3)."
+            },
+            {
+              "t": 18.0,
+              "text": "</Response> C slides (1,3) -> (1,2)."
+            },
+            {
+              "t": 18.5,
+              "text": "</Response> C slides (1,2) -> (1,3)."
+            },
+            {
+              "t": 19.0,
+              "text": "</Response> Tile E moves, not C. C still (1,3)."
+            },
+            {
+              "t": 19.5,
+              "text": "</Response> Tile D moves, not C. C still (1,3)."
+            },
+            {
+              "t": 20.0,
+              "text": "</Response> Tile G moves, not C. C still (1,3)."
+            },
+            {
+              "t": 20.75,
+              "text": "</Response> <answer>Row 1, Column 3</answer>"
+            }
+          ],
+          "n_frames": 84
+        }
+      ]
+    },
+    {
+      "id": "vstat_hidden_dice_roll",
+      "name": "V-STAT · Hidden Dice",
+      "task": "Count dice rolls",
+      "icon": "🎲",
+      "format": "synthetic streaming (per-frame Silence/Standby/Response + counting)",
+      "samples": [
+        {
+          "video": "videos/datasets/vstat_hidden_dice_roll/s0.mp4",
+          "question": "During the roll, how many times did the **Pink** face land on the bottom? (Consecutive stays count as 1, including the initial position)",
+          "events": [
+            {
+              "t": 1.0,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 2.0,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 3.0,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 4.25,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 5.25,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 6.25,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 7.25,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 8.25,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 9.5,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 10.5,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 11.5,
+              "text": "</Response> count = 0."
+            },
+            {
+              "t": 12.5,
+              "text": "</Response> count = 1."
+            },
+            {
+              "t": 13.5,
+              "text": "</Response> count = 1."
+            },
+            {
+              "t": 14.5,
+              "text": "</Response> count = 2."
+            },
+            {
+              "t": 15.5,
+              "text": "</Response> count = 2."
+            },
+            {
+              "t": 16.75,
+              "text": "</Response> count = 2."
+            },
+            {
+              "t": 17.75,
+              "text": "</Response> count = 3."
+            },
+            {
+              "t": 18.75,
+              "text": "</Response> count = 3."
+            },
+            {
+              "t": 19.75,
+              "text": "</Response> count = 3."
+            },
+            {
+              "t": 20.75,
+              "text": "</Response> count = 3."
+            },
+            {
+              "t": 22.0,
+              "text": "</Response> count = 3."
+            },
+            {
+              "t": 23.0,
+              "text": "</Response> count = 3."
+            },
+            {
+              "t": 24.0,
+              "text": "</Response> count = 3."
+            },
+            {
+              "t": 25.0,
+              "text": "</Response> count = 4."
+            },
+            {
+              "t": 25.75,
+              "text": "</Response> <answer>4</answer>"
+            }
+          ],
+          "n_frames": 104
+        }
+      ]
+    },
+    {
+      "id": "joyai_timelens_event_grounding_by_source",
+      "name": "JoyAI / TimeLens · Event Grounding by Source",
+      "task": "event_grounding samples from every TimeLens source, formally converted",
+      "icon": "⏱️",
+      "format": "official convert_sample output excerpt: per-second user/image turns with </silence> until response.time",
+      "samples": [
+        {
+          "video": "videos/datasets/joyai_timelens_event/cosmo_cap.mp4",
+          "question": "event_grounding · original_source=cosmo_cap · generated by JoyAI convert_sample(); showing converted message excerpt.",
+          "events": [
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "USER: Let me know if \"Driver begins to text on her phone\" occurs."
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 5.0,
+              "text": "</response> \"Driver begins to text on her phone\" is happening."
+            },
+            {
+              "t": 6.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 120
+        },
+        {
+          "video": "videos/datasets/joyai_timelens_event/didemo.mp4",
+          "question": "event_grounding · original_source=didemo · generated by JoyAI convert_sample(); showing converted message excerpt.",
+          "events": [
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 5.0,
+              "text": "USER: Tell me when \"The dog stretches out its front legs while holding the stick\" first appears."
+            },
+            {
+              "t": 5.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 6.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 7.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 8.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 9.0,
+              "text": "</response> \"The dog stretches out its front legs while holding the stick\" has started."
+            },
+            {
+              "t": 10.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 140
+        },
+        {
+          "video": "videos/datasets/joyai_timelens_event/internvid_vtime.mp4",
+          "question": "event_grounding · original_source=internvid_vtime · generated by JoyAI convert_sample(); showing converted message excerpt.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "USER: Help me monitor \"Background turns pink\" throughout its duration."
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 4.0,
+              "text": "</response> Report: \"Background turns pink\" is still happening."
+            },
+            {
+              "t": 5.0,
+              "text": "</response> Report: \"Background turns pink\" is still happening."
+            },
+            {
+              "t": 6.0,
+              "text": "</response> Report: \"Background turns pink\" is still happening."
+            },
+            {
+              "t": 7.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 36
+        },
+        {
+          "video": "videos/datasets/joyai_timelens_event/queryd.mp4",
+          "question": "event_grounding · original_source=queryd · generated by JoyAI convert_sample(); showing converted message excerpt.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: Help me watch for \"The child looks up at the woman\", notify me when it appears."
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</response> Noticed \"The child looks up at the woman\" starting."
+            },
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 20
+        },
+        {
+          "video": "videos/datasets/joyai_timelens_event/hirest.mp4",
+          "question": "event_grounding · original_source=hirest · generated by JoyAI convert_sample(); showing converted message excerpt.",
+          "events": [
+            {
+              "t": 16.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 17.0,
+              "text": "USER: Watch for \"The man picks up the coins from the table and puts them in his palm\" and tell me."
+            },
+            {
+              "t": 17.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 18.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 19.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 20.0,
+              "text": "</response> Noticed \"The man picks up the coins from the table and puts them in his palm\" starting."
+            },
+            {
+              "t": 21.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 188
+        },
+        {
+          "video": "videos/datasets/joyai_timelens_event/hirest_grounding.mp4",
+          "question": "event_grounding · original_source=hirest_grounding · generated by JoyAI convert_sample(); showing converted message excerpt.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: Watch for signs of \"The man introduces himself by stating his name\" and report once."
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</response> \"The man introduces himself by stating his name\" has started."
+            },
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 236
+        },
+        {
+          "video": "videos/datasets/joyai_timelens_event/hirest_step.mp4",
+          "question": "event_grounding · original_source=hirest_step · generated by JoyAI convert_sample(); showing converted message excerpt.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: Notify me when \"The person introduces the tools for the job\" begins in the video."
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</response> \"The person introduces the tools for the job\" has started."
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 224
+        }
+      ]
+    },
+    {
+      "id": "joyai_chat_formal_converted",
+      "name": "JoyAI / Chat · Formal Converted Samples",
+      "task": "video-grounded EgoIT chat samples converted with the official JoyAI training script; arithmetic-only TimeLens rows are excluded",
+      "icon": "💬",
+      "format": "official convert_sample output excerpt: question seconds plus exact assistant </silence>/</response> targets",
+      "samples": [
+        {
+          "video": "videos/datasets/joyai_chat_formal/egoit_multiturn_washing.mp4",
+          "question": "chat · EgoIT video-grounded multi-turn QA · official JoyAI convert_sample() training-format excerpt; source=EgoIT; clip_id=P_01_long_10_0",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: What's the person holding over the sink?"
+            },
+            {
+              "t": 0.0,
+              "text": "</response> Looks like a big white colander! Perfect for draining pasta or veggies."
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 5.0,
+              "text": "USER: Are they washing a spatula?"
+            },
+            {
+              "t": 5.0,
+              "text": "</response> Yep, that's a white spatula they're rinsing off! Getting it nice and clean."
+            },
+            {
+              "t": 12.0,
+              "text": "USER: What kind of utensils are being washed now?"
+            },
+            {
+              "t": 12.0,
+              "text": "</response> Looks like forks and spoons now — typical silverware getting the full scrub treatment!"
+            },
+            {
+              "t": 19.0,
+              "text": "USER: Did they finish washing the silverware?"
+            },
+            {
+              "t": 19.0,
+              "text": "</response> Sure did! They just moved on to rinsing the colander itself. All done with the utensils."
+            },
+            {
+              "t": 25.0,
+              "text": "USER: Why are they scrubbing the bottom of the colander?"
+            },
+            {
+              "t": 25.0,
+              "text": "</response> Probably making sure no food residue is stuck in those little holes! Colanders can be tricky to get fully clean."
+            }
+          ],
+          "n_frames": 120
+        },
+        {
+          "video": "videos/datasets/joyai_chat_formal/egoit_multiturn_reading.mp4",
+          "question": "chat · EgoIT video-grounded multi-turn QA · official JoyAI convert_sample() training-format excerpt; source=EgoIT; clip_id=P_01_long_11_0",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "USER: What's the person doing with the tissue on the table?"
+            },
+            {
+              "t": 2.0,
+              "text": "</response> Looks like they're wiping up some kind of mess or crumbs on the table. Good job getting that cleaned up!"
+            },
+            {
+              "t": 7.0,
+              "text": "USER: Did they just grab another tissue from the box?"
+            },
+            {
+              "t": 7.0,
+              "text": "</response> Yep, they just pulled another tissue from the box on the table. Gotta love having extras handy!"
+            },
+            {
+              "t": 12.0,
+              "text": "USER: Is the table clean now? It looks like they're finishing up."
+            },
+            {
+              "t": 12.0,
+              "text": "</response> Sure looks like it! The table's looking nice and clean now. Great work finishing up the wipe-down."
+            },
+            {
+              "t": 18.0,
+              "text": "USER: Where are they walking to now? Is that the kitchen area?"
+            },
+            {
+              "t": 18.0,
+              "text": "</response> Yeah, they're heading through the living room toward the back, and it looks like the kitchen area is coming up. Nice open layout!"
+            },
+            {
+              "t": 25.0,
+              "text": "USER: Are they throwing something away in the trash can?"
+            },
+            {
+              "t": 25.0,
+              "text": "</response> Looks like it! They opened the trash can lid, probably tossing those used tissues. Smart move keeping things tidy."
+            }
+          ],
+          "n_frames": 240
+        },
+        {
+          "video": "videos/datasets/joyai_chat_formal/egoit_multiturn_cleanup.mp4",
+          "question": "chat · EgoIT video-grounded multi-turn QA · official JoyAI convert_sample() training-format excerpt; source=EgoIT; clip_id=P_01_long_12_0",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: What's the person doing at the sink?"
+            },
+            {
+              "t": 0.0,
+              "text": "</response> Looks like they're washing dishes! The water's running and they've got a sink full of plates and bowls to clean."
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 5.0,
+              "text": "USER: What kind of utensil are they washing with the sponge?"
+            },
+            {
+              "t": 5.0,
+              "text": "</response> They're scrubbing a white spatula with the sponge — getting it nice and soapy!"
+            },
+            {
+              "t": 12.0,
+              "text": "USER: Are they rinsing the spatula now?"
+            },
+            {
+              "t": 12.0,
+              "text": "</response> Yep, they're rinsing that spatula off now! Looking good and clean."
+            },
+            {
+              "t": 20.0,
+              "text": "USER: Did they finish washing dishes?"
+            },
+            {
+              "t": 20.0,
+              "text": "</response> Looks like they're done! The water's off and they're moving away from the sink — nice job finishing up."
+            },
+            {
+              "t": 26.0,
+              "text": "USER: What are they doing near the stove?"
+            },
+            {
+              "t": 26.0,
+              "text": "</response> They're over by the microwave now — looks like they're about to heat something up or check the timer!"
+            }
+          ],
+          "n_frames": 172
+        },
+        {
+          "video": "videos/datasets/joyai_chat_formal/egoit_multiturn_daily_action.mp4",
+          "question": "chat · EgoIT video-grounded multi-turn QA · official JoyAI convert_sample() training-format excerpt; source=EgoIT; clip_id=P_01_long_12_1",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: What's the person doing with that colander?"
+            },
+            {
+              "t": 0.0,
+              "text": "</response> Looks like they're putting it away in the dish rack! Nice and organized."
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 5.0,
+              "text": "USER: Is that a green plate they're washing?"
+            },
+            {
+              "t": 5.0,
+              "text": "</response> Yep, that's a green plate! Scrubbing it clean under the running water."
+            },
+            {
+              "t": 10.0,
+              "text": "USER: What kind of utensil is that white thing?"
+            },
+            {
+              "t": 10.0,
+              "text": "</response> That's a spatula! Getting it all sudsy with the sponge."
+            },
+            {
+              "t": 16.0,
+              "text": "USER: Why are they washing that spatula so carefully?"
+            },
+            {
+              "t": 16.0,
+              "text": "</response> Making sure it's spotless! Spatulas can get greasy, so extra scrubbing helps."
+            },
+            {
+              "t": 23.0,
+              "text": "USER: Did they finish washing all the dishes?"
+            },
+            {
+              "t": 23.0,
+              "text": "</response> Looks like it! The sink's clear and everything's tucked in the rack. Great job!"
+            }
+          ],
+          "n_frames": 120
+        }
+      ]
+    },
+    {
+      "id": "joyai_live_whisperx_narration_converted",
+      "name": "JoyAI / Live-WhisperX · Narration Converted Samples",
+      "task": "English narration samples from the locally extracted JoyAI Live-WhisperX videos, converted with the official training script",
+      "icon": "🎙️",
+      "format": "official JoyAI convert_sample output excerpt: per-second user/image turns, dense narration responses, and </silence> on non-response seconds",
+      "samples": [
+        {
+          "video": "videos/datasets/joyai_live_whisperx_narration/s0.mp4",
+          "question": "narration · Live-WhisperX-526K · official JoyAI convert_sample() training-format excerpt; video=QUQOP5rtKQo_6.09-91.09_2.0fps.mp4",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: Please narrate the content of the scene."
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 5.0,
+              "text": "</response> The Toyota Land Cruiser is a five- or eight-seat SUV with world-class off-road capability."
+            },
+            {
+              "t": 6.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 11.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 12.0,
+              "text": "</response> Competitors include the Nissan Armada, Lexus LX, Mercedes-Benz GLS-Class, or Chevy Tahoe."
+            },
+            {
+              "t": 13.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 16.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 17.0,
+              "text": "</response> Toyota's kept the Land Cruiser alive for decades, and its looks don't change much."
+            },
+            {
+              "t": 18.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 20.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 21.0,
+              "text": "</response> It's bigger and boxier than other SUVs across the showroom."
+            },
+            {
+              "t": 22.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 25.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 26.0,
+              "text": "</response> Inside, it's a tech-heavy look with plenty of climate, infotainment, and off-road controls."
+            },
+            {
+              "t": 27.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 29.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 30.0,
+              "text": "</response> Underneath is where the Land Cruiser separates from the bunch."
+            },
+            {
+              "t": 31.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 36.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 37.0,
+              "text": "</response> All Land Cruisers are powered by a 381-horsepower V8 8-speed automatic transmission and full-time four-wheel drive."
+            },
+            {
+              "t": 38.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 40.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 41.0,
+              "text": "</response> The EPA rates it up to the mid-teens on the highway."
+            }
+          ],
+          "n_frames": 170
+        },
+        {
+          "video": "videos/datasets/joyai_live_whisperx_narration/s1.mp4",
+          "question": "narration · Live-WhisperX-526K · official JoyAI convert_sample() training-format excerpt; video=GmlODruGuAE_5.96-64.03_2.0fps.mp4",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: Can you provide step-by-step instructions for fixing a common problem in a vehicle?"
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</response> I've got a 98 Jeep Cherokee."
+            },
+            {
+              "t": 3.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 5.0,
+              "text": "</response> This is the XJ body style, the smaller Jeep."
+            },
+            {
+              "t": 6.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 12.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 13.0,
+              "text": "</response> The problem where the door button is just not working."
+            },
+            {
+              "t": 14.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 18.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 19.0,
+              "text": "</response> So I'm going to go ahead and show you a trick for how to get these things open."
+            },
+            {
+              "t": 20.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 27.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 28.0,
+              "text": "</response> So the first thing you want to do is go ahead and remove this piece of window scraper."
+            },
+            {
+              "t": 29.0,
+              "text": "</response> here."
+            },
+            {
+              "t": 30.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 37.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 38.0,
+              "text": "</response> You can use a trim tool like this and just carefully pry up on the rubber and it'll release from the door."
+            },
+            {
+              "t": 39.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 46.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 47.0,
+              "text": "</response> If you're real particular about the paint you might want to run a little piece of masking tape there to protect the paint."
+            },
+            {
+              "t": 48.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 57.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 58.0,
+              "text": "</response> This vehicle has been off-road a lot and it's got a lot of scratches and the owner doesn't care about the paint so I'm just going to go ahead and use a trim tool to pull this window scraper up."
+            }
+          ],
+          "n_frames": 236
+        },
+        {
+          "video": "videos/datasets/joyai_live_whisperx_narration/s2.mp4",
+          "question": "narration · Live-WhisperX-526K · official JoyAI convert_sample() training-format excerpt; video=hyu7_-9vJn4_0.20-60.41_2.0fps.mp4",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: How do I replace the battery in a key fob?"
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 4.0,
+              "text": "</response> Hey, in this video, we're going to be showing you how to replace the battery in a Nissan key fob."
+            },
+            {
+              "t": 5.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 8.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 9.0,
+              "text": "</response> You've probably gotten that sign on your dash before letting you know your battery's getting low or maybe it's not working."
+            },
+            {
+              "t": 10.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 13.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 14.0,
+              "text": "</response> We're going to pull on this little notch here on the left-hand side and pull the emergency key out."
+            },
+            {
+              "t": 15.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 17.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 18.0,
+              "text": "</response> One thing to note, there's these little grooves on the side of it."
+            },
+            {
+              "t": 19.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 20.0,
+              "text": "</response> Don't focus on those."
+            },
+            {
+              "t": 21.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 25.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 26.0,
+              "text": "</response> What you need to do is get a flathead screwdriver, smaller preferable, but you could use a larger one that I showed to the left there."
+            },
+            {
+              "t": 27.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 30.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 31.0,
+              "text": "</response> And we're going to zoom in here and you'll see these little slits at the top of the key where you took the key out."
+            },
+            {
+              "t": 32.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 33.0,
+              "text": "</response> You need to just pry those open like a crowbar."
+            },
+            {
+              "t": 34.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 35.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 36.0,
+              "text": "</response> And what you're going to do is peel this open like a pistachio."
+            }
+          ],
+          "n_frames": 244
+        },
+        {
+          "video": "videos/datasets/joyai_live_whisperx_narration/s3.mp4",
+          "question": "narration · Live-WhisperX-526K · official JoyAI convert_sample() training-format excerpt; video=qA0hFSX79bM_0.49-63.82_2.0fps.mp4",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: Describe the features and highlights of the interior of a modern vehicle as if you were guiding through a video tour."
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 6.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 7.0,
+              "text": "</response> It's a great day at Western GMC Buick, located on the corner of 184th Street and Stony Plain Road in Edmonton."
+            },
+            {
+              "t": 8.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 11.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 12.0,
+              "text": "</response> Today we're looking at the 2020 Buick Encore Preferred."
+            },
+            {
+              "t": 13.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 15.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 16.0,
+              "text": "</response> We'll start by taking a look inside the front of the Encore."
+            },
+            {
+              "t": 17.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 23.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 24.0,
+              "text": "</response> On the driver's door we've got power locks, power windows, power adjustable mirrors, and a child lock button."
+            },
+            {
+              "t": 25.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 27.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 28.0,
+              "text": "</response> Here we have the power adjustable driver's seat."
+            },
+            {
+              "t": 29.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 31.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 32.0,
+              "text": "</response> Next, I'll climb right in and we'll take a look at the steering wheel."
+            },
+            {
+              "t": 33.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 38.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 39.0,
+              "text": "</response> On the left side of the steering wheel, we've got the cruise control buttons, and on the right side, we've got the audio buttons."
+            },
+            {
+              "t": 40.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 47.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 128
+        },
+        {
+          "video": "videos/datasets/joyai_live_whisperx_narration/s4.mp4",
+          "question": "narration · Live-WhisperX-526K · official JoyAI convert_sample() training-format excerpt; video=l8rbcX3nebU_0.82-72.86_2.0fps.mp4",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: Help me narrate this scene."
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</response> Welcome to the AIM Insight e-training series presented by AIM Sports."
+            },
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 7.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 8.0,
+              "text": "</response> Providing support and training of your AIM Sports products when and where you want it."
+            },
+            {
+              "t": 9.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 12.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 13.0,
+              "text": "</response> This module is discussing the generating a track map function in Race Studio 2."
+            },
+            {
+              "t": 14.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 21.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 22.0,
+              "text": "</response> Track maps are a valuable tool that allow you to view your actual track position directly linked to the cursor position in your data graphs."
+            },
+            {
+              "t": 23.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 28.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 29.0,
+              "text": "</response> Race Studio 2 allows the generation of high quality, accurate track maps directly from your recorded data."
+            },
+            {
+              "t": 30.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 37.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 38.0,
+              "text": "</response> Ray Studio 2 also allows the full management of track maps including modifying, loading, or deleting existing maps in addition to creating new track maps."
+            },
+            {
+              "t": 39.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 41.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 42.0,
+              "text": "</response> There are functions in Ray Studio 2 that require a track map."
+            },
+            {
+              "t": 43.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 47.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 48.0,
+              "text": "</response> Some are split times, track report, lap replay, and time compare."
+            },
+            {
+              "t": 49.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 54.0,
+              "text": "</silence>"
+            }
+          ],
+          "n_frames": 144
+        },
+        {
+          "video": "videos/datasets/joyai_live_whisperx_narration/s5.mp4",
+          "question": "narration · Live-WhisperX-526K · official JoyAI convert_sample() training-format excerpt; video=YiB5aVc9Fnw_8.69-49.08_2.0fps.mp4",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "USER: Can you describe how to perform a basic household cleaning task using simple and inexpensive materials?"
+            },
+            {
+              "t": 0.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 1.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 2.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 3.0,
+              "text": "</response> So all I'm going to be using for this is just white vinegar."
+            },
+            {
+              "t": 4.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 7.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 8.0,
+              "text": "</response> This is Target's brand, but I used Walmart brand before, so it's really all the same."
+            },
+            {
+              "t": 9.0,
+              "text": "</response> Vinegar is vinegar."
+            },
+            {
+              "t": 10.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 15.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 16.0,
+              "text": "</response> And it'll take probably about the two gallons that I've got there, so I'm spending probably about $7 on two gallons."
+            },
+            {
+              "t": 17.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 24.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 25.0,
+              "text": "</response> A bucket and an old mop or some sort of wet broom that you might have around the house."
+            },
+            {
+              "t": 26.0,
+              "text": "</response> You'll see that one's pretty beat up."
+            },
+            {
+              "t": 27.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 29.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 30.0,
+              "text": "</response> Probably this process you're going to want to throw that out when you're done."
+            },
+            {
+              "t": 31.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 32.0,
+              "text": "</response> So use one that's cheap or already beat up."
+            },
+            {
+              "t": 33.0,
+              "text": "</response> You could also use rags."
+            },
+            {
+              "t": 34.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 38.0,
+              "text": "</silence>"
+            },
+            {
+              "t": 39.0,
+              "text": "</response> So I'm going to go ahead and put all that vinegar into the bucket."
+            },
+            {
+              "t": 40.0,
+              "text": "</response> Be right back."
+            }
+          ],
+          "n_frames": 164
+        }
+      ]
+    },
+    {
+      "id": "qvh_narration",
+      "name": "QVHighlight · Narration",
+      "task": "Live commentary, frame-by-frame",
+      "icon": "🗣️",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/qvh_narration/s0.mp4",
+          "question": "Generate live commentary of the video, focusing on who is doing what, where, and when, and noting any transitions or new events immediately.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "</Response> Numbers rearrange in bar."
+            },
+            {
+              "t": 2.0,
+              "text": "</Response> Man opens mouth wider."
+            },
+            {
+              "t": 3.0,
+              "text": "</Response> Man lowers hands."
+            },
+            {
+              "t": 5.0,
+              "text": "</Response> Man raises hands."
+            },
+            {
+              "t": 7.0,
+              "text": "</Response> Person appears on rock."
+            },
+            {
+              "t": 8.0,
+              "text": "</Response> Bird flies away."
+            },
+            {
+              "t": 9.0,
+              "text": "</Response> Man raises fists."
+            },
+            {
+              "t": 10.0,
+              "text": "</Response> Man raises camera."
+            },
+            {
+              "t": 11.0,
+              "text": "</Response> Person moves closer to rocks."
+            },
+            {
+              "t": 12.0,
+              "text": "</Response> People move out of view."
+            },
+            {
+              "t": 13.0,
+              "text": "</Response> Sun becomes more visible."
+            },
+            {
+              "t": 14.0,
+              "text": "</Response> Sky brightens significantly."
+            },
+            {
+              "t": 15.0,
+              "text": "</Response> Man moves hands outward."
+            },
+            {
+              "t": 16.0,
+              "text": "</Response> Man closes mouth."
+            },
+            {
+              "t": 17.0,
+              "text": "</Response> Man moves hands closer."
+            },
+            {
+              "t": 18.0,
+              "text": "</Response> Man moves hands outward."
+            },
+            {
+              "t": 20.0,
+              "text": "</Response> Man lowers hands out of view."
+            },
+            {
+              "t": 21.0,
+              "text": "</Response> Man leans forward and smiles."
+            },
+            {
+              "t": 22.0,
+              "text": "</Response> Person opens mouth wider."
+            },
+            {
+              "t": 23.0,
+              "text": "</Response> Hand appears in foreground."
+            },
+            {
+              "t": 24.0,
+              "text": "</Response> Hand lowers."
+            },
+            {
+              "t": 25.0,
+              "text": "</Response> Man moves hands outward."
+            },
+            {
+              "t": 26.0,
+              "text": "</Response> Man moves hands down."
+            },
+            {
+              "t": 27.0,
+              "text": "</Response> Man shows three fingers."
+            },
+            {
+              "t": 28.0,
+              "text": "</Response> Man lowers hand from peace sign."
+            },
+            {
+              "t": 29.0,
+              "text": "</Response> Man lowers hands."
+            },
+            {
+              "t": 30.0,
+              "text": "</Response> Text at bottom changes."
+            },
+            {
+              "t": 31.0,
+              "text": "</Response> Text disappears."
+            },
+            {
+              "t": 32.0,
+              "text": "</Response> Man raises hand and gestures."
+            },
+            {
+              "t": 33.0,
+              "text": "</Response> Water ripples more visibly."
+            },
+            {
+              "t": 34.0,
+              "text": "</Response> Water droplets shorten and thicken."
+            },
+            {
+              "t": 35.0,
+              "text": "</Response> Water droplets elongate and fall."
+            },
+            {
+              "t": 36.0,
+              "text": "</Response> Water droplets fall further."
+            },
+            {
+              "t": 37.0,
+              "text": "</Response> Camera angle shifts upward."
+            },
+            {
+              "t": 38.0,
+              "text": "</Response> Camera pans down."
+            },
+            {
+              "t": 39.0,
+              "text": "</Response> Camera zooms into water."
+            },
+            {
+              "t": 40.0,
+              "text": "</Response> Surfer moves along wave."
+            },
+            {
+              "t": 41.0,
+              "text": "</Response> Woman appears."
+            },
+            {
+              "t": 42.0,
+              "text": "</Response> Child moves closer to water."
+            },
+            {
+              "t": 43.0,
+              "text": "</Response> Octopus tentacles move slightly."
+            },
+            {
+              "t": 44.0,
+              "text": "</Response> Man opens mouth wider."
+            },
+            {
+              "t": 45.0,
+              "text": "</Response> Man moves hands slightly."
+            },
+            {
+              "t": 46.0,
+              "text": "</Response> Man moves hands closer."
+            },
+            {
+              "t": 47.0,
+              "text": "</Response> Man raises thumb."
+            },
+            {
+              "t": 48.0,
+              "text": "</Response> Man changes from thumbs-up to pointing."
+            },
+            {
+              "t": 49.0,
+              "text": "</Response> Man moves hands from pointing to open."
+            },
+            {
+              "t": 50.0,
+              "text": "</Response> Man moves hands outward."
+            },
+            {
+              "t": 51.0,
+              "text": "</Response> Man lowers hands."
+            },
+            {
+              "t": 52.0,
+              "text": "</Response> Person appears at bottom right."
+            },
+            {
+              "t": 53.0,
+              "text": "</Response> Camera zooms in slightly."
+            },
+            {
+              "t": 54.0,
+              "text": "</Response> Motorcycle moves forward."
+            },
+            {
+              "t": 55.0,
+              "text": "</Response> Rider's hand disappears."
+            },
+            {
+              "t": 56.0,
+              "text": "</Response> Woman appears."
+            },
+            {
+              "t": 57.0,
+              "text": "</Response> Woman moves closer to camera."
+            },
+            {
+              "t": 58.0,
+              "text": "</Response> Woman bends legs slightly."
+            },
+            {
+              "t": 59.0,
+              "text": "</Response> Man moves hands apart."
+            },
+            {
+              "t": 61.0,
+              "text": "</Response> Man moves hands closer."
+            },
+            {
+              "t": 63.0,
+              "text": "</Response> Water splashes more vigorously."
+            },
+            {
+              "t": 64.0,
+              "text": "</Response> Camera shifts to aerial beach view."
+            },
+            {
+              "t": 65.0,
+              "text": "</Response> People walk forward on beach."
+            },
+            {
+              "t": 66.0,
+              "text": "</Response> Person moves right on beach."
+            },
+            {
+              "t": 67.0,
+              "text": "</Response> Man raises hands higher."
+            },
+            {
+              "t": 68.0,
+              "text": "</Response> Man closes mouth."
+            },
+            {
+              "t": 69.0,
+              "text": "</Response> Man turns head right."
+            },
+            {
+              "t": 70.0,
+              "text": "</Response> Person disappears from view."
+            },
+            {
+              "t": 71.0,
+              "text": "</Response> Clouds shift slightly."
+            },
+            {
+              "t": 72.0,
+              "text": "</Response> Man's mouth changes shape."
+            },
+            {
+              "t": 73.0,
+              "text": "</Response> Man moves hands upward slightly."
+            },
+            {
+              "t": 74.0,
+              "text": "</Response> Man moves hands from pointing to open."
+            },
+            {
+              "t": 75.0,
+              "text": "</Response> Man moves hands outward."
+            },
+            {
+              "t": 76.0,
+              "text": "</Response> Camera angle shifts downward."
+            },
+            {
+              "t": 77.0,
+              "text": "</Response> Man opens mouth wider."
+            },
+            {
+              "t": 78.0,
+              "text": "</Response> Man closes eyes."
+            },
+            {
+              "t": 79.0,
+              "text": "</Response> Man opens mouth wider."
+            },
+            {
+              "t": 80.0,
+              "text": "</Response> Birds shift positions."
+            },
+            {
+              "t": 82.0,
+              "text": "</Response> Bird flies out of frame."
+            },
+            {
+              "t": 84.0,
+              "text": "</Response> Ship moves forward slightly."
+            },
+            {
+              "t": 85.0,
+              "text": "</Response> Man moves hands closer."
+            },
+            {
+              "t": 88.0,
+              "text": "</Response> Man moves hands apart."
+            },
+            {
+              "t": 90.0,
+              "text": "</Response> Man moves hands closer."
+            },
+            {
+              "t": 91.0,
+              "text": "</Response> Man moves hands outward and upward."
+            },
+            {
+              "t": 92.0,
+              "text": "</Response> Man moves hands closer."
+            },
+            {
+              "t": 93.0,
+              "text": "</Response> Man lowers hands out of view."
+            },
+            {
+              "t": 94.0,
+              "text": "</Response> Man's hand moves into view."
+            },
+            {
+              "t": 95.0,
+              "text": "</Response> Man moves hands outward."
+            },
+            {
+              "t": 96.0,
+              "text": "</Response> Man moves hands downward."
+            },
+            {
+              "t": 97.0,
+              "text": "</Response> Man opens mouth wider."
+            },
+            {
+              "t": 98.0,
+              "text": "</Response> Man closes mouth."
+            },
+            {
+              "t": 99.0,
+              "text": "</Response> Man turns head right."
+            },
+            {
+              "t": 100.0,
+              "text": "</Response> Woman turns head right."
+            },
+            {
+              "t": 101.0,
+              "text": "</Response> Man turns head right slightly."
+            },
+            {
+              "t": 102.0,
+              "text": "</Response> Camera angle shifts downward."
+            },
+            {
+              "t": 103.0,
+              "text": "</Response> Boat moves forward slightly."
+            },
+            {
+              "t": 104.0,
+              "text": "</Response> Camera angle shifts upward and right."
+            },
+            {
+              "t": 105.0,
+              "text": "</Response> Birds move across water."
+            },
+            {
+              "t": 106.0,
+              "text": "</Response> Man turns head right slightly."
+            },
+            {
+              "t": 107.0,
+              "text": "</Response> Man lifts object into view."
+            },
+            {
+              "t": 108.0,
+              "text": "</Response> Man opens mouth wider."
+            },
+            {
+              "t": 109.0,
+              "text": "</Response> Man lowers camera and gestures."
+            },
+            {
+              "t": 110.0,
+              "text": "</Response> Man closes mouth."
+            },
+            {
+              "t": 111.0,
+              "text": "</Response> Subject changes to animal."
+            },
+            {
+              "t": 113.0,
+              "text": "</Response> Man moves hands apart."
+            },
+            {
+              "t": 116.0,
+              "text": "</Response> Background changes to beach scene."
+            },
+            {
+              "t": 117.0,
+              "text": "</Response> Handlebar and helmet shift right."
+            },
+            {
+              "t": 118.0,
+              "text": "</Response> Man moves hands apart slightly."
+            },
+            {
+              "t": 119.0,
+              "text": "</Response> Man moves hands outward."
+            },
+            {
+              "t": 120.0,
+              "text": "</Response> Man lowers hands."
+            },
+            {
+              "t": 121.0,
+              "text": "</Response> Person turns head right slightly."
+            },
+            {
+              "t": 122.0,
+              "text": "</Response> Man moves hands closer."
+            },
+            {
+              "t": 124.0,
+              "text": "</Response> Man moves hands outward."
+            },
+            {
+              "t": 125.0,
+              "text": "</Response> Man moves hands apart."
+            },
+            {
+              "t": 126.0,
+              "text": "</Response> Man raises hand higher."
+            },
+            {
+              "t": 127.0,
+              "text": "</Response> Man lowers hand."
+            },
+            {
+              "t": 128.0,
+              "text": "</Response> \"MUSIC IS EVERYTHING\" disappears."
+            },
+            {
+              "t": 129.0,
+              "text": "</Response> Text overlay disappears."
+            },
+            {
+              "t": 130.0,
+              "text": "</Response> Girl adjusts position."
+            },
+            {
+              "t": 131.0,
+              "text": "</Response> Woman turns head right."
+            },
+            {
+              "t": 132.0,
+              "text": "</Response> Person turns head right."
+            },
+            {
+              "t": 133.0,
+              "text": "</Response> Scene shows feet near waterfall."
+            },
+            {
+              "t": 134.0,
+              "text": "</Response> Foot moves forward."
+            },
+            {
+              "t": 136.0,
+              "text": "</Response> People move left slightly."
+            },
+            {
+              "t": 137.0,
+              "text": "</Response> Camera zooms in on tower."
+            },
+            {
+              "t": 138.0,
+              "text": "</Response> Scene shows man walking to mountain."
+            },
+            {
+              "t": 139.0,
+              "text": "</Response> Man turns head right slightly."
+            },
+            {
+              "t": 140.0,
+              "text": "</Response> Camera changes to aerial view."
+            },
+            {
+              "t": 141.0,
+              "text": "</Response> Water level rises around person."
+            },
+            {
+              "t": 142.0,
+              "text": "</Response> Camera shifts to aerial view."
+            },
+            {
+              "t": 143.0,
+              "text": "</Response> Kayak moves forward slightly."
+            },
+            {
+              "t": 144.0,
+              "text": "</Response> Man steps forward."
+            },
+            {
+              "t": 145.0,
+              "text": "</Response> Man moves from beach to kayak."
+            },
+            {
+              "t": 146.0,
+              "text": "</Response> Person in kayak moves forward."
+            },
+            {
+              "t": 147.0,
+              "text": "</Response> Man moves hands closer."
+            },
+            {
+              "t": 148.0,
+              "text": "</Response> Man moves hands apart."
+            }
+          ],
+          "n_frames": 642
+        },
+        {
+          "video": "videos/datasets/qvh_narration/s1.mp4",
+          "question": "Produce a running narration that captures ongoing activities, brief pauses, and resumptions, maintaining temporal alignment with the video timeline.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "</Response> Water touches the feet."
+            },
+            {
+              "t": 1.0,
+              "text": "</Response> Footwear is removed."
+            },
+            {
+              "t": 2.0,
+              "text": "</Response> Feet sink into water."
+            },
+            {
+              "t": 4.0,
+              "text": "</Response> Feet move onto sand."
+            },
+            {
+              "t": 5.0,
+              "text": "</Response> Camera moves nearer to water."
+            },
+            {
+              "t": 6.0,
+              "text": "</Response> Hand appears over water."
+            },
+            {
+              "t": 7.0,
+              "text": "</Response> Sky and horizon enter frame."
+            },
+            {
+              "t": 8.0,
+              "text": "</Response> Text appears."
+            },
+            {
+              "t": 9.0,
+              "text": "</Response> Text reads \"Later that night....\""
+            },
+            {
+              "t": 10.0,
+              "text": "</Response> Text centers on screen."
+            },
+            {
+              "t": 11.0,
+              "text": "</Response> Woman appears in frame."
+            },
+            {
+              "t": 12.0,
+              "text": "</Response> Two images of same scene appear."
+            },
+            {
+              "t": 13.0,
+              "text": "</Response> Woman turns left."
+            },
+            {
+              "t": 15.0,
+              "text": "</Response> Woman sways hips and moves arms."
+            },
+            {
+              "t": 17.0,
+              "text": "</Response> Woman raises her arm."
+            },
+            {
+              "t": 18.0,
+              "text": "</Response> She steps forward."
+            },
+            {
+              "t": 20.0,
+              "text": "</Response> Lighting brightens slightly."
+            },
+            {
+              "t": 21.0,
+              "text": "</Response> Lamp illuminates more brightly."
+            },
+            {
+              "t": 23.0,
+              "text": "</Response> Woman waves her hands."
+            },
+            {
+              "t": 26.0,
+              "text": "</Response> Woman leans forward."
+            },
+            {
+              "t": 27.0,
+              "text": "</Response> Woman raises her arm."
+            },
+            {
+              "t": 28.0,
+              "text": "</Response> Woman on right raises arm and moves head."
+            },
+            {
+              "t": 30.0,
+              "text": "</Response> People wave hands."
+            },
+            {
+              "t": 31.0,
+              "text": "</Response> Woman moves hand toward face."
+            },
+            {
+              "t": 32.0,
+              "text": "</Response> Black car moves forward."
+            },
+            {
+              "t": 34.0,
+              "text": "</Response> Car moves forward."
+            },
+            {
+              "t": 35.0,
+              "text": "</Response> Car appears on right."
+            },
+            {
+              "t": 37.0,
+              "text": "</Response> White car enters frame."
+            },
+            {
+              "t": 38.0,
+              "text": "</Response> Red car appears."
+            },
+            {
+              "t": 39.0,
+              "text": "</Response> Person walks right."
+            },
+            {
+              "t": 40.0,
+              "text": "</Response> White car moves down road."
+            },
+            {
+              "t": 41.0,
+              "text": "</Response> White car turns left toward building."
+            },
+            {
+              "t": 42.0,
+              "text": "</Response> Silver car enters and stops."
+            },
+            {
+              "t": 45.0,
+              "text": "</Response> Silver car with bright headlights stops."
+            },
+            {
+              "t": 46.0,
+              "text": "</Response> Woman on left sticks out tongue."
+            },
+            {
+              "t": 47.0,
+              "text": "</Response> Woman on left moves her hand."
+            },
+            {
+              "t": 48.0,
+              "text": "</Response> Woman's face turns away."
+            },
+            {
+              "t": 49.0,
+              "text": "</Response> Finger points."
+            },
+            {
+              "t": 50.0,
+              "text": "</Response> Woman raises her hand."
+            },
+            {
+              "t": 51.0,
+              "text": "</Response> Light changes to red."
+            },
+            {
+              "t": 52.0,
+              "text": "</Response> Two people jump off frame."
+            },
+            {
+              "t": 53.0,
+              "text": "</Response> Three people move clockwise."
+            },
+            {
+              "t": 54.0,
+              "text": "</Response> Red light moves across ground."
+            },
+            {
+              "t": 55.0,
+              "text": "</Response> Man in middle moves back and forth. Person in checkered shirt comes forward and moves back."
+            },
+            {
+              "t": 56.0,
+              "text": "</Response> Person claps."
+            },
+            {
+              "t": 57.0,
+              "text": "</Response> Lighting changes color."
+            },
+            {
+              "t": 58.0,
+              "text": "</Response> Person with wine glass appears."
+            },
+            {
+              "t": 59.0,
+              "text": "</Response> Man turns around."
+            },
+            {
+              "t": 60.0,
+              "text": "</Response> Man raises his arm."
+            },
+            {
+              "t": 61.0,
+              "text": "</Response> Man appears walking down."
+            },
+            {
+              "t": 62.0,
+              "text": "</Response> Person turns right."
+            },
+            {
+              "t": 63.0,
+              "text": "</Response> Man bends down."
+            },
+            {
+              "t": 64.0,
+              "text": "</Response> Person in gray shirt extends hands."
+            },
+            {
+              "t": 65.0,
+              "text": "</Response> Purple light spot on floor."
+            },
+            {
+              "t": 66.0,
+              "text": "</Response> Woman appears."
+            },
+            {
+              "t": 67.0,
+              "text": "</Response> Person jumps up and dances."
+            },
+            {
+              "t": 68.0,
+              "text": "</Response> Girl moves forward."
+            },
+            {
+              "t": 69.0,
+              "text": "</Response> Woman walks away from camera."
+            },
+            {
+              "t": 70.0,
+              "text": "</Response> Red square light is not glowing."
+            },
+            {
+              "t": 71.0,
+              "text": "</Response> Pole shines more purple."
+            },
+            {
+              "t": 72.0,
+              "text": "</Response> Man in black t-shirt spreads hands."
+            },
+            {
+              "t": 73.0,
+              "text": "</Response> Lighting changes from green to blue."
+            },
+            {
+              "t": 74.0,
+              "text": "</Response> Lighting turns red."
+            },
+            {
+              "t": 75.0,
+              "text": "</Response> Girl turns."
+            },
+            {
+              "t": 76.0,
+              "text": "</Response> Room becomes greener."
+            },
+            {
+              "t": 77.0,
+              "text": "</Response> Light changes from green to blue."
+            },
+            {
+              "t": 78.0,
+              "text": "</Response> Light becomes brighter."
+            },
+            {
+              "t": 79.0,
+              "text": "</Response> Light turns green."
+            },
+            {
+              "t": 80.0,
+              "text": "</Response> Woman turns toward camera."
+            },
+            {
+              "t": 81.0,
+              "text": "</Response> Girl moves closer to lens."
+            },
+            {
+              "t": 82.0,
+              "text": "</Response> Woman's head and shoulders move slightly."
+            },
+            {
+              "t": 83.0,
+              "text": "</Response> Person leans forward."
+            },
+            {
+              "t": 84.0,
+              "text": "</Response> Camera moves away from person."
+            },
+            {
+              "t": 85.0,
+              "text": "</Response> Person's hair moves closer to camera."
+            },
+            {
+              "t": 86.0,
+              "text": "</Response> Woman becomes more visible and closer."
+            },
+            {
+              "t": 87.0,
+              "text": "</Response> Woman extends arm backward."
+            },
+            {
+              "t": 89.0,
+              "text": "</Response> Camera shakes."
+            },
+            {
+              "t": 90.0,
+              "text": "</Response> Woman's head moves slightly."
+            },
+            {
+              "t": 92.0,
+              "text": "</Response> Camera tilts slightly right."
+            },
+            {
+              "t": 93.0,
+              "text": "</Response> Woman's head turns slightly."
+            },
+            {
+              "t": 94.0,
+              "text": "</Response> Person leans forward."
+            },
+            {
+              "t": 95.0,
+              "text": "</Response> White vehicle enters from right."
+            },
+            {
+              "t": 96.0,
+              "text": "</Response> Man in white runs toward camera."
+            },
+            {
+              "t": 97.0,
+              "text": "</Response> Two people walk toward camera."
+            },
+            {
+              "t": 98.0,
+              "text": "</Response> Person in white moves closer."
+            },
+            {
+              "t": 99.0,
+              "text": "</Response> Man walks closer."
+            },
+            {
+              "t": 100.0,
+              "text": "</Response> Person walks closer to another person."
+            },
+            {
+              "t": 101.0,
+              "text": "</Response> Person walks into frame."
+            },
+            {
+              "t": 102.0,
+              "text": "</Response> Person removes lid from grill."
+            },
+            {
+              "t": 103.0,
+              "text": "</Response> Man looks more to the right."
+            },
+            {
+              "t": 104.0,
+              "text": "</Response> Man moves his right hand up and down."
+            },
+            {
+              "t": 106.0,
+              "text": "</Response> Person places food over grill."
+            },
+            {
+              "t": 107.0,
+              "text": "</Response> Man raises his arm."
+            },
+            {
+              "t": 109.0,
+              "text": "</Response> Flames appear."
+            },
+            {
+              "t": 110.0,
+              "text": "</Response> Flames decrease in size."
+            },
+            {
+              "t": 111.0,
+              "text": "</Response> Camera angle changes slightly."
+            },
+            {
+              "t": 112.0,
+              "text": "</Response> Person in white hat and jacket appears."
+            },
+            {
+              "t": 113.0,
+              "text": "</Response> Person moves their arms."
+            },
+            {
+              "t": 114.0,
+              "text": "</Response> Chef's hand moves slightly."
+            },
+            {
+              "t": 115.0,
+              "text": "</Response> Chef appears."
+            },
+            {
+              "t": 116.0,
+              "text": "</Response> Hand holding tool comes into view."
+            },
+            {
+              "t": 117.0,
+              "text": "</Response> Hand places foil-wrapped food on grill."
+            },
+            {
+              "t": 118.0,
+              "text": "</Response> Foil is positioned by grilling food."
+            },
+            {
+              "t": 119.0,
+              "text": "</Response> Hand moves to grill."
+            },
+            {
+              "t": 120.0,
+              "text": "</Response> Person's arms move food on grill."
+            },
+            {
+              "t": 121.0,
+              "text": "</Response> Fork picks up piece of food."
+            },
+            {
+              "t": 122.0,
+              "text": "</Response> Person moves toward camera."
+            },
+            {
+              "t": 123.0,
+              "text": "</Response> Person in white shirt enters from left."
+            },
+            {
+              "t": 124.0,
+              "text": "</Response> Hand cuts chicken."
+            },
+            {
+              "t": 125.0,
+              "text": "</Response> Hands adjust objects on grill with cleaver."
+            },
+            {
+              "t": 126.0,
+              "text": "</Response> Man chops chicken and puts it on plate."
+            },
+            {
+              "t": 127.0,
+              "text": "</Response> Person picks up tray of food."
+            },
+            {
+              "t": 128.0,
+              "text": "</Response> Man picks up bottle."
+            },
+            {
+              "t": 129.0,
+              "text": "</Response> Man holds sauce bottle and pumps sauce onto plate."
+            },
+            {
+              "t": 130.0,
+              "text": "</Response> Man pulls bottle outwards."
+            },
+            {
+              "t": 131.0,
+              "text": "</Response> Person shifts bottle's position."
+            },
+            {
+              "t": 133.0,
+              "text": "</Response> Man pours barbecue sauce."
+            },
+            {
+              "t": 134.0,
+              "text": "</Response> Group of people appears on right."
+            },
+            {
+              "t": 135.0,
+              "text": "</Response> Woman jumps closer to camera."
+            },
+            {
+              "t": 136.0,
+              "text": "</Response> Man moves slightly left."
+            },
+            {
+              "t": 137.0,
+              "text": "</Response> Man raises his arm."
+            },
+            {
+              "t": 138.0,
+              "text": "</Response> Person in red gestures with hand."
+            },
+            {
+              "t": 139.0,
+              "text": "</Response> Man in hat bends down slightly."
+            },
+            {
+              "t": 140.0,
+              "text": "</Response> Person in white shirt enters from right."
+            },
+            {
+              "t": 141.0,
+              "text": "</Response> Hand wearing ring points upward."
+            },
+            {
+              "t": 142.0,
+              "text": "</Response> Person raises their hand."
+            },
+            {
+              "t": 143.0,
+              "text": "</Response> Person's arm moves left."
+            },
+            {
+              "t": 144.0,
+              "text": "</Response> Man raises hand higher."
+            },
+            {
+              "t": 145.0,
+              "text": "</Response> Image gets brighter."
+            },
+            {
+              "t": 146.0,
+              "text": "</Response> Man opens mouth wider."
+            },
+            {
+              "t": 147.0,
+              "text": "</Response> Man is joined by man in red shirt."
+            },
+            {
+              "t": 148.0,
+              "text": "</Response> Woman points with her hand."
+            }
+          ],
+          "n_frames": 642
+        }
+      ]
+    },
+    {
+      "id": "qvh_eventcaption",
+      "name": "QVHighlight · Event Caption",
+      "task": "Dense timestamped events",
+      "icon": "🎬",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/qvh_eventcaption/s0.mp4",
+          "question": "Find all significant events in the video and describe them.",
+          "events": [
+            {
+              "t": 149.0,
+              "text": "</Response> The creator explains bringing her plants inside for sunlight and announces a 7-Eleven mugbang in Tagalog, inviting viewers to follow her on Instagram for the event."
+            }
+          ],
+          "n_frames": 625
+        },
+        {
+          "video": "videos/datasets/qvh_eventcaption/s1.mp4",
+          "question": "Find all significant events in the video and describe them.",
+          "events": [
+            {
+              "t": 150.0,
+              "text": "</Response> A farmer explains the various paths their corn and soybeans take, from ethanol facilities to the Gulf of Mexico, and to markets in China, emphasizing the crucial role of export markets for their livelihoods."
+            }
+          ],
+          "n_frames": 642
+        }
+      ]
+    },
+    {
+      "id": "qvh_grounding",
+      "name": "QVHighlight · Event Grounding",
+      "task": "Alert when an event happens",
+      "icon": "📍",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/qvh_grounding/s0.mp4",
+          "question": "Alert me once the event 'A woman with glasses talks to the camera, explaining she's ready to go back to school and is excited about her first time in her own room' is finished.",
+          "events": [
+            {
+              "t": 25.0,
+              "text": "</Response> A woman with glasses talks to the camera, explaining she is ready to go back to school and is excited about her first time in her own room."
+            },
+            {
+              "t": 71.0,
+              "text": "</Response> The woman in the yellow shirt arrives to leave, and they share hugs and a goodbye hug with another woman before she departs."
+            },
+            {
+              "t": 105.0,
+              "text": "</Response> The man in a white cap films a vlog from the kitchen, announcing it is the first day of school and he will be getting the kids' breakfast."
+            },
+            {
+              "t": 130.0,
+              "text": "</Response> The camera shows a view of the backyard pool area from a window."
+            }
+          ],
+          "n_frames": 155
+        },
+        {
+          "video": "videos/datasets/qvh_grounding/s1.mp4",
+          "question": "Update me as soon as the event 'The scene shows a view from the car driving on a street at night' is done.",
+          "events": [
+            {
+              "t": 19.0,
+              "text": "</Response> A view from the car driving on a street at night is shown."
+            },
+            {
+              "t": 58.0,
+              "text": "</Response> She and her friend go to a dessert shop called \"Pressed juicery,\" where they look at the menu and toppings."
+            },
+            {
+              "t": 74.0,
+              "text": "</Response> They sit at an outdoor table and enjoy their ice cream."
+            }
+          ],
+          "n_frames": 137
+        }
+      ]
+    },
+    {
+      "id": "didemo_grounding",
+      "name": "DiDeMo · Event Grounding",
+      "task": "Short Flickr-video moment localization",
+      "icon": "📌",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/didemo_grounding/s0.mp4",
+          "question": "Identify and mark the temporal boundaries of all segments featuring the event 'a brown rat goes into someone's hand then onto a cage'. Report each event upon its conclusion.",
+          "events": [
+            {
+              "t": 13.0,
+              "text": "</Response> a brown rat goes into someone's hand then onto a cage"
+            }
+          ],
+          "n_frames": 42
+        },
+        {
+          "video": "videos/datasets/didemo_grounding/s1.mp4",
+          "question": "Locate all video segments where the event 'an orange kitten is sitting then gets up and walks away' appears and specify their time intervals. Output detected events once they end.",
+          "events": [
+            {
+              "t": 28.0,
+              "text": "</Response> an orange kitten is sitting then gets up and walks away"
+            }
+          ],
+          "n_frames": 86
+        }
+      ]
+    },
+    {
+      "id": "queryd_grounding",
+      "name": "QueryD · Event Grounding",
+      "task": "Alert when an event happens",
+      "icon": "⏱️",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/queryd_grounding/s0.mp4",
+          "question": "Find and localize all occurrences of the event 'he throws the pizza boxes at grapefruit and the Watermelons who fall into the aquarium of live anchovies which attack them' throughout the video. Report",
+          "events": [
+            {
+              "t": 258.0,
+              "text": "</Response> he throws the pizza boxes at grapefruit and the Watermelons who fall into the aquarium of live anchovies which attack them"
+            }
+          ],
+          "n_frames": 1375
+        },
+        {
+          "video": "videos/datasets/queryd_grounding/s1.mp4",
+          "question": "Identify and mark the temporal boundaries of all segments featuring the event 'there's no one there but a berry in a fancy outfits'. Report each event upon its conclusion.",
+          "events": [
+            {
+              "t": 35.0,
+              "text": "</Response> there's no one there but a berry in a fancy outfits"
+            }
+          ],
+          "n_frames": 1375
+        }
+      ]
+    },
+    {
+      "id": "coin_action",
+      "name": "COIN · Action Caption",
+      "task": "Procedural step captions",
+      "icon": "🔧",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/coin_action/s0.mp4",
+          "question": "Identify and localize a series of steps or actions occurring in the video.",
+          "events": [
+            {
+              "t": 33.0,
+              "text": "</Response> remove the old hard disk"
+            },
+            {
+              "t": 61.0,
+              "text": "</Response> remove the old hard disk"
+            },
+            {
+              "t": 71.0,
+              "text": "</Response> install the new hard disk"
+            },
+            {
+              "t": 88.0,
+              "text": "</Response> install the new hard disk"
+            },
+            {
+              "t": 98.0,
+              "text": "</Response> install the new hard disk"
+            },
+            {
+              "t": 118.0,
+              "text": "</Response> install the laptop rear cover"
+            }
+          ],
+          "n_frames": 546
+        },
+        {
+          "video": "videos/datasets/coin_action/s1.mp4",
+          "question": "Identify and mark the video segments corresponding to a series of actions or steps.",
+          "events": [
+            {
+              "t": 37.0,
+              "text": "</Response> clean the surface"
+            },
+            {
+              "t": 47.0,
+              "text": "</Response> clean the surface"
+            },
+            {
+              "t": 69.0,
+              "text": "</Response> clean the scratch"
+            },
+            {
+              "t": 194.0,
+              "text": "</Response> polish with polisher"
+            },
+            {
+              "t": 205.0,
+              "text": "</Response> polish with polisher"
+            },
+            {
+              "t": 216.0,
+              "text": "</Response> clean the scratch"
+            }
+          ],
+          "n_frames": 994
+        }
+      ]
+    },
+    {
+      "id": "anet_narration_full",
+      "name": "ActivityNet · Narration",
+      "task": "Dense activity narration",
+      "icon": "🎞️",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": null,
+          "question": "Generate live commentary of the video, focusing on who is doing what, where, and when, and noting any transitions or new events immediately.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "</Response> Dancers move to center stage."
+            },
+            {
+              "t": 1.0,
+              "text": "</Response> Man in blue jumps."
+            },
+            {
+              "t": 2.0,
+              "text": "</Response> Dancers raise arms."
+            },
+            {
+              "t": 4.0,
+              "text": "</Response> Dancers shift positions."
+            },
+            {
+              "t": 6.0,
+              "text": "</Response> Man in blue jumps forward."
+            },
+            {
+              "t": 7.0,
+              "text": "</Response> Camera zooms out."
+            },
+            {
+              "t": 8.0,
+              "text": "</Response> Group steps forward."
+            },
+            {
+              "t": 11.0,
+              "text": "</Response> Camera zooms in."
+            },
+            {
+              "t": 12.0,
+              "text": "</Response> Women lower arms."
+            },
+            {
+              "t": 13.0,
+              "text": "</Response> Women raise arms above heads."
+            },
+            {
+              "t": 14.0,
+              "text": "</Response> Dancers lower arms and bend knees."
+            },
+            {
+              "t": 15.0,
+              "text": "</Response> Dancers shift positions."
+            },
+            {
+              "t": 16.0,
+              "text": "</Response> Dancers extend arms outward."
+            },
+            {
+              "t": 17.0,
+              "text": "</Response> Dancers jump upward."
+            },
+            {
+              "t": 18.0,
+              "text": "</Response> Dancers jump forward."
+            },
+            {
+              "t": 20.0,
+              "text": "</Response> Man in blue jumps higher."
+            },
+            {
+              "t": 23.0,
+              "text": "</Response> Camera zooms out."
+            },
+            {
+              "t": 28.0,
+              "text": "</Response> Dancers move forward and backward."
+            },
+            {
+              "t": 29.0,
+              "text": "</Response> Dancers move off stage."
+            },
+            {
+              "t": 30.0,
+              "text": "</Response> Trophy rotates clockwise."
+            },
+            {
+              "t": 32.0,
+              "text": "</Response> Scene transitions to person walking on stage."
+            },
+            {
+              "t": 33.0,
+              "text": "</Response> Man changes stance and lifts leg."
+            },
+            {
+              "t": 34.0,
+              "text": "</Response> Man appears."
+            },
+            {
+              "t": 35.0,
+              "text": "</Response> Third person appears from left."
+            },
+            {
+              "t": 36.0,
+              "text": "</Response> Man in center jumps higher."
+            },
+            {
+              "t": 38.0,
+              "text": "</Response> Man in blue pants steps forward."
+            },
+            {
+              "t": 39.0,
+              "text": "</Response> Man's headband disappears."
+            },
+            {
+              "t": 40.0,
+              "text": "</Response> Dancers lower legs and arms."
+            },
+            {
+              "t": 41.0,
+              "text": "</Response> Dancers extend arms and lift leg."
+            },
+            {
+              "t": 42.0,
+              "text": "</Response> Dancers lower arms."
+            },
+            {
+              "t": 43.0,
+              "text": "</Response> Man raises arms above head."
+            },
+            {
+              "t": 44.0,
+              "text": "</Response> Man lowers arms."
+            },
+            {
+              "t": 45.0,
+              "text": "</Response> Dancers switch positions."
+            },
+            {
+              "t": 47.0,
+              "text": "</Response> Person in blue lifts right leg."
+            },
+            {
+              "t": 48.0,
+              "text": "</Response> Person in blue jumps over person in red."
+            },
+            {
+              "t": 49.0,
+              "text": "</Response> Man moves behind woman."
+            },
+            {
+              "t": 51.0,
+              "text": "</Response> People change positions."
+            },
+            {
+              "t": 52.0,
+              "text": "</Response> Man's arm extends outward."
+            },
+            {
+              "t": 54.0,
+              "text": "</Response> Man lifts right leg."
+            },
+            {
+              "t": 55.0,
+              "text": "</Response> Dancers turn around."
+            },
+            {
+              "t": 56.0,
+              "text": "</Response> Dancers lower arms and bend elbows."
+            },
+            {
+              "t": 57.0,
+              "text": "</Response> People change outfits."
+            },
+            {
+              "t": 59.0,
+              "text": "</Response> Dancers extend arms and widen legs."
+            },
+            {
+              "t": 60.0,
+              "text": "</Response> Man's legs move apart."
+            },
+            {
+              "t": 61.0,
+              "text": "</Response> Man disappears from frame."
+            },
+            {
+              "t": 62.0,
+              "text": "</Response> Women raise arms above heads."
+            },
+            {
+              "t": 63.0,
+              "text": "</Response> Women switch positions."
+            },
+            {
+              "t": 66.0,
+              "text": "</Response> Man lifts leg."
+            },
+            {
+              "t": 67.0,
+              "text": "</Response> Man lowers leg."
+            },
+            {
+              "t": 68.0,
+              "text": "</Response> Man steps forward and turns."
+            },
+            {
+              "t": 69.0,
+              "text": "</Response> Man moves arms around woman's back."
+            },
+            {
+              "t": 70.0,
+              "text": "</Response> Group raises arms."
+            },
+            {
+              "t": 71.0,
+              "text": "</Response> Group raises arms above heads."
+            },
+            {
+              "t": 72.0,
+              "text": "</Response> Dancers lower arms."
+            },
+            {
+              "t": 73.0,
+              "text": "</Response> Dancers raise arms above heads."
+            },
+            {
+              "t": 76.0,
+              "text": "</Response> Dancers move arms and legs into new positions."
+            },
+            {
+              "t": 78.0,
+              "text": "</Response> People move arms to cover heads."
+            },
+            {
+              "t": 79.0,
+              "text": "</Response> Dancers lower arms and shift pose."
+            },
+            {
+              "t": 80.0,
+              "text": "</Response> Men's arms move forward."
+            },
+            {
+              "t": 81.0,
+              "text": "</Response> Men raise arms above heads."
+            },
+            {
+              "t": 82.0,
+              "text": "</Response> Man in middle turns head right."
+            },
+            {
+              "t": 83.0,
+              "text": "</Response> Men bend knees deeper."
+            },
+            {
+              "t": 84.0,
+              "text": "</Response> Man on right extends arms outward."
+            },
+            {
+              "t": 85.0,
+              "text": "</Response> Men's legs extend outward."
+            },
+            {
+              "t": 86.0,
+              "text": "</Response> Men raise arms above heads."
+            },
+            {
+              "t": 87.0,
+              "text": "</Response> Men lower arms."
+            },
+            {
+              "t": 88.0,
+              "text": "</Response> Man in middle lifts right leg."
+            },
+            {
+              "t": 89.0,
+              "text": "</Response> People change outfits to red tops and brown bottoms."
+            },
+            {
+              "t": 90.0,
+              "text": "</Response> Women lower arms to sides."
+            },
+            {
+              "t": 91.0,
+              "text": "</Response> Women's arms bend at elbows."
+            },
+            {
+              "t": 92.0,
+              "text": "</Response> Women bend knees and lower bodies."
+            },
+            {
+              "t": 93.0,
+              "text": "</Response> Women extend legs outward."
+            },
+            {
+              "t": 94.0,
+              "text": "</Response> Women lower legs and arms."
+            },
+            {
+              "t": 95.0,
+              "text": "</Response> Dancers change outfits and positions."
+            },
+            {
+              "t": 96.0,
+              "text": "</Response> Dancers raise arms above heads."
+            },
+            {
+              "t": 97.0,
+              "text": "</Response> Man lowers leg."
+            },
+            {
+              "t": 98.0,
+              "text": "</Response> Person on left changes hair to blonde."
+            },
+            {
+              "t": 99.0,
+              "text": "</Response> Person on left turns sideways."
+            },
+            {
+              "t": 100.0,
+              "text": "</Response> People raise arms higher."
+            },
+            {
+              "t": 101.0,
+              "text": "</Response> Man lowers arms."
+            },
+            {
+              "t": 102.0,
+              "text": "</Response> Man disappears."
+            },
+            {
+              "t": 103.0,
+              "text": "</Response> Women lower arms and step forward."
+            },
+            {
+              "t": 104.0,
+              "text": "</Response> Women lower arms and bend knees."
+            },
+            {
+              "t": 106.0,
+              "text": "</Response> Women squat."
+            },
+            {
+              "t": 107.0,
+              "text": "</Response> Women bend knees deeper."
+            },
+            {
+              "t": 108.0,
+              "text": "</Response> People stand up straight."
+            },
+            {
+              "t": 109.0,
+              "text": "</Response> Man jumps."
+            },
+            {
+              "t": 110.0,
+              "text": "</Response> Dancers jump higher."
+            },
+            {
+              "t": 111.0,
+              "text": "</Response> Dancers raise arms higher."
+            },
+            {
+              "t": 112.0,
+              "text": "</Response> Dancers jump higher."
+            },
+            {
+              "t": 113.0,
+              "text": "</Response> Dancers extend arms outward."
+            },
+            {
+              "t": 114.0,
+              "text": "</Response> Dancers shift positions."
+            },
+            {
+              "t": 115.0,
+              "text": "</Response> Dancers raise arms above heads."
+            },
+            {
+              "t": 116.0,
+              "text": "</Response> Dancers lower arms."
+            },
+            {
+              "t": 117.0,
+              "text": "</Response> Man jumps higher."
+            },
+            {
+              "t": 118.0,
+              "text": "</Response> Dancers raise arms above heads."
+            },
+            {
+              "t": 119.0,
+              "text": "</Response> Dancers lower arms."
+            },
+            {
+              "t": 120.0,
+              "text": "</Response> Dancers extend arms outward."
+            },
+            {
+              "t": 121.0,
+              "text": "</Response> Man lifts leg higher."
+            },
+            {
+              "t": 122.0,
+              "text": "</Response> Person in blue lowers leg."
+            },
+            {
+              "t": 123.0,
+              "text": "</Response> Rightmost person lifts right leg."
+            },
+            {
+              "t": 124.0,
+              "text": "</Response> Legs lift forward."
+            },
+            {
+              "t": 125.0,
+              "text": "</Response> Man's leg lifts higher."
+            },
+            {
+              "t": 126.0,
+              "text": "</Response> Dancers lower legs and arms."
+            },
+            {
+              "t": 127.0,
+              "text": "</Response> Woman jumps off ground."
+            },
+            {
+              "t": 128.0,
+              "text": "</Response> Woman lowers arms and bends leg."
+            },
+            {
+              "t": 129.0,
+              "text": "</Response> Woman raises arms above head."
+            },
+            {
+              "t": 130.0,
+              "text": "</Response> Woman lowers arms."
+            },
+            {
+              "t": 131.0,
+              "text": "</Response> Legs move closer together."
+            },
+            {
+              "t": 132.0,
+              "text": "</Response> Woman's arms raise outward."
+            },
+            {
+              "t": 133.0,
+              "text": "</Response> Woman jumps and raises legs."
+            },
+            {
+              "t": 134.0,
+              "text": "</Response> Woman raises right leg and bends arm."
+            },
+            {
+              "t": 135.0,
+              "text": "</Response> Woman lowers leg and extends arms."
+            },
+            {
+              "t": 136.0,
+              "text": "</Response> Woman's leg lifts higher."
+            },
+            {
+              "t": 137.0,
+              "text": "</Response> Woman's leg lowers and extends forward."
+            },
+            {
+              "t": 138.0,
+              "text": "</Response> Woman lowers leg and arm."
+            },
+            {
+              "t": 139.0,
+              "text": "</Response> Woman's arms move higher."
+            },
+            {
+              "t": 140.0,
+              "text": "</Response> Woman lifts right leg higher."
+            },
+            {
+              "t": 142.0,
+              "text": "</Response> Woman's leg position changes."
+            },
+            {
+              "t": 143.0,
+              "text": "</Response> Woman's leg lowers from raised position."
+            },
+            {
+              "t": 144.0,
+              "text": "</Response> Woman lifts leg higher."
+            },
+            {
+              "t": 145.0,
+              "text": "</Response> Woman's arms cross over chest."
+            },
+            {
+              "t": 146.0,
+              "text": "</Response> Woman's legs extend outward."
+            },
+            {
+              "t": 147.0,
+              "text": "</Response> Woman's arms move to chest."
+            },
+            {
+              "t": 148.0,
+              "text": "</Response> Woman raises right leg."
+            },
+            {
+              "t": 149.0,
+              "text": "</Response> Woman lowers leg and arm."
+            },
+            {
+              "t": 150.0,
+              "text": "</Response> Woman's arms move above head."
+            },
+            {
+              "t": 151.0,
+              "text": "</Response> Woman raises arms above head."
+            },
+            {
+              "t": 152.0,
+              "text": "</Response> Woman lowers arms."
+            },
+            {
+              "t": 153.0,
+              "text": "</Response> Woman's legs switch positions."
+            },
+            {
+              "t": 155.0,
+              "text": "</Response> Woman's legs move apart and arms raise above head."
+            },
+            {
+              "t": 156.0,
+              "text": "</Response> Woman jumps into air."
+            },
+            {
+              "t": 157.0,
+              "text": "</Response> Woman's legs move to step forward."
+            },
+            {
+              "t": 158.0,
+              "text": "</Response> Woman raises arms above head."
+            },
+            {
+              "t": 159.0,
+              "text": "</Response> Women raise arms above heads."
+            },
+            {
+              "t": 160.0,
+              "text": "</Response> Women lower arms."
+            },
+            {
+              "t": 161.0,
+              "text": "</Response> Women extend arms outward."
+            },
+            {
+              "t": 162.0,
+              "text": "</Response> Group's arms extend outward."
+            },
+            {
+              "t": 163.0,
+              "text": "</Response> Women raise arms above heads."
+            },
+            {
+              "t": 164.0,
+              "text": "</Response> Group changes arm positions."
+            },
+            {
+              "t": 165.0,
+              "text": "</Response> Woman lowers arms."
+            },
+            {
+              "t": 166.0,
+              "text": "</Response> Person's leg extends forward."
+            },
+            {
+              "t": 167.0,
+              "text": "</Response> Man lowers arms and bends knees."
+            },
+            {
+              "t": 168.0,
+              "text": "</Response> Person lowers hands and steps forward."
+            },
+            {
+              "t": 169.0,
+              "text": "</Response> Person's leg lifts higher."
+            },
+            {
+              "t": 170.0,
+              "text": "</Response> Person changes pose significantly."
+            },
+            {
+              "t": 171.0,
+              "text": "</Response> Man jumps and lands with legs apart."
+            },
+            {
+              "t": 172.0,
+              "text": "</Response> Person jumps and lands with legs apart."
+            },
+            {
+              "t": 173.0,
+              "text": "</Response> Person's arms move upward."
+            },
+            {
+              "t": 174.0,
+              "text": "</Response> Man raises arms above head."
+            },
+            {
+              "t": 175.0,
+              "text": "</Response> Man's arms extend outward."
+            },
+            {
+              "t": 176.0,
+              "text": "</Response> Man jumps into air."
+            },
+            {
+              "t": 177.0,
+              "text": "</Response> Man stands up."
+            },
+            {
+              "t": 178.0,
+              "text": "</Response> Man jumps and lands with legs together."
+            },
+            {
+              "t": 179.0,
+              "text": "</Response> Man extends arms outward."
+            },
+            {
+              "t": 180.0,
+              "text": "</Response> Person raises right leg and extends arms."
+            },
+            {
+              "t": 181.0,
+              "text": "</Response> Person lowers leg and arm."
+            },
+            {
+              "t": 182.0,
+              "text": "</Response> Person turns around."
+            },
+            {
+              "t": 183.0,
+              "text": "</Response> Man turns around."
+            },
+            {
+              "t": 184.0,
+              "text": "</Response> Man raises arms above head."
+            },
+            {
+              "t": 185.0,
+              "text": "</Response> Dancer lowers one arm and extends other."
+            },
+            {
+              "t": 186.0,
+              "text": "</Response> Person jumps to crouched position with arms raised."
+            },
+            {
+              "t": 187.0,
+              "text": "</Response> Person's legs move apart."
+            },
+            {
+              "t": 188.0,
+              "text": "</Response> Leg lowers and arms move forward."
+            },
+            {
+              "t": 189.0,
+              "text": "</Response> Person flexes both arms."
+            },
+            {
+              "t": 190.0,
+              "text": "</Response> Person changes pose."
+            },
+            {
+              "t": 191.0,
+              "text": "</Response> Man jumps off ground."
+            },
+            {
+              "t": 192.0,
+              "text": "</Response> Man lands and steps forward."
+            },
+            {
+              "t": 193.0,
+              "text": "</Response> Man's legs straighten and arms move closer."
+            },
+            {
+              "t": 194.0,
+              "text": "</Response> Man lifts leg high and extends arms."
+            },
+            {
+              "t": 195.0,
+              "text": "</Response> Man lowers leg and extends arms."
+            },
+            {
+              "t": 196.0,
+              "text": "</Response> Man's pose changes."
+            },
+            {
+              "t": 197.0,
+              "text": "</Response> Dancers move arms upward."
+            },
+            {
+              "t": 198.0,
+              "text": "</Response> Dancers move forward and raise arms."
+            },
+            {
+              "t": 199.0,
+              "text": "</Response> Dancers run in place."
+            },
+            {
+              "t": 200.0,
+              "text": "</Response> Woman in red appears."
+            },
+            {
+              "t": 201.0,
+              "text": "</Response> Group bends forward."
+            },
+            {
+              "t": 202.0,
+              "text": "</Response> Dancers switch positions."
+            },
+            {
+              "t": 203.0,
+              "text": "</Response> Woman in center moves arms down."
+            },
+            {
+              "t": 204.0,
+              "text": "</Response> Man in blue moves forward."
+            },
+            {
+              "t": 205.0,
+              "text": "</Response> Group's arms move higher."
+            },
+            {
+              "t": 206.0,
+              "text": "</Response> Woman in red steps forward."
+            },
+            {
+              "t": 207.0,
+              "text": "</Response> Central figure lowers arms."
+            },
+            {
+              "t": 208.0,
+              "text": "</Response> Man in blue moves forward."
+            },
+            {
+              "t": 209.0,
+              "text": "</Response> Man exits frame."
+            },
+            {
+              "t": 210.0,
+              "text": "</Response> Dancers extend arms outward."
+            },
+            {
+              "t": 211.0,
+              "text": "</Response> Dancers move arms upward."
+            },
+            {
+              "t": 212.0,
+              "text": "</Response> Dancers raise arms higher."
+            },
+            {
+              "t": 213.0,
+              "text": "</Response> Dancers move arms down."
+            },
+            {
+              "t": 214.0,
+              "text": "</Response> Dancers raise arms."
+            },
+            {
+              "t": 215.0,
+              "text": "</Response> Group steps forward together."
+            },
+            {
+              "t": 216.0,
+              "text": "</Response> Group raises arms."
+            },
+            {
+              "t": 217.0,
+              "text": "</Response> Dancers raise arms higher."
+            }
+          ],
+          "n_frames": 229
+        },
+        {
+          "video": "videos/datasets/anet_narration_full/s1.mp4",
+          "question": "Deliver an on-the-fly description of the video, highlighting salient actions, interactions, and changes in context as soon as they appear.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "</Response> Lightning flashes brightly."
+            },
+            {
+              "t": 2.0,
+              "text": "</Response> Sky brightens significantly."
+            },
+            {
+              "t": 3.0,
+              "text": "</Response> Lightning strikes appear."
+            },
+            {
+              "t": 5.0,
+              "text": "</Response> Lightning illuminates the sky."
+            },
+            {
+              "t": 7.0,
+              "text": "</Response> Bright light appears. Ship appears."
+            },
+            {
+              "t": 8.0,
+              "text": "</Response> Person in green moves forward."
+            },
+            {
+              "t": 9.0,
+              "text": "</Response> Water splashes higher."
+            },
+            {
+              "t": 11.0,
+              "text": "</Response> Boat tips into water."
+            },
+            {
+              "t": 12.0,
+              "text": "</Response> Boat submerges into wave."
+            },
+            {
+              "t": 14.0,
+              "text": "</Response> Wave crashes over boat."
+            },
+            {
+              "t": 16.0,
+              "text": "</Response> Water splashes over camera."
+            },
+            {
+              "t": 17.0,
+              "text": "</Response> Boat tilts further into water."
+            },
+            {
+              "t": 19.0,
+              "text": "</Response> Water splashes higher over boat."
+            },
+            {
+              "t": 21.0,
+              "text": "</Response> Person in center bends forward."
+            },
+            {
+              "t": 23.0,
+              "text": "</Response> Person at helm leans back."
+            },
+            {
+              "t": 24.0,
+              "text": "</Response> Hand covers camera lens."
+            },
+            {
+              "t": 25.0,
+              "text": "</Response> Person in yellow moves forward."
+            },
+            {
+              "t": 26.0,
+              "text": "</Response> Person moves out of view."
+            },
+            {
+              "t": 27.0,
+              "text": "</Response> Camera angle shifts downward."
+            },
+            {
+              "t": 29.0,
+              "text": "</Response> Person in center leans forward."
+            },
+            {
+              "t": 31.0,
+              "text": "</Response> View transitions to sky."
+            },
+            {
+              "t": 32.0,
+              "text": "</Response> Man in yellow hat stands."
+            },
+            {
+              "t": 33.0,
+              "text": "</Response> Wave crashes higher over boat."
+            },
+            {
+              "t": 34.0,
+              "text": "</Response> Person in foreground leans back."
+            },
+            {
+              "t": 36.0,
+              "text": "</Response> Person in orange disappears."
+            },
+            {
+              "t": 37.0,
+              "text": "</Response> Wave crashes higher over boat."
+            },
+            {
+              "t": 39.0,
+              "text": "</Response> Water splashes less intensely."
+            },
+            {
+              "t": 40.0,
+              "text": "</Response> Person adjusts stance."
+            },
+            {
+              "t": 41.0,
+              "text": "</Response> Person adjusts grip on wheel."
+            },
+            {
+              "t": 42.0,
+              "text": "</Response> Wave crashes higher over boat."
+            },
+            {
+              "t": 44.0,
+              "text": "</Response> Water splashes onto boat."
+            },
+            {
+              "t": 45.0,
+              "text": "</Response> Water spray decreases."
+            },
+            {
+              "t": 46.0,
+              "text": "</Response> Person at front leans back."
+            },
+            {
+              "t": 47.0,
+              "text": "</Response> Large wave crashes over boat."
+            },
+            {
+              "t": 49.0,
+              "text": "</Response> Person raises hand."
+            },
+            {
+              "t": 51.0,
+              "text": "</Response> Person's arm lowers."
+            },
+            {
+              "t": 53.0,
+              "text": "</Response> Person at wheel leans back."
+            },
+            {
+              "t": 55.0,
+              "text": "</Response> Person at back moves forward."
+            },
+            {
+              "t": 57.0,
+              "text": "</Response> Person in foreground steps forward."
+            },
+            {
+              "t": 59.0,
+              "text": "</Response> Boat capsizes."
+            },
+            {
+              "t": 61.0,
+              "text": "</Response> Sailboat tilts further right."
+            },
+            {
+              "t": 62.0,
+              "text": "</Response> Sailboat capsizes."
+            },
+            {
+              "t": 64.0,
+              "text": "</Response> Camera angle shifts downward."
+            },
+            {
+              "t": 65.0,
+              "text": "</Response> Person moves out of view."
+            },
+            {
+              "t": 66.0,
+              "text": "</Response> Large wave crashes over boat."
+            },
+            {
+              "t": 67.0,
+              "text": "</Response> Water spray clears."
+            },
+            {
+              "t": 68.0,
+              "text": "</Response> Sailboat tilts further right."
+            },
+            {
+              "t": 69.0,
+              "text": "</Response> Person on yellow boat moves."
+            },
+            {
+              "t": 70.0,
+              "text": "</Response> Green light moves downward."
+            },
+            {
+              "t": 71.0,
+              "text": "</Response> Green light brightens."
+            },
+            {
+              "t": 72.0,
+              "text": "</Response> Green lights shift upward."
+            },
+            {
+              "t": 76.0,
+              "text": "</Response> Water splashes intensely."
+            },
+            {
+              "t": 77.0,
+              "text": "</Response> Water splashes subside."
+            },
+            {
+              "t": 78.0,
+              "text": "</Response> Sail flaps vigorously."
+            },
+            {
+              "t": 79.0,
+              "text": "</Response> Sail adjusts angle."
+            },
+            {
+              "t": 80.0,
+              "text": "</Response> Sailboat tilts right."
+            },
+            {
+              "t": 81.0,
+              "text": "</Response> Person in orange appears."
+            },
+            {
+              "t": 82.0,
+              "text": "</Response> Person in yellow adjusts grip."
+            },
+            {
+              "t": 83.0,
+              "text": "</Response> Person in yellow leans back."
+            },
+            {
+              "t": 84.0,
+              "text": "</Response> Person disappears from view."
+            },
+            {
+              "t": 85.0,
+              "text": "</Response> Camera angle shifts downward."
+            },
+            {
+              "t": 86.0,
+              "text": "</Response> Scene darkens significantly."
+            },
+            {
+              "t": 87.0,
+              "text": "</Response> Image becomes brighter."
+            },
+            {
+              "t": 88.0,
+              "text": "</Response> Image becomes overexposed."
+            },
+            {
+              "t": 89.0,
+              "text": "</Response> Image overexposes completely."
+            },
+            {
+              "t": 90.0,
+              "text": "</Response> Camera angle shifts upward."
+            },
+            {
+              "t": 91.0,
+              "text": "</Response> Car appears."
+            },
+            {
+              "t": 92.0,
+              "text": "</Response> Person in water moves forward."
+            },
+            {
+              "t": 93.0,
+              "text": "</Response> Camera shows water splashing."
+            },
+            {
+              "t": 94.0,
+              "text": "</Response> Water splashes higher, obscuring view."
+            },
+            {
+              "t": 95.0,
+              "text": "</Response> Wave crashes over railing."
+            },
+            {
+              "t": 96.0,
+              "text": "</Response> Boat tilts less."
+            },
+            {
+              "t": 97.0,
+              "text": "</Response> Large wave crashes over boat."
+            },
+            {
+              "t": 98.0,
+              "text": "</Response> Person in yellow hat leans forward."
+            },
+            {
+              "t": 99.0,
+              "text": "</Response> Person in yellow helmet appears."
+            },
+            {
+              "t": 100.0,
+              "text": "</Response> Person stands up."
+            },
+            {
+              "t": 101.0,
+              "text": "</Response> Person in yellow hat disappears."
+            },
+            {
+              "t": 102.0,
+              "text": "</Response> Water splashes higher."
+            },
+            {
+              "t": 103.0,
+              "text": "</Response> Sailboat tilts further right."
+            },
+            {
+              "t": 104.0,
+              "text": "</Response> Water splashes higher, obscuring boat."
+            },
+            {
+              "t": 105.0,
+              "text": "</Response> Boat tilts more sharply."
+            },
+            {
+              "t": 107.0,
+              "text": "</Response> Dust cloud becomes denser."
+            },
+            {
+              "t": 108.0,
+              "text": "</Response> Helicopter lifts off."
+            },
+            {
+              "t": 109.0,
+              "text": "</Response> Scene darkens significantly."
+            },
+            {
+              "t": 110.0,
+              "text": "</Response> Scene brightens significantly."
+            },
+            {
+              "t": 111.0,
+              "text": "</Response> Water level rises significantly."
+            },
+            {
+              "t": 112.0,
+              "text": "</Response> Water level drops significantly."
+            },
+            {
+              "t": 113.0,
+              "text": "</Response> Person appears in water."
+            },
+            {
+              "t": 114.0,
+              "text": "</Response> Person falls into water."
+            },
+            {
+              "t": 115.0,
+              "text": "</Response> Scene shows \"PIRATES\" boat."
+            },
+            {
+              "t": 116.0,
+              "text": "</Response> Text 'of the Car' appears."
+            },
+            {
+              "t": 117.0,
+              "text": "</Response> Smoke clears."
+            },
+            {
+              "t": 118.0,
+              "text": "</Response> Boat tilts more to side."
+            },
+            {
+              "t": 119.0,
+              "text": "</Response> Camera angle shifts upward."
+            },
+            {
+              "t": 120.0,
+              "text": "</Response> Sailboat tilts further sideways."
+            },
+            {
+              "t": 122.0,
+              "text": "</Response> People move closer to camera."
+            },
+            {
+              "t": 123.0,
+              "text": "</Response> People disappear from view."
+            },
+            {
+              "t": 124.0,
+              "text": "</Response> Sailboat tilts into water."
+            },
+            {
+              "t": 125.0,
+              "text": "</Response> Man lowers head to bottle."
+            },
+            {
+              "t": 126.0,
+              "text": "</Response> Boat tilts into water."
+            },
+            {
+              "t": 127.0,
+              "text": "</Response> Boat tilts significantly sideways."
+            },
+            {
+              "t": 128.0,
+              "text": "</Response> Man's head turns right."
+            },
+            {
+              "t": 129.0,
+              "text": "</Response> Boat tilts more right."
+            },
+            {
+              "t": 131.0,
+              "text": "</Response> Boat tilts further right."
+            },
+            {
+              "t": 133.0,
+              "text": "</Response> Boat's angle steepens."
+            },
+            {
+              "t": 134.0,
+              "text": "</Response> Person in yellow disappears."
+            },
+            {
+              "t": 135.0,
+              "text": "</Response> Person's legs move upward."
+            },
+            {
+              "t": 136.0,
+              "text": "</Response> Person on sailboat leans back."
+            },
+            {
+              "t": 137.0,
+              "text": "</Response> Boat tips further sideways."
+            },
+            {
+              "t": 138.0,
+              "text": "</Response> Sail lowers significantly."
+            },
+            {
+              "t": 139.0,
+              "text": "</Response> Person in yellow jacket appears."
+            },
+            {
+              "t": 140.0,
+              "text": "</Response> Sail collapses."
+            },
+            {
+              "t": 141.0,
+              "text": "</Response> Skull symbol centers."
+            },
+            {
+              "t": 142.0,
+              "text": "</Response> Sailboat tilts further right."
+            },
+            {
+              "t": 143.0,
+              "text": "</Response> Boat lifts higher out of water."
+            },
+            {
+              "t": 144.0,
+              "text": "</Response> Boat capsizes."
+            },
+            {
+              "t": 145.0,
+              "text": "</Response> Boat tilts significantly."
+            },
+            {
+              "t": 146.0,
+              "text": "</Response> Boat tilts more steeply."
+            },
+            {
+              "t": 147.0,
+              "text": "</Response> Boat's bow lifts higher."
+            },
+            {
+              "t": 148.0,
+              "text": "</Response> Person in yellow vest moves forward."
+            },
+            {
+              "t": 150.0,
+              "text": "</Response> Water level rises significantly."
+            },
+            {
+              "t": 151.0,
+              "text": "</Response> Boat tilts more steeply."
+            },
+            {
+              "t": 152.0,
+              "text": "</Response> Water level rises significantly."
+            },
+            {
+              "t": 153.0,
+              "text": "</Response> Smoke becomes denser."
+            },
+            {
+              "t": 154.0,
+              "text": "</Response> Camera angle shifts upward."
+            },
+            {
+              "t": 155.0,
+              "text": "</Response> Camera pans down."
+            },
+            {
+              "t": 156.0,
+              "text": "</Response> Sailboat tilts further right."
+            },
+            {
+              "t": 157.0,
+              "text": "</Response> Sailboat tilts into water."
+            },
+            {
+              "t": 158.0,
+              "text": "</Response> Water splashes higher around hull."
+            },
+            {
+              "t": 159.0,
+              "text": "</Response> Boat's hull becomes more visible."
+            },
+            {
+              "t": 160.0,
+              "text": "</Response> Boat's angle becomes upright."
+            },
+            {
+              "t": 161.0,
+              "text": "</Response> Sailboat tilts further right."
+            },
+            {
+              "t": 164.0,
+              "text": "</Response> Boat tilts further right."
+            },
+            {
+              "t": 167.0,
+              "text": "</Response> Boat's angle steepens."
+            },
+            {
+              "t": 168.0,
+              "text": "</Response> Person in red suit moves forward."
+            },
+            {
+              "t": 169.0,
+              "text": "</Response> Wave crashes higher against boat."
+            },
+            {
+              "t": 170.0,
+              "text": "</Response> Boat tilts more sideways."
+            },
+            {
+              "t": 171.0,
+              "text": "</Response> Blue sailboat tilts right."
+            },
+            {
+              "t": 172.0,
+              "text": "</Response> Camera shows people on boat."
+            },
+            {
+              "t": 173.0,
+              "text": "</Response> Person in center raises arm."
+            },
+            {
+              "t": 174.0,
+              "text": "</Response> People raise arms higher."
+            },
+            {
+              "t": 175.0,
+              "text": "</Response> Boat tilts more right."
+            },
+            {
+              "t": 176.0,
+              "text": "</Response> Person on right lowers arms."
+            },
+            {
+              "t": 177.0,
+              "text": "</Response> Person lowers arms."
+            },
+            {
+              "t": 178.0,
+              "text": "</Response> Person falls into water."
+            },
+            {
+              "t": 179.0,
+              "text": "</Response> Smoke clears significantly."
+            },
+            {
+              "t": 180.0,
+              "text": "</Response> Person in yellow moves forward."
+            },
+            {
+              "t": 181.0,
+              "text": "</Response> Boat tilts further sideways."
+            },
+            {
+              "t": 182.0,
+              "text": "</Response> Boat's angle becomes upright."
+            },
+            {
+              "t": 183.0,
+              "text": "</Response> Boat's bow lifts higher."
+            },
+            {
+              "t": 184.0,
+              "text": "</Response> Sailboat tips into water."
+            },
+            {
+              "t": 185.0,
+              "text": "</Response> Boat tilts into water."
+            },
+            {
+              "t": 186.0,
+              "text": "</Response> Boat tilts further sideways."
+            },
+            {
+              "t": 187.0,
+              "text": "</Response> Boat capsizes."
+            },
+            {
+              "t": 188.0,
+              "text": "</Response> Boat tilts further right."
+            },
+            {
+              "t": 190.0,
+              "text": "</Response> Boat leans further right."
+            },
+            {
+              "t": 191.0,
+              "text": "</Response> Sailboat tilts into water."
+            },
+            {
+              "t": 192.0,
+              "text": "</Response> Sailboat tilts further sideways."
+            },
+            {
+              "t": 193.0,
+              "text": "</Response> Boat tilts further right."
+            },
+            {
+              "t": 194.0,
+              "text": "</Response> Sailboat tilts further right."
+            },
+            {
+              "t": 196.0,
+              "text": "</Response> Sailboat leans further right."
+            },
+            {
+              "t": 197.0,
+              "text": "</Response> Sailboat tilts further sideways."
+            },
+            {
+              "t": 199.0,
+              "text": "</Response> Sailboat capsizes."
+            },
+            {
+              "t": 200.0,
+              "text": "</Response> Scene changes to black and white."
+            },
+            {
+              "t": 201.0,
+              "text": "</Response> Sailboat leans further right."
+            },
+            {
+              "t": 202.0,
+              "text": "</Response> Camera angle shifts upward."
+            },
+            {
+              "t": 203.0,
+              "text": "</Response> Sailboat tilts more sideways."
+            },
+            {
+              "t": 204.0,
+              "text": "</Response> Person sits upright."
+            },
+            {
+              "t": 205.0,
+              "text": "</Response> Person disappears under wave."
+            },
+            {
+              "t": 206.0,
+              "text": "</Response> Wave crashes over boat."
+            },
+            {
+              "t": 207.0,
+              "text": "</Response> Yellow sail appears."
+            },
+            {
+              "t": 208.0,
+              "text": "</Response> Sailboat capsizes."
+            },
+            {
+              "t": 209.0,
+              "text": "</Response> Boat moves forward."
+            },
+            {
+              "t": 210.0,
+              "text": "</Response> Boat tips over."
+            },
+            {
+              "t": 211.0,
+              "text": "</Response> Sailboat leans further right."
+            },
+            {
+              "t": 212.0,
+              "text": "</Response> Boat tilts into water."
+            },
+            {
+              "t": 214.0,
+              "text": "</Response> Boat tilts into water."
+            }
+          ],
+          "n_frames": 217
+        }
+      ]
+    },
+    {
+      "id": "anet_grounding",
+      "name": "ActivityNet · Event Grounding",
+      "task": "Alert when an event happens",
+      "icon": "🛰️",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/anet_grounding/s0.mp4",
+          "question": "Update me as soon as the event 'The video opens with a polo team celebrating on a podium, lifting a trophy in front of a 'Royal Salute Scotch Whisky' banner' is done.",
+          "events": [
+            {
+              "t": 6.0,
+              "text": "</Response> A polo team celebrates on a podium, lifting a trophy in front of a 'Royal Salute Scotch Whisky' banner."
+            },
+            {
+              "t": 41.0,
+              "text": "</Response> A team poses for a group photo on a trailer, followed by a celebratory hug among the players."
+            },
+            {
+              "t": 82.0,
+              "text": "</Response> Prince Harry speaks at the podium."
+            }
+          ],
+          "n_frames": 118
+        },
+        {
+          "video": "videos/datasets/anet_grounding/s1.mp4",
+          "question": "Send me a notification when the event 'The video opens with a shot of a catamaran sailing at high speed across the open sea, with two people on board' is complete.",
+          "events": [
+            {
+              "t": 21.0,
+              "text": "</Response> A catamaran sails at high speed across the open sea with two people on board."
+            },
+            {
+              "t": 53.0,
+              "text": "</Response> A city street in Thessaloniki shows a map being examined and marked, followed by a map animation of the sailing route from Thessaloniki to Chania."
+            },
+            {
+              "t": 167.0,
+              "text": "</Response> The crew celebrates with a woman, sitting on the boat and posing for photos."
+            }
+          ],
+          "n_frames": 173
+        }
+      ]
+    },
+    {
+      "id": "anet_qa",
+      "name": "ActivityNet · QA",
+      "task": "Answer at the queried moment",
+      "icon": "💬",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/anet_qa/s0.mp4",
+          "question": "What step of decorating the Christmas tree is currently being done?\nA. Make snow\nB. Add impromptu tree skirt\nC. Admire Tree\nD. Assemble tree\nE. Add lights\nF. Add ornaments\nPlease respond with only the",
+          "events": [
+            {
+              "t": 6.0,
+              "text": "</Response> D"
+            },
+            {
+              "t": 41.0,
+              "text": "</Response> E"
+            },
+            {
+              "t": 73.0,
+              "text": "</Response> F"
+            },
+            {
+              "t": 87.0,
+              "text": "</Response> B"
+            },
+            {
+              "t": 105.0,
+              "text": "</Response> A"
+            },
+            {
+              "t": 139.0,
+              "text": "</Response> C"
+            }
+          ],
+          "n_frames": 156
+        },
+        {
+          "video": "videos/datasets/anet_qa/s1.mp4",
+          "question": "What team is currently competing?\nA. White team\nB. Green team\nPlease respond with only the letter of the correct answer. Refresh your answer upon any change.",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "</Response> A"
+            },
+            {
+              "t": 15.0,
+              "text": "</Response> B"
+            },
+            {
+              "t": 36.0,
+              "text": "</Response> A"
+            },
+            {
+              "t": 113.0,
+              "text": "</Response> B"
+            },
+            {
+              "t": 166.0,
+              "text": "</Response> A"
+            }
+          ],
+          "n_frames": 197
+        }
+      ]
+    },
+    {
+      "id": "llava_video_grounding",
+      "name": "LLaVA-Video · Event Grounding",
+      "task": "Alert when a described event is done",
+      "icon": "🔎",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/llava_video_grounding/s0.mp4",
+          "question": "Inform me when the event 'The video opens with a title card suggesting the content is best enjoyed on a mobile device or VR headset' has been finalized.",
+          "events": [
+            {
+              "t": 2.0,
+              "text": "</Response> A title card suggests the content is best enjoyed on a mobile device or VR headset."
+            },
+            {
+              "t": 67.0,
+              "text": "</Response> Tom is sexy, and Chris compliments him."
+            },
+            {
+              "t": 98.0,
+              "text": "</Response> Tom is wearing a pigeon mask and playing the ukulele in a universe where a pigeon is a person."
+            },
+            {
+              "t": 132.0,
+              "text": "</Response> Hyper-intelligent horse people are shown wearing horse masks and holding a bomb."
+            }
+          ],
+          "n_frames": 149
+        },
+        {
+          "video": "videos/datasets/llava_video_grounding/s1.mp4",
+          "question": "Send me a notification when the event 'The video begins with an animated intro for 'Media Flix' and 'Fresh News', prompting viewers to like, comment, share, and subscribe' is complete.",
+          "events": [
+            {
+              "t": 9.0,
+              "text": "</Response> An animated intro for 'Media Flix' and 'Fresh News' prompts viewers to like, comment, share, and subscribe."
+            },
+            {
+              "t": 38.0,
+              "text": "</Response> Photos show the woman in a green saree, smiling outdoors in front of a tree."
+            },
+            {
+              "t": 68.0,
+              "text": "</Response> The montage shows her in a red saree with white flower decorations in her hair, smiling and interacting with her surroundings."
+            },
+            {
+              "t": 98.0,
+              "text": "</Response> She is shown in a red saree with a floral headpiece, smiling and looking through a green leafy frame."
+            }
+          ],
+          "n_frames": 138
+        }
+      ]
+    },
+    {
+      "id": "llava_video_eventcaption",
+      "name": "LLaVA-Video · Event Caption",
+      "task": "Dense timestamped events",
+      "icon": "🎥",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/llava_video_eventcaption/s0.mp4",
+          "question": "Extract and explain all notable activities in the video.",
+          "events": [
+            {
+              "t": 143.0,
+              "text": "</Response> She concludes the video by summarizing the workout, encouraging viewers to like, comment, and share, and saying goodbye."
+            }
+          ],
+          "n_frames": 147
+        },
+        {
+          "video": "videos/datasets/llava_video_eventcaption/s1.mp4",
+          "question": "Find all significant events in the video and describe them.",
+          "events": [
+            {
+              "t": 46.0,
+              "text": "</Response> She sits back down at the table, takes a final sip from her cup, and continues her phone call"
+            }
+          ],
+          "n_frames": 48
+        }
+      ]
+    },
+    {
+      "id": "qvh_qa",
+      "name": "QVHighlight · QA",
+      "task": "Answer at the queried moment",
+      "icon": "❓",
+      "format": "proactive streaming (per-frame Silence/Standby/Response)",
+      "samples": [
+        {
+          "video": "videos/datasets/qvh_qa/s0.mp4",
+          "question": "What beauty product is being shown?\nA. perfume bottle\nB. pink cylindrical product\nC. small rollerball product\nD. white cylindrical product\nE. dark cylindrical product\nF. larger bottle with light blue ",
+          "events": [
+            {
+              "t": 15.0,
+              "text": "</Response> D. white cylindrical product"
+            },
+            {
+              "t": 22.0,
+              "text": "</Response> B. pink cylindrical product"
+            },
+            {
+              "t": 36.0,
+              "text": "</Response> A. perfume bottle"
+            },
+            {
+              "t": 81.0,
+              "text": "</Response> C. small rollerball product"
+            },
+            {
+              "t": 111.0,
+              "text": "</Response> F. larger bottle with light blue cap"
+            },
+            {
+              "t": 134.0,
+              "text": "</Response> E. dark cylindrical product"
+            }
+          ],
+          "n_frames": 155
+        },
+        {
+          "video": "videos/datasets/qvh_qa/s1.mp4",
+          "question": "What item is being shown from the bag?\nA. Heinz HomeStyle Gravy\nB. Tai Pei frozen food\nC. Mott's fruit snacks\nD. 409 Multi-Surface cleaner\nE. Mr. Clean Freak cleaner\nF. blue box (food item)\nG. 409 Car",
+          "events": [
+            {
+              "t": 25.0,
+              "text": "</Response> B"
+            },
+            {
+              "t": 33.0,
+              "text": "</Response> C"
+            },
+            {
+              "t": 39.0,
+              "text": "</Response> A"
+            },
+            {
+              "t": 83.0,
+              "text": "</Response> D"
+            },
+            {
+              "t": 111.0,
+              "text": "</Response> G"
+            },
+            {
+              "t": 116.0,
+              "text": "</Response> E"
+            }
+          ],
+          "n_frames": 155
+        }
+      ]
+    },
+    {
+      "id": "molmo_point",
+      "name": "Molmo2-VideoPoint",
+      "task": "Visual pointing / counting",
+      "icon": "📍",
+      "format": "question + normalized (x,y) points per object",
+      "samples": [
+        {
+          "video": "videos/datasets/molmo_point/s0.mp4",
+          "question": "How many black music stands are visible?",
+          "label": "black music stands",
+          "count": 0,
+          "category": "object",
+          "points": []
+        },
+        {
+          "video": "videos/datasets/molmo_point/s1.mp4",
+          "question": "How many podium poles are visible?",
+          "label": "podium poles",
+          "count": 2,
+          "category": "object",
+          "points": [
+            {
+              "x": 29.0,
+              "y": 85.0
+            },
+            {
+              "x": 89.5,
+              "y": 86.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "personpath22",
+      "name": "VideoTrack · personpath22",
+      "task": "Per-frame object tracking",
+      "icon": "🎯",
+      "format": "per-frame </Response> <tracks>[{id,x,y,vis}]",
+      "samples": [
+        {
+          "video": "videos/datasets/personpath22/s0.mp4",
+          "question": "Track the object(s) described as: Reading a paper. Report every requested object on every frame.",
+          "tracks": [
+            {
+              "t": 0.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 0.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 0.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 0.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 1.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 1.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 1.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 1.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 2.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 2.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 2.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 2.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 3.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 3.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 3.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 3.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 4.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 4.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 4.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 4.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 5.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 5.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 5.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 5.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 6.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 6.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 6.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 6.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 7.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 7.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 7.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 7.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 8.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 8.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":380,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 8.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":921,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 8.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 9.0,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 9.25,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 9.5,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            },
+            {
+              "t": 9.75,
+              "text": "</Response> <tracks>[{\"id\":\"0\",\"x\":381,\"y\":920,\"visible\":true}]</tracks>"
+            }
+          ],
+          "n_frames": 40
+        }
+      ]
+    },
+    {
+      "id": "live_whisperx_question_at_start",
+      "name": "Live-WhisperX · Question at start",
+      "task": "Question is given before the frame stream; model learns to stay silent until answerable",
+      "icon": "🎬",
+      "format": "MMDuet2 proactive SFT: initial question + <image> stream + NO REPLY / answer",
+      "samples": [
+        {
+          "video": "videos/datasets/live_whisperx/start_s0.mp4",
+          "question": "What steps are taken to prepare the corn?",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "Q: What steps are taken to prepare the corn?"
+            },
+            {
+              "t": 0.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 2.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 6.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 10.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 14.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 18.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 22.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 26.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 30.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 34.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 38.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 42.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 46.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 50.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 54.0,
+              "text": "</Response> The husks and silk are removed from the ears of corn."
+            },
+            {
+              "t": 58.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 62.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 66.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 70.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 74.0,
+              "text": "</Response> The corn is washed under cold water with a brush and then patted dry with a paper towel."
+            },
+            {
+              "t": 78.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 82.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 86.0,
+              "text": "</Response> One end of the corn is trimmed to make it flat, and the corn is positioned to stand on an inverted smaller bowl."
+            },
+            {
+              "t": 90.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 92.0,
+              "text": "</Response> The kernels are separated from the cob with downward strokes of a sharp paring knife, falling into a large bowl."
+            }
+          ],
+          "n_frames": 47
+        },
+        {
+          "video": "videos/datasets/live_whisperx/start_s1.mp4",
+          "question": "How is the motherboard handled and examined?",
+          "events": [
+            {
+              "t": 0.0,
+              "text": "Q: How is the motherboard handled and examined?"
+            },
+            {
+              "t": 0.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 2.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 6.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 10.0,
+              "text": "</Response> A hand holds the motherboard, adjusts its grip, and showcases different angles of the port section and component layout."
+            },
+            {
+              "t": 14.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 18.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 22.0,
+              "text": "</Response> A hand holds the motherboard, rotates and repositions it to show different angles of its components and layout."
+            },
+            {
+              "t": 26.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 30.0,
+              "text": "</Response> Hands manipulate the motherboard; one hand supports it while the other points to and examines different components, showcasing the layout from multiple angles."
+            },
+            {
+              "t": 34.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 38.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 42.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 46.0,
+              "text": "</Response> Hands examine the motherboard; one hand points to an X16 slot and an X4 slot, while the other holds the board."
+            },
+            {
+              "t": 50.0,
+              "text": "</Response> Hands hold the motherboard; one hand supports it while the other makes final checks or adjustments."
+            },
+            {
+              "t": 54.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 58.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 62.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 66.0,
+              "text": "</Response> A hand holds the motherboard, shows its other side, and then places it inside a computer case."
+            }
+          ],
+          "n_frames": 34
+        }
+      ]
+    },
+    {
+      "id": "live_whisperx_midstream_questions",
+      "name": "Live-WhisperX · Midstream questions",
+      "task": "Questions are inserted during playback; model answers immediately or keeps watching",
+      "icon": "🎙️",
+      "format": "MMDuet2 proactive SFT: <image> stream + midstream question turns + NO REPLY / answer",
+      "samples": [
+        {
+          "video": "videos/datasets/live_whisperx/mid_s0.mp4",
+          "question": "What are the specifications of the Transcend SSD 370S? / What features are shown on the Transcend SSD 370S packaging? / What items are included with the Transcend SSD 370S?",
+          "events": [
+            {
+              "t": 2.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 6.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 10.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 14.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 18.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 22.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 26.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 30.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 32.0,
+              "text": "Q: What are the specifications of the Transcend SSD 370S?"
+            },
+            {
+              "t": 32.0,
+              "text": "</Response> It is a 2.5-inch solid state drive with a SATA 6Gb/s interface and a capacity of 128GB."
+            },
+            {
+              "t": 36.0,
+              "text": "</Response> It has sequential read and write speeds, is shockproof, operates silently, consumes low power, and supports trim."
+            },
+            {
+              "t": 40.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 44.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 46.0,
+              "text": "Q: What features are shown on the Transcend SSD 370S packaging?"
+            },
+            {
+              "t": 46.0,
+              "text": "</Response> The packaging indicates it's a 2.5-inch SATA 6Gb/s solid state drive with 128GB capacity, includes a 3.5-bracket, has a 'SATA III 6Gb/s' label, and a red 'Editor's Choice' sticker. One side features branding, Transcend's System Clone software (with visual aids and text explaining data transfer from HDD to SSD) and a QR code. The back displays specifications and sequential read/write speeds, while another side highlights shockproof, silent operation, low power consumption, trim support, with branding and key features prominently shown."
+            },
+            {
+              "t": 50.0,
+              "text": "</Response> The packaging is shown being unboxed, with hands cutting through and peeling back the plastic covering, revealing the box's design including branding and storage capacity information."
+            },
+            {
+              "t": 54.0,
+              "text": "Q: What items are included with the Transcend SSD 370S?"
+            },
+            {
+              "t": 54.0,
+              "text": "</Response> A 3.5-inch bracket is included."
+            },
+            {
+              "t": 58.0,
+              "text": "</Response> 8 screws for the 3.5-inch desktop bracket are included."
+            },
+            {
+              "t": 62.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 66.0,
+              "text": "</Response> A quick installation guide, a warranty card, and several pamphlets advertising other Transcend multimedia products are included."
+            }
+          ],
+          "n_frames": 34
+        },
+        {
+          "video": "videos/datasets/live_whisperx/mid_s1.mp4",
+          "question": "What is done with the small metal part during the engine work? / What specific tasks are performed during the engine maintenance or repair? / What are the details of the engine's setup and surrounding items?",
+          "events": [
+            {
+              "t": 2.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 6.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 10.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 14.0,
+              "text": "Q: What is done with the small metal part during the engine work?"
+            },
+            {
+              "t": 14.0,
+              "text": "</Response> One hand holds the small metal part while the other adjusts or positions it."
+            },
+            {
+              "t": 18.0,
+              "text": "</Response> One hand holds the small metal part while the other uses a tool to work on a hole in the engine."
+            },
+            {
+              "t": 22.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 26.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 30.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 34.0,
+              "text": "</Response> One hand holds the small metal part (possibly a fuel-flow system component) while examining it closely to ensure it fits correctly in fuel-flow openings."
+            },
+            {
+              "t": 34.0,
+              "text": "Q: What specific tasks are performed during the engine maintenance or repair?"
+            },
+            {
+              "t": 34.0,
+              "text": "</Response> Adjusting or positioning a small metal part near the front of the engine, using a tool to work on and clear the hole where gas gets drawn in, and examining a small metal part closely to ensure it fits correctly in fuel-flow openings."
+            },
+            {
+              "t": 38.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 42.0,
+              "text": "</Response> Guiding a small metal part towards an opening in the engine for fuel-flow related components."
+            },
+            {
+              "t": 46.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 50.0,
+              "text": "</Response> Using a small tool to interact with a small metal part."
+            },
+            {
+              "t": 52.0,
+              "text": "Q: What are the details of the engine's setup and surrounding items?"
+            },
+            {
+              "t": 52.0,
+              "text": "</Response> The engine has a light-gray cover and is on a surface with a cloth underneath."
+            },
+            {
+              "t": 56.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 60.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 64.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 68.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 72.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 76.0,
+              "text": "</Response> An orange tool is placed on the engine with a light-gray cover."
+            },
+            {
+              "t": 80.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 84.0,
+              "text": "</Silence> NO REPLY"
+            },
+            {
+              "t": 86.0,
+              "text": "</Response> The engine is on a dark surface with a cloth underneath, and an orange tool is placed on it."
+            }
+          ],
+          "n_frames": 44
+        }
+      ]
+    }
+  ]
+}

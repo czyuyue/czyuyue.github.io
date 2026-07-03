@@ -1,0 +1,313 @@
+{
+ "families": [
+  {
+   "family": "V-STAT",
+   "kind": "synthetic (Blender)",
+   "fps": 4,
+   "total": 4500,
+   "note": "5 state-tracking tasks; standby-heavy counting rhythm.",
+   "sources": [
+    {
+     "source": "hidden_dice_roll",
+     "n": 900,
+     "fps": 4,
+     "S": 1,
+     "B": 75,
+     "R": 24,
+     "avg_frames": 83,
+     "desc": "standby-heavy: track event in progress, respond at key points"
+    },
+    {
+     "source": "make_coffee",
+     "n": 900,
+     "fps": 4,
+     "S": 2,
+     "B": 88,
+     "R": 11,
+     "avg_frames": 84,
+     "desc": "standby-heavy: track event in progress, respond at key points"
+    },
+    {
+     "source": "memory_sliding_puzzle",
+     "n": 900,
+     "fps": 4,
+     "S": 24,
+     "B": 39,
+     "R": 37,
+     "avg_frames": 79,
+     "desc": "mixed standby + frequent response"
+    },
+    {
+     "source": "tighten_untighten",
+     "n": 900,
+     "fps": 4,
+     "S": 9,
+     "B": 82,
+     "R": 9,
+     "avg_frames": 65,
+     "desc": "standby-heavy: track event in progress, respond at key points"
+    },
+    {
+     "source": "tilt_box",
+     "n": 900,
+     "fps": 4,
+     "S": 17,
+     "B": 74,
+     "R": 9,
+     "avg_frames": 72,
+     "desc": "standby-heavy: track event in progress, respond at key points"
+    }
+   ]
+  },
+  {
+   "family": "Proactive (Streamo-Instruct)",
+   "kind": "real-world video",
+   "fps": 1,
+   "total": 137389,
+   "note": "narration / event-caption / temporal-grounding on real video. Rhythm varies wildly by source (narration=respond-always, grounding=mostly-silent) — this heterogeneity teaches the model 'real video => often silent', which suppresses VSTAT-style speak-up on OOD real videos.",
+   "sources": [
+    {
+     "source": "qvh_qa",
+     "n": 26812,
+     "fps": 1,
+     "S": 98,
+     "B": 0,
+     "R": 2,
+     "avg_frames": 152,
+     "desc": "mostly silent: speak only at the queried moment"
+    },
+    {
+     "source": "llava_video_grounding",
+     "n": 15135,
+     "fps": 1,
+     "S": 85,
+     "B": 14,
+     "R": 1,
+     "avg_frames": 135,
+     "desc": "mostly silent: speak only at the queried moment"
+    },
+    {
+     "source": "anet_qa",
+     "n": 13411,
+     "fps": 1,
+     "S": 98,
+     "B": 0,
+     "R": 2,
+     "avg_frames": 140,
+     "desc": "mostly silent: speak only at the queried moment"
+    },
+    {
+     "source": "qvh_narration",
+     "n": 11052,
+     "fps": 1,
+     "S": 46,
+     "B": 0,
+     "R": 54,
+     "avg_frames": 152,
+     "desc": "balanced silence / standby"
+    },
+    {
+     "source": "didemo_grounding",
+     "n": 33000,
+     "fps": 1,
+     "S": 83,
+     "B": 15,
+     "R": 2,
+     "avg_frames": 50,
+     "desc": "mostly silent: speak only at the queried moment"
+    },
+    {
+     "source": "anet_narration_full",
+     "n": 12428,
+     "fps": 1,
+     "S": 52,
+     "B": 0,
+     "R": 48,
+     "avg_frames": 116,
+     "desc": "balanced silence / standby"
+    },
+    {
+     "source": "qvh_grounding",
+     "n": 8423,
+     "fps": 1,
+     "S": 79,
+     "B": 20,
+     "R": 1,
+     "avg_frames": 152,
+     "desc": "mostly silent: speak only at the queried moment"
+    },
+    {
+     "source": "llava_video_eventcaption",
+     "n": 6058,
+     "fps": 1,
+     "S": 9,
+     "B": 91,
+     "R": 0,
+     "avg_frames": 124,
+     "desc": "standby-heavy: track event in progress, respond at key points"
+    },
+    {
+     "source": "queryd_grounding",
+     "n": 3505,
+     "fps": 1,
+     "S": 95,
+     "B": 4,
+     "R": 1,
+     "avg_frames": 166,
+     "desc": "mostly silent: speak only at the queried moment"
+    },
+    {
+     "source": "anet_grounding",
+     "n": 3413,
+     "fps": 1,
+     "S": 86,
+     "B": 13,
+     "R": 1,
+     "avg_frames": 119,
+     "desc": "mostly silent: speak only at the queried moment"
+    },
+    {
+     "source": "qvh_eventcaption",
+     "n": 2469,
+     "fps": 1,
+     "S": 1,
+     "B": 98,
+     "R": 0,
+     "avg_frames": 152,
+     "desc": "standby-heavy: track event in progress, respond at key points"
+    },
+    {
+     "source": "coin_action",
+     "n": 1214,
+     "fps": 1,
+     "S": 51,
+     "B": 47,
+     "R": 2,
+     "avg_frames": 150,
+     "desc": "balanced silence / standby"
+    },
+    {
+     "source": "anet_eventcaption",
+     "n": 469,
+     "fps": 1,
+     "S": 0,
+     "B": 99,
+     "R": 0,
+     "avg_frames": 99,
+     "desc": "standby-heavy: track event in progress, respond at key points"
+    }
+   ]
+  },
+  {
+   "family": "VideoTrack (Molmo2)",
+   "kind": "real-world video",
+   "fps": 2,
+   "total": 25401,
+   "note": "multi-object point tracking; outputs coordinates every frame (100% Response). Forces continuous fine-grained perception -> best OOD transfer of the three.",
+   "sources": [
+    {
+     "source": "vipseg",
+     "n": 5466,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 13,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "soccernet",
+     "n": 4420,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 20,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "dancetrack",
+     "n": 4077,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 21,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "sportsmot",
+     "n": 2552,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 18,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "sav",
+     "n": 2546,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 27,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "personpath22",
+     "n": 2502,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 13,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "mosev2",
+     "n": 1269,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 23,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "APTv2",
+     "n": 1132,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 5,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "mose",
+     "n": 1000,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 30,
+     "desc": "per-frame point tracking (Response every frame)"
+    },
+    {
+     "source": "uavdt",
+     "n": 437,
+     "fps": 2,
+     "S": 0,
+     "B": 0,
+     "R": 100,
+     "avg_frames": 26,
+     "desc": "per-frame point tracking (Response every frame)"
+    }
+   ]
+  }
+ ],
+ "grand_total": 167290,
+ "legend": "S = Silence, B = Standby, R = Response (per assistant turn / frame)"
+}
