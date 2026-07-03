@@ -1,5 +1,5 @@
 // Preparation status — hand-maintained inventory of the 465K + Molmo + VideoTrack sources.
-const DATA_VERSION = "videopoint-fullpoints-20260703";
+const DATA_VERSION = "videopoint-diverse-points-20260703";
 const STATUS = [
   ["QVHighlight · narration", "proactive narration", "11,052", "100%", "ready"],
   ["QVHighlight · event_caption", "dense events", "2,469", "100%", "ready"],
@@ -235,7 +235,7 @@ function renderVideoPoint(VP) {
 
   document.getElementById("videopointWrap").innerHTML = `<div class="vp-grid">` + catEntries.map(([name, c]) => {
     const note = c.note || {};
-    const samples = (c.samples || []).slice(0, 3).map((s, si) => {
+    const samples = (c.samples || []).slice(0, 4).map((s, si) => {
       const sid = `${name.replace(/[^a-z0-9]+/gi, "_")}_${si}`;
       const events = vpEvents(s);
       VP_EVENTS[sid] = events;
@@ -275,11 +275,22 @@ function renderVideoPoint(VP) {
 function renderVpDots(sample, idx) {
   const sid = sample.dataset.vpSid;
   const overlay = sample.querySelector(".vp-overlay");
+  const video = sample.querySelector("video");
   if (!overlay) return;
   const events = VP_EVENTS[sid] || [];
   const e = events[idx];
+  const cw = overlay.clientWidth || 1;
+  const ch = overlay.clientHeight || 1;
+  let ox = 0, oy = 0, vw = cw, vh = ch;
+  if (video?.videoWidth && video?.videoHeight) {
+    const scale = Math.min(cw / video.videoWidth, ch / video.videoHeight);
+    vw = video.videoWidth * scale;
+    vh = video.videoHeight * scale;
+    ox = (cw - vw) / 2;
+    oy = (ch - vh) / 2;
+  }
   overlay.innerHTML = (e?.points || []).map((p, pi) =>
-    `<span class="vp-dot" style="left:${Number(p.x)}%;top:${Number(p.y)}%">${pi + 1}</span>`
+    `<span class="vp-dot" style="left:${ox + Number(p.x) / 100 * vw}px;top:${oy + Number(p.y) / 100 * vh}px">${pi + 1}</span>`
   ).join("");
   sample.querySelectorAll(".vp-trow").forEach((row, i) => row.classList.toggle("active", i === idx));
 }
@@ -288,15 +299,20 @@ function wireVideoPointOverlays() {
   document.querySelectorAll(".vp-sample[data-vp-sid]").forEach(sample => {
     const video = sample.querySelector("video");
     const events = VP_EVENTS[sample.dataset.vpSid] || [];
+    let activeIdx = -1;
     sample.querySelectorAll(".vp-trow").forEach(row => {
       row.addEventListener("click", () => {
         const i = Number(row.dataset.vpI);
+        activeIdx = i;
         const t = events[i]?.t;
         if (video && t != null) video.currentTime = Number(t);
         renderVpDots(sample, i);
       });
     });
     if (!video || !events.length) return;
+    video.addEventListener("loadedmetadata", () => {
+      if (activeIdx >= 0) renderVpDots(sample, activeIdx);
+    });
     video.addEventListener("timeupdate", () => {
       let best = -1, bestDist = Infinity;
       events.forEach((e, i) => {
@@ -304,7 +320,13 @@ function wireVideoPointOverlays() {
         const dist = Math.abs(Number(e.t) - video.currentTime);
         if (dist < bestDist) { best = i; bestDist = dist; }
       });
-      if (best >= 0 && bestDist <= 0.75) renderVpDots(sample, best);
+      if (best >= 0 && bestDist <= 0.75) {
+        activeIdx = best;
+        renderVpDots(sample, best);
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (activeIdx >= 0) renderVpDots(sample, activeIdx);
     });
   });
 }
