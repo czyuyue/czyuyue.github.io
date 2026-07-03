@@ -1,5 +1,5 @@
 // Preparation status — hand-maintained inventory of the 465K + Molmo + VideoTrack sources.
-const DATA_VERSION = "videopoint-diverse-points-20260703";
+const DATA_VERSION = "videopoint-videoonly-20260703";
 const STATUS = [
   ["QVHighlight · narration", "proactive narration", "11,052", "100%", "ready"],
   ["QVHighlight · event_caption", "dense events", "2,469", "100%", "ready"],
@@ -230,6 +230,7 @@ function renderVideoPoint(VP) {
   document.getElementById("videopointSub").innerHTML =
     `<b>${fmtN(totalRows)}</b> annotations grouped into <b>${catEntries.length}</b> categories; ` +
     `<b>${fmtN(totalCovered)}</b> rows covered by <b>${fmtN(VP.downloaded_mp4)}</b> local YouTube videos when this report was built. ` +
+    `This preview now shows only rows with playable videos. ` +
     `Best streaming-count source: <b>action_or_event</b> (${fmtN(action.rows)} rows, ${fmtN(action.multi_timestamp_rows)} multi-timestamp rows). ` +
     `Object/animal rows (${fmtN(objectRows)}) need tracking/dedup before using "first seen" counting.`;
 

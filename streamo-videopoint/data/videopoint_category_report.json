@@ -318,7 +318,8 @@
           "downloaded": true,
           "category": "action_or_event"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
     },
     "object": {
       "rows": 267749,
@@ -938,7 +939,8 @@
           "downloaded": true,
           "category": "object"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
     },
     "animal": {
       "rows": 23750,
@@ -1005,136 +1007,9 @@
           "video_source": "MammalNet",
           "downloaded": true,
           "category": "animal"
-        },
-        {
-          "video_id": "93iDUGAcY3s",
-          "video_url": null,
-          "video_path": null,
-          "question": "How many different chimpanzees are visible?",
-          "label": "chimpanzees",
-          "count": 2,
-          "timestamp_count": 1,
-          "timestamps": [
-            28.5
-          ],
-          "raw_timestamps": [
-            28.5
-          ],
-          "points_full": [
-            [
-              {
-                "x": 40.23,
-                "y": 46.93
-              },
-              {
-                "x": 92.32,
-                "y": 47.46
-              }
-            ]
-          ],
-          "points_count": 1,
-          "points_preview": [
-            [
-              {
-                "x": 40.23,
-                "y": 46.93
-              },
-              {
-                "x": 92.32,
-                "y": 47.46
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 0.0,
-          "clip_end": 35.0,
-          "video_duration": 35.0,
-          "annotator_unsure": false,
-          "video_source": "MammalNet",
-          "downloaded": false,
-          "category": "animal"
-        },
-        {
-          "video_id": "32GWBC-5zgI",
-          "video_url": null,
-          "video_path": null,
-          "question": "How many different white-tailed deer are visible?",
-          "label": "white-tailed deer",
-          "count": 1,
-          "timestamp_count": 1,
-          "timestamps": [
-            4.5
-          ],
-          "raw_timestamps": [
-            4.5045
-          ],
-          "points_full": [
-            [
-              {
-                "x": 37.53,
-                "y": 26.53
-              }
-            ]
-          ],
-          "points_count": 1,
-          "points_preview": [
-            [
-              {
-                "x": 37.53,
-                "y": 26.53
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 0.0,
-          "clip_end": 16.0,
-          "video_duration": 16.0,
-          "annotator_unsure": false,
-          "video_source": "MammalNet",
-          "downloaded": false,
-          "category": "animal"
-        },
-        {
-          "video_id": "F1HlqYqhlHA_2",
-          "video_url": null,
-          "video_path": null,
-          "question": "How many different lions are visible?",
-          "label": "lions",
-          "count": 1,
-          "timestamp_count": 1,
-          "timestamps": [
-            1.0
-          ],
-          "raw_timestamps": [
-            1.0
-          ],
-          "points_full": [
-            [
-              {
-                "x": 52.91,
-                "y": 27.71
-              }
-            ]
-          ],
-          "points_count": 1,
-          "points_preview": [
-            [
-              {
-                "x": 52.91,
-                "y": 27.71
-              }
-            ]
-          ],
-          "points_note": "Full points are aligned one-to-one with timestamps; x/y are percentages of the decoded video frame.",
-          "clip_start": 0.0,
-          "clip_end": 13.0,
-          "video_duration": 13.0,
-          "annotator_unsure": false,
-          "video_source": "MammalNet",
-          "downloaded": false,
-          "category": "animal"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (1/4 kept)."
     },
     "comparative reference": {
       "rows": 48015,
@@ -1322,7 +1197,8 @@
           "downloaded": true,
           "category": "comparative reference"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
     },
     "indirect reference": {
       "rows": 39567,
@@ -1518,7 +1394,8 @@
           "downloaded": true,
           "category": "indirect reference"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
     },
     "referring expression": {
       "rows": 60902,
@@ -1720,7 +1597,8 @@
           "downloaded": true,
           "category": "referring expression"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
     },
     "spatial reference": {
       "rows": 27985,
@@ -1984,7 +1862,8 @@
           "downloaded": true,
           "category": "spatial reference"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
     },
     "anomaly": {
       "rows": 15204,
@@ -2216,7 +2095,8 @@
           "downloaded": true,
           "category": "anomaly"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (4/4 kept)."
     },
     "data": {
       "rows": 658340,
@@ -2462,7 +2342,8 @@
           "downloaded": true,
           "category": "data"
         }
-      ]
+      ],
+      "preview_note": "Preview shows only samples with public/local video (2/2 kept)."
     }
   }
 }
