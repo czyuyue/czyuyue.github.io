@@ -1,5 +1,5 @@
 // Preparation status — hand-maintained inventory of the 465K + Molmo + VideoTrack sources.
-const DATA_VERSION = "videopoint-videos-20260703";
+const DATA_VERSION = "videopoint-fullpoints-20260703";
 const STATUS = [
   ["QVHighlight · narration", "proactive narration", "11,052", "100%", "ready"],
   ["QVHighlight · event_caption", "dense events", "2,469", "100%", "ready"],
@@ -183,14 +183,45 @@ function sampleTimes(ts) {
 
 function samplePoints(points, timestamps) {
   const frames = points || [];
-  return frames.slice(0, 3).map((frame, i) => {
+  return frames.map((frame, i) => {
     const pts = (frame || []).slice(0, 3).map(p => `(${Number(p.x).toFixed(1)},${Number(p.y).toFixed(1)})`).join(" ");
     const t = timestamps?.[i] == null ? `t${i + 1}` : `${Number(timestamps[i]).toFixed(1)}s`;
-    return `${t}: ${pts || "none"}`;
+    const more = (frame || []).length > 3 ? ` +${(frame || []).length - 3}` : "";
+    return `${t}: ${pts || "none"}${more}`;
   }).join(" · ");
 }
 
+let VP_EVENTS = {};
+
+function vpEvents(s) {
+  const ts = s.timestamps || [];
+  const pts = s.points_full || s.points_preview || [];
+  const n = Math.max(ts.length, pts.length);
+  return Array.from({length: n}, (_, i) => ({
+    t: ts[i],
+    points: pts[i] || [],
+  }));
+}
+
+function pointText(points) {
+  if (!points || !points.length) return "no points";
+  return points.map(p => `(${Number(p.x).toFixed(1)},${Number(p.y).toFixed(1)})`).join(" ");
+}
+
+function vpTimeline(events, sid) {
+  if (!events.length) return `<div class="vp-timeline-empty">no timestamped points</div>`;
+  return `<div class="vp-timeline">` + events.map((e, i) => {
+    const t = e.t == null ? "" : Number(e.t).toFixed(1);
+    return `<button class="vp-trow" type="button" data-vp-sid="${sid}" data-vp-i="${i}">
+      <span class="vp-time">${t ? `${t}s` : `frame ${i + 1}`}</span>
+      <span class="vp-pcount">${(e.points || []).length} pt</span>
+      <span class="vp-pcoords">${esc(pointText(e.points))}</span>
+    </button>`;
+  }).join("") + `</div>`;
+}
+
 function renderVideoPoint(VP) {
+  VP_EVENTS = {};
   const catEntries = Object.entries(VP.categories || {});
   const totalRows = catEntries.reduce((a, [,c]) => a + Number(c.rows || 0), 0);
   const totalCovered = catEntries.reduce((a, [,c]) => a + Number(c.covered_rows || 0), 0);
@@ -204,16 +235,21 @@ function renderVideoPoint(VP) {
 
   document.getElementById("videopointWrap").innerHTML = `<div class="vp-grid">` + catEntries.map(([name, c]) => {
     const note = c.note || {};
-    const samples = (c.samples || []).slice(0, 3).map(s => `<div class="vp-sample">
-      ${s.video_url ? `<video class="vp-video" src="${esc(s.video_url)}" controls muted playsinline preload="metadata"></video>` : `<div class="vp-novid">no public sample video</div>`}
+    const samples = (c.samples || []).slice(0, 3).map((s, si) => {
+      const sid = `${name.replace(/[^a-z0-9]+/gi, "_")}_${si}`;
+      const events = vpEvents(s);
+      VP_EVENTS[sid] = events;
+      return `<div class="vp-sample" data-vp-sid="${sid}">
+      ${s.video_url ? `<div class="vp-video-wrap"><video class="vp-video" src="${esc(s.video_url)}" controls muted playsinline preload="metadata"></video><div class="vp-overlay"></div></div>` : `<div class="vp-novid">no public sample video</div>`}
       <div class="vp-s-title"><code>${esc(s.video_id)}</code><span>${s.downloaded ? "local video ready" : "video missing"}</span></div>
       <div class="vp-q">${esc(s.question)}</div>
       <div class="vp-kv"><b>label</b><span>${esc(s.label)}</span></div>
-      <div class="vp-kv"><b>count</b><span>${esc(s.count)} · timestamps ${esc(s.timestamp_count ?? (s.timestamps || []).length)}</span></div>
-      <div class="vp-kv"><b>times</b><span class="mono">${esc(sampleTimes(s.timestamps))}</span></div>
-      <div class="vp-kv"><b>points</b><span class="mono">${esc(samplePoints(s.points_preview, s.timestamps))}</span></div>
-      <div class="vp-point-note">${esc(s.points_preview_note || "points are annotation clicks in x/y percent for the displayed timestamp frames.")}</div>
-    </div>`).join("");
+      <div class="vp-kv"><b>count</b><span>${esc(s.count)} · timestamps ${esc(s.timestamp_count ?? (s.timestamps || []).length)} · point frames ${esc(s.points_count ?? (s.points_full || s.points_preview || []).length)}</span></div>
+      <div class="vp-kv"><b>points</b><span class="mono">${esc(samplePoints(s.points_full || s.points_preview, s.timestamps))}</span></div>
+      <div class="vp-point-note">${esc(s.points_note || "Points are annotation clicks in x/y percent for each timestamp frame.")}</div>
+      ${vpTimeline(events, sid)}
+    </div>`;
+    }).join("");
     return `<article class="vp-card">
       <div class="vp-head">
         <h3>${esc(name)}</h3>
@@ -233,6 +269,44 @@ function renderVideoPoint(VP) {
       <div class="vp-samples">${samples}</div>
     </article>`;
   }).join("") + `</div>`;
+  wireVideoPointOverlays();
+}
+
+function renderVpDots(sample, idx) {
+  const sid = sample.dataset.vpSid;
+  const overlay = sample.querySelector(".vp-overlay");
+  if (!overlay) return;
+  const events = VP_EVENTS[sid] || [];
+  const e = events[idx];
+  overlay.innerHTML = (e?.points || []).map((p, pi) =>
+    `<span class="vp-dot" style="left:${Number(p.x)}%;top:${Number(p.y)}%">${pi + 1}</span>`
+  ).join("");
+  sample.querySelectorAll(".vp-trow").forEach((row, i) => row.classList.toggle("active", i === idx));
+}
+
+function wireVideoPointOverlays() {
+  document.querySelectorAll(".vp-sample[data-vp-sid]").forEach(sample => {
+    const video = sample.querySelector("video");
+    const events = VP_EVENTS[sample.dataset.vpSid] || [];
+    sample.querySelectorAll(".vp-trow").forEach(row => {
+      row.addEventListener("click", () => {
+        const i = Number(row.dataset.vpI);
+        const t = events[i]?.t;
+        if (video && t != null) video.currentTime = Number(t);
+        renderVpDots(sample, i);
+      });
+    });
+    if (!video || !events.length) return;
+    video.addEventListener("timeupdate", () => {
+      let best = -1, bestDist = Infinity;
+      events.forEach((e, i) => {
+        if (e.t == null) return;
+        const dist = Math.abs(Number(e.t) - video.currentTime);
+        if (dist < bestDist) { best = i; bestDist = dist; }
+      });
+      if (best >= 0 && bestDist <= 0.75) renderVpDots(sample, best);
+    });
+  });
 }
 
 function renderDatasets(list) {
