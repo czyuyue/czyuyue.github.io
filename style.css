@@ -372,11 +372,12 @@ code, .contact code {
 
 /* inline institution logos */
 .logo {
-  height: 1.25em;
+  height: 1.4em;
   width: auto;
-  vertical-align: -0.28em;
-  margin: 0 3px 0 1px;
-  border-radius: 2px;
+  vertical-align: middle;
+  position: relative;
+  top: -0.11em;
+  margin-right: 3px;
 }
 
 /* hero links with icons */
@@ -422,4 +423,3 @@ code, .contact code {
   transition: border-color .15s, color .15s, background .15s;
 }
 .btns a:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
-.logo-tall { height: 1.6em; vertical-align: -0.45em; border-radius: 0; }
