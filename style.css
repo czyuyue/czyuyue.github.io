@@ -229,3 +229,8 @@ footer {
 
 .small { font-size: 14px; margin: 0; }
 .news em { font-style: italic; }
+
+/* Figures with white backgrounds: show whole figure on a white card. */
+.work-media.fig { background: #fff; padding: 8px; }
+.work-media.fig img { object-fit: contain; }
+.work:hover .work-media.fig img { transform: none; }
