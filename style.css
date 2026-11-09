@@ -440,3 +440,32 @@ code, .contact code {
 .tabs a.active { color: #fff; background: var(--accent); border-color: var(--accent); }
 .tabs a.active span { color: rgba(255,255,255,.75); }
 .gallery figure[hidden] { display: none; }
+
+/* ---------- blog ---------- */
+.page-wide.narrow { max-width: 760px; }
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.post-list time { color: var(--ink-faint); font: 400 13px var(--mono); padding-top: 4px; }
+.post-title { font: 500 20px/1.35 var(--serif); color: var(--ink); text-decoration: none; }
+.post-title:hover { color: var(--accent); }
+.post-summary { margin: 4px 0 0; color: var(--ink-soft); font-size: 15px; }
+.back { margin: 0 0 24px; font-size: 14px; }
+.back a { color: var(--accent); text-decoration: none; }
+.post-date { color: var(--ink-faint); font: 400 13px var(--mono); margin: 0 0 32px; }
+.post-body { font-size: 17px; line-height: 1.8; }
+.post-body h2 { font-size: 24px; margin: 36px 0 14px; }
+.post-body h3 { font: 500 19px var(--serif); margin: 28px 0 10px; }
+.post-body p { margin: 0 0 18px; }
+.post-body a { color: var(--accent); }
+.post-body img { max-width: 100%; border-radius: 4px; display: block; margin: 8px 0; }
+.post-body blockquote { margin: 0 0 18px; padding-left: 16px; border-left: 2px solid var(--warm); color: var(--ink-soft); font-style: italic; }
+.post-body code { background: var(--surface); padding: 1px 5px; border-radius: 3px; }
+.post-body pre { background: var(--surface); padding: 14px 16px; border-radius: 6px; overflow-x: auto; }
+.post-body pre code { background: none; padding: 0; }
+@media (max-width: 720px) { .post-list li { grid-template-columns: 1fr; gap: 4px; } }

@@ -6,7 +6,6 @@ For every image in the topic folders:
   - strip all metadata (EXIF, incl. GPS location), keeping orientation applied.
 Already-processed JPEGs are left untouched, so re-running is safe.
 """
-import re
 from pathlib import Path
 
 from PIL import Image, ImageOps

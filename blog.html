@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog · Yue Yu</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Yue Yu</a>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wide narrow">
+    <h1 class="page-title">Blog</h1>
+    <p class="page-sub">Notes on research, birds, and whatever else I am thinking about.</p>
+
+    <!--
+      Posts are Markdown files in blog/ (listed via the GitHub API). Each starts with a header:
+        ---
+        title: ...
+        date: YYYY-MM-DD
+        summary: ...
+        ---
+      Files starting with "_" are skipped. See blog/_template.md.
+    -->
+    <ul class="post-list" id="posts"></ul>
+    <p class="page-sub empty" id="empty" hidden>No posts yet. Coming soon. ✍️</p>
+
+    <footer style="margin-top: 40px">
+      <span>© 2026 Yue Yu</span>
+      <span></span>
+    </footer>
+  </main>
+
+  <script src="blog.js"></script>
+  <script>
+    listPosts().then(function (posts) {
+      var ul = document.getElementById("posts");
+      posts.forEach(function (p) {
+        var li = document.createElement("li");
+        li.innerHTML = '<time></time><div><a class="post-title"></a><p class="post-summary"></p></div>';
+        li.querySelector("time").textContent = p.meta.date || "";
+        var a = li.querySelector("a");
+        a.textContent = p.meta.title || p.slug;
+        a.href = "post.html?p=" + encodeURIComponent(p.slug);
+        li.querySelector("p").textContent = p.meta.summary || "";
+        ul.appendChild(li);
+      });
+      document.getElementById("empty").hidden = posts.length > 0;
+    });
+  </script>
+</body>
+</html>

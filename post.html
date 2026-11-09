@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog · Yue Yu</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Yue Yu</a>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wide narrow">
+    <p class="back"><a href="blog.html">← All posts</a></p>
+    <article class="post" id="post">
+      <h1 class="page-title" id="post-title"></h1>
+      <p class="post-date" id="post-date"></p>
+      <div class="post-body" id="post-body"></div>
+    </article>
+
+    <footer style="margin-top: 40px">
+      <span>© 2026 Yue Yu</span>
+      <span></span>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="blog.js"></script>
+  <script>
+    var slug = new URLSearchParams(location.search).get("p") || "";
+    var titleEl = document.getElementById("post-title");
+    if (!/^[\w\-.]+$/.test(slug) || slug.charAt(0) === "_") {
+      titleEl.textContent = "Post not found";
+    } else {
+      fetch("blog/" + slug + ".md", { cache: "no-cache" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(function (text) {
+          var post = parseFrontMatter(text);
+          var title = post.meta.title || slug;
+          document.title = title + " · Yue Yu";
+          titleEl.textContent = title;
+          document.getElementById("post-date").textContent = post.meta.date || "";
+          // Paths in posts are relative to the site root, e.g. assets/photos/birds/x.jpg.
+          document.getElementById("post-body").innerHTML = marked.parse(post.body);
+        })
+        .catch(function () { titleEl.textContent = "Post not found"; });
+    }
+  </script>
+</body>
+</html>
