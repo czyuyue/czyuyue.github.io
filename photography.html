@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photography · Yue Yu</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Yue Yu</a>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="photography.html" aria-current="page">Photography</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wide">
+    <h1 class="page-title">Photography</h1>
+    <p class="page-sub">Birds, places, and small moments.</p>
+
+    <!--
+      Add photos to assets/photos/ (JPEG, ~1600px on the long side) and list them here:
+        <figure><img src="assets/photos/xxx.jpg" alt="..." loading="lazy"><figcaption>Place, 2026</figcaption></figure>
+      The caption is optional. Click a photo to view it full-screen.
+      Delete the placeholder figures below once real photos are added.
+    -->
+    <div class="gallery">
+      <figure><div class="photo-placeholder" style="aspect-ratio: 3/2">photo</div></figure>
+      <figure><div class="photo-placeholder" style="aspect-ratio: 4/5">photo</div></figure>
+      <figure><div class="photo-placeholder" style="aspect-ratio: 3/2">photo</div></figure>
+      <figure><div class="photo-placeholder" style="aspect-ratio: 1/1">photo</div></figure>
+      <figure><div class="photo-placeholder" style="aspect-ratio: 2/3">photo</div></figure>
+      <figure><div class="photo-placeholder" style="aspect-ratio: 3/2">photo</div></figure>
+    </div>
+
+    <footer style="margin-top: 40px">
+      <span>© 2026 Yue Yu</span>
+      <span>All photos by Yue Yu</span>
+    </footer>
+  </main>
+
+  <div class="lightbox" id="lightbox"><img alt=""></div>
+  <script>
+    var box = document.getElementById('lightbox');
+    var boxImg = box.querySelector('img');
+    document.querySelectorAll('.gallery img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        boxImg.src = img.src;
+        boxImg.alt = img.alt;
+        box.classList.add('open');
+      });
+    });
+    box.addEventListener('click', function () { box.classList.remove('open'); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') box.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

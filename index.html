@@ -12,6 +12,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Yue Yu</a>
+      <nav>
+        <a href="index.html" aria-current="page">About</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="photography.html">Photography</a>
+      </nav>
+    </div>
+  </header>
+
   <div class="page">
 
     <aside class="profile">
@@ -43,7 +54,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="news">
         <h2>News</h2>
         <ul class="news">
           <li><time>2026.09</time><span>Received the Yao Award Recognition Prize from IIIS.</span></li>
@@ -53,14 +64,13 @@
         </ul>
       </section>
 
-      <section>
+      <section id="publications">
         <h2>Publications</h2>
 
         <!--
           One <article class="work"> per paper/project.
-          Media: replace .media-placeholder with <img src="assets/xxx.jpg">, or with
-          <video src="assets/xxx.mp4" poster="assets/xxx.jpg" muted loop playsinline></video>
-          (videos play on hover).
+          Media: <img src="assets/xxx.jpg" loading="lazy">; add class "fig" on
+          .work-media for white-background paper figures (shown uncropped).
         -->
         <article class="work">
           <div class="work-media fig">
@@ -80,7 +90,7 @@
 
         <article class="work">
           <div class="work-media">
-            <video src="assets/fvp.mp4" poster="assets/fvp-poster.jpg" muted loop playsinline preload="none"></video>
+            <img src="assets/fvp.jpg" alt="FVP real-robot task" loading="lazy">
           </div>
           <div class="work-body">
             <h3><a href="https://4d-visual-pretraining.github.io/">4D Visual Pre-training for Robot Learning</a></h3>
@@ -118,15 +128,5 @@
     </main>
 
   </div>
-
-  <script>
-    // Play teaser videos on hover; keep them paused otherwise.
-    document.querySelectorAll('.work').forEach(function (card) {
-      var v = card.querySelector('video');
-      if (!v) return;
-      card.addEventListener('mouseenter', function () { v.play(); });
-      card.addEventListener('mouseleave', function () { v.pause(); v.currentTime = 0; });
-    });
-  </script>
 </body>
 </html>
