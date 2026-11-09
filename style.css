@@ -422,3 +422,4 @@ code, .contact code {
   transition: border-color .15s, color .15s, background .15s;
 }
 .btns a:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.logo-tall { height: 1.6em; vertical-align: -0.45em; border-radius: 0; }
