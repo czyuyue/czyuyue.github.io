@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -56,50 +56,86 @@
       <img class="avatar" src="assets/avatar.jpg" alt="Yue Yu">
       <div>
         <h1 class="name">Yue Yu</h1>
-        <p class="role">Undergraduate, Yao Class, IIIS, Tsinghua University</p>
-        <p class="contact">yuyue23 [at] mails [dot] tsinghua [dot] edu [dot] cn</p>
+        <p class="role">Undergraduate Student · <img class="logo" src="assets/logos/tsinghua.png" alt=""> Tsinghua University</p>
+        <p class="contact"><code>yuyue23 [at] mails.tsinghua.edu.cn</code></p>
         <nav class="links">
-          <a href="mailto:yuyue23@mails.tsinghua.edu.cn">Email</a>
-          <a href="https://github.com/czyuyue">GitHub</a>
-          <!-- TODO: <a href="https://scholar.google.com/citations?user=...">Google Scholar</a> -->
-          <!-- TODO: <a href="assets/cv.pdf">CV</a> -->
+          <a href="mailto:yuyue23@mails.tsinghua.edu.cn" title="Email"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 5.5h18v13H3z M3.5 6l8.5 7 8.5-7"/></svg><span>Email</span></a>
+          <a href="https://github.com/czyuyue" title="GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>GitHub</span></a>
+          <!-- TODO: Google Scholar / CV links -->
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="intro">
+      <section id="about">
+        <h2>About Me</h2>
         <p>
-          I am currently a fourth-year undergraduate in the Yao Class at the Institute for
-          Interdisciplinary Information Sciences (IIIS), Tsinghua University, and a research
-          assistant at New York University, advised by
-          <a href="https://www.sainingxie.com/">Prof. Saining Xie</a>. My research interests lie
-          in multimodal learning and video understanding, with a particular focus on long-video
-          understanding and reasoning over streaming video. Previously, I worked on robot
-          learning with <a href="http://hxu.rocks/">Prof. Huazhe Xu</a> at Tsinghua.
+          I am currently a <strong>senior undergraduate</strong> (from 2023 Fall) in
+          <a href="https://iiis.tsinghua.edu.cn/en/">IIIS (Yao Class)</a>,
+          <img class="logo" src="assets/logos/tsinghua.png" alt=""><a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>,
+          pursuing a Bachelor&rsquo;s degree in Computer Science.
         </p>
+        <p>
+          Currently, I am a research assistant at <img class="logo" src="assets/logos/nyu.png" alt=""><a href="https://www.nyu.edu/">New York University</a>,
+          advised by <a href="https://www.sainingxie.com/">Prof. Saining Xie</a>.
+          Before that, I worked on robot learning with
+          <a href="http://hxu.rocks/">Prof. Huazhe Xu</a> at <img class="logo" src="assets/logos/tsinghua.png" alt="">Tsinghua University.
+        </p>
+      </section>
+
+      <section id="research">
+        <h2>Research Interests</h2>
+        <p>My research focuses on <strong>multimodal models that understand and reason over video</strong>:</p>
+        <ul class="topics">
+          <li>
+            <strong>Long-Video Understanding:</strong> building models that perceive, remember, and
+            reason over long video, including spatial understanding from video.
+            <span class="related">▸ <em>Related work:</em> <a href="#cambrian-s">Cambrian-S</a>.</span>
+          </li>
+          <li>
+            <strong>Streaming Video Reasoning:</strong> interleaved chain-of-thought methods that let
+            models reason as a video stream unfolds, and dense supervision for tracking state over time.
+          </li>
+          <li>
+            <strong>Robot Learning</strong> <span class="muted">(previous)</span><strong>:</strong>
+            visual pre-training for robot manipulation.
+            <span class="related">▸ <em>Related work:</em> <a href="#fvp">4D Visual Pre-training</a>.</span>
+          </li>
+        </ul>
       </section>
 
       <section id="news">
         <h2>News</h2>
         <ul class="news">
-          <li><time>2026.09</time><span>Received the Yao Award Recognition Prize from IIIS.</span></li>
-          <li><time>2026.01</time><span><em>Cambrian-S</em> accepted to ICLR 2026.</span></li>
-          <li><time>2025.06</time><span>Joined Saining Xie's group at NYU as a research assistant.</span></li>
-          <li><time>2025.06</time><span><em>4D Visual Pre-training for Robot Learning</em> accepted to ICCV 2025.</span></li>
+          <li><time>2026.09</time><span>🏆 Received the <strong>Yao Award Recognition Prize</strong> from IIIS, Tsinghua.</span></li>
+          <li><time>2026.01</time><span>🎉 <a href="#cambrian-s">Cambrian-S</a> is accepted to <span class="venue-hl">ICLR 2026</span>!</span></li>
+          <li><time>2025.06</time><span>🗽 Joined <strong>Saining Xie&rsquo;s group at NYU</strong> as a research assistant.</span></li>
+          <li><time>2025.06</time><span>🎉 <a href="#fvp">4D Visual Pre-training for Robot Learning</a> is accepted to <span class="venue-hl">ICCV 2025</span>!</span></li>
         </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="edu">
+          <img class="edu-logo" src="assets/logos/tsinghua.png" alt="Tsinghua University">
+          <div>
+            <p class="edu-title"><strong>B.S. in Computer Science</strong>, Tsinghua University <span class="muted">· 2023 – 2027 (expected)</span></p>
+            <p><a href="https://iiis.tsinghua.edu.cn/en/">Institute for Interdisciplinary Information Sciences (Yao Class)</a></p>
+            <p><strong>GPA:</strong> <span class="hl">4.0 / 4.0</span>, <strong>Rank:</strong> <span class="hl">1 / 91</span></p>
+          </div>
+        </div>
       </section>
 
       <section id="publications">
         <h2>Publications</h2>
 
         <!--
-          One <article class="work"> per paper/project.
-          Media: <img src="assets/xxx.jpg" loading="lazy">; add class "fig" on
-          .work-media for white-background paper figures (shown uncropped).
+          One <article class="work"> per paper. <span class="badge"> on the image shows the venue.
+          Add class "fig" on .work-media for white-background paper figures (shown uncropped).
         -->
-        <article class="work">
+        <article class="work" id="cambrian-s">
           <div class="work-media fig">
+            <span class="badge">ICLR</span>
             <img src="assets/cambrian-s.jpg" alt="Cambrian-S teaser" loading="lazy">
           </div>
           <div class="work-body">
@@ -107,15 +143,17 @@
             <p class="authors">Shusheng Yang, Jihan Yang, Pinzhi Huang, Ellis Brown, Zihao Yang, <strong>Yue Yu</strong>,
               Shengbang Tong, Zihan Zheng, Yifan Xu, Muhan Wang, Daohan Lu, Rob Fergus, Yann LeCun, Li Fei-Fei, Saining Xie</p>
             <p class="venue">ICLR 2026</p>
-            <p class="links-inline">
+            <p class="btns">
               <a href="https://arxiv.org/abs/2511.04670">arXiv</a>
-              <a href="https://github.com/cambrian-mllm/cambrian-s">code</a>
+              <a href="https://arxiv.org/pdf/2511.04670">PDF</a>
+              <a href="https://github.com/cambrian-mllm/cambrian-s">Code</a>
             </p>
           </div>
         </article>
 
-        <article class="work">
+        <article class="work" id="fvp">
           <div class="work-media">
+            <span class="badge">ICCV</span>
             <img src="assets/fvp.jpg" alt="FVP real-robot task" loading="lazy">
           </div>
           <div class="work-body">
@@ -123,22 +161,23 @@
             <p class="authors">Chengkai Hou, Yanjie Ze, Yankai Fu, Zeyu Gao, Songbo Hu, <strong>Yue Yu</strong>,
               Shanghang Zhang, Huazhe Xu</p>
             <p class="venue">ICCV 2025</p>
-            <p class="links-inline">
-              <a href="https://4d-visual-pretraining.github.io/">project</a>
+            <p class="btns">
               <a href="https://arxiv.org/abs/2508.17230">arXiv</a>
+              <a href="https://arxiv.org/pdf/2508.17230">PDF</a>
+              <a href="https://4d-visual-pretraining.github.io/">Project Page</a>
             </p>
           </div>
         </article>
       </section>
 
-      <section>
-        <h2>Honors</h2>
+      <section id="honors">
+        <h2>Honors &amp; Awards</h2>
         <ul class="news">
-          <li><time>2026</time><span>Yao Award Recognition Prize, IIIS, Tsinghua University</span></li>
-          <li><time>2025</time><span>Tsinghua Academic Excellence Scholarship (Tsinghua Friends – ByteDance Group)</span></li>
-          <li><time>2024</time><span>Mr. and Mrs. Huang Yicong Scholarship, Tsinghua University</span></li>
-          <li><time>2023</time><span>Second-class Freshman Scholarship, Tsinghua University</span></li>
-          <li><time>2021</time><span>Gold Medal, China National Olympiad in Informatics (NOI)</span></li>
+          <li><time>2026</time><span>🏆 <strong>Yao Award Recognition Prize</strong>, IIIS, Tsinghua University</span></li>
+          <li><time>2025</time><span>Tsinghua <strong>Academic Excellence Scholarship</strong> (Tsinghua Friends – ByteDance Group)</span></li>
+          <li><time>2024</time><span>Mr. and Mrs. <strong>Huang Yicong Scholarship</strong>, Tsinghua University</span></li>
+          <li><time>2023</time><span>Second-class <strong>Freshman Scholarship</strong>, Tsinghua University</span></li>
+          <li><time>2021</time><span>🥇 <strong>Gold Medal</strong>, China National Olympiad in Informatics (<span class="hl">NOI</span>)</span></li>
         </ul>
       </section>
 
