@@ -17,86 +17,113 @@
     <aside class="profile">
       <img class="avatar" src="assets/avatar.svg" alt="Yue Yu">
       <h1 class="name">Yue Yu</h1>
-      <p class="name-alt"><!-- TODO: 中文名 -->中文名</p>
-      <p class="role">Undergraduate · IIIS, Tsinghua University</p>
+      <p class="role">Undergraduate · Yao Class, IIIS<br>Tsinghua University</p>
 
       <nav class="links">
-        <a href="mailto:2636684535yy@gmail.com">Email</a>
+        <a href="mailto:yuyue23@mails.tsinghua.edu.cn">Email</a>
         <a href="https://github.com/czyuyue">GitHub</a>
-        <a href="#">Scholar</a>
-        <a href="#">CV</a>
+        <!-- TODO: <a href="https://scholar.google.com/citations?user=...">Scholar</a> -->
+        <!-- TODO: <a href="assets/cv.pdf">CV</a> -->
       </nav>
     </aside>
 
     <main>
       <section class="intro">
         <p class="lede">
-          I build models that <em>watch, remember, and reason</em> over long video.
+          I study how models can <em>watch, track, and reason</em> over long, streaming video.
         </p>
         <p>
-          I am a third-year undergraduate at the Institute for
-          Interdisciplinary Information Sciences (IIIS), Tsinghua University.
-          My research interests are multimodal large language models, streaming
-          video understanding, and world models.
-          <!-- TODO: advisors / collaborators, e.g. "I am fortunate to work with ..." -->
+          I am an undergraduate in the Yao Class at the Institute for Interdisciplinary
+          Information Sciences (IIIS), Tsinghua University. Since 2025 I have been a research
+          assistant at New York University with
+          <a href="https://www.sainingxie.com/">Prof. Saining Xie</a>, working on long-video
+          understanding and interleaved chain-of-thought reasoning for streaming video.
+          Before that, I worked on robot learning with
+          <a href="http://hxu.rocks/">Prof. Huazhe Xu</a> at Tsinghua.
         </p>
       </section>
 
       <section>
         <h2>News</h2>
         <ul class="news">
-          <li><time>2026.11</time><span>New homepage is live.</span></li>
-          <!-- TODO: add news items -->
-          <li><time>2026.xx</time><span>Placeholder news item — replace me.</span></li>
+          <li><time>2026.09</time><span>Received the Yao Award Recognition Prize from IIIS.</span></li>
+          <li><time>2026.01</time><span><em>Cambrian-S</em> accepted to ICLR 2026.</span></li>
+          <li><time>2025.06</time><span>Joined Saining Xie's group at NYU as a research assistant.</span></li>
+          <li><time>2025.06</time><span><em>4D Visual Pre-training for Robot Learning</em> accepted to ICCV 2025.</span></li>
         </ul>
       </section>
 
       <section>
-        <h2>Research</h2>
+        <h2>Publications</h2>
 
         <!--
           One <article class="work"> per paper/project.
-          Media: use <img> for a still, or <video> (muted, loop, playsinline)
-          with a poster; the video plays on hover.
+          Media: replace .media-placeholder with <img src="assets/xxx.jpg">, or with
+          <video src="assets/xxx.mp4" poster="assets/xxx.jpg" muted loop playsinline></video>
+          (videos play on hover).
         -->
         <article class="work">
           <div class="work-media">
-            <div class="media-placeholder">teaser</div>
+            <div class="media-placeholder">Cambrian-S</div>
           </div>
           <div class="work-body">
-            <h3><a href="https://cambrian-mllm.github.io/">Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs</a></h3>
-            <p class="authors">Shengbang Tong, Ellis Brown, …, <!-- TODO: confirm author list --></p>
-            <p class="venue">NeurIPS 2024 <span class="tag">Oral</span></p>
+            <h3><a href="https://arxiv.org/abs/2511.04670">Cambrian-S: Towards Spatial Supersensing in Video</a></h3>
+            <p class="authors">Shusheng Yang, Jihan Yang, Pinzhi Huang, Ellis Brown, Zihao Yang, <strong>Yue Yu</strong>,
+              Shengbang Tong, Zihan Zheng, Yifan Xu, Muhan Wang, Daohan Lu, Rob Fergus, Yann LeCun, Li Fei-Fei, Saining Xie</p>
+            <p class="venue">ICLR 2026</p>
             <p class="links-inline">
-              <a href="https://cambrian-mllm.github.io/">project</a>
-              <a href="https://arxiv.org/abs/2406.16860">arXiv</a>
-              <a href="https://github.com/cambrian-mllm/cambrian">code</a>
+              <a href="https://arxiv.org/abs/2511.04670">arXiv</a>
+              <a href="https://github.com/cambrian-mllm/cambrian-s">code</a>
             </p>
           </div>
         </article>
 
         <article class="work">
           <div class="work-media">
-            <div class="media-placeholder">teaser</div>
+            <div class="media-placeholder">FVP</div>
           </div>
           <div class="work-body">
-            <h3><a href="#">Streamo: Streaming Video Understanding <!-- TODO: real title --></a></h3>
-            <p class="authors"><strong>Yue Yu</strong>, … <!-- TODO --></p>
-            <p class="venue">In progress</p>
+            <h3><a href="https://4d-visual-pretraining.github.io/">4D Visual Pre-training for Robot Learning</a></h3>
+            <p class="authors">Chengkai Hou, Yanjie Ze, Yankai Fu, Zeyu Gao, Songbo Hu, <strong>Yue Yu</strong>,
+              Shanghang Zhang, Huazhe Xu</p>
+            <p class="venue">ICCV 2025</p>
             <p class="links-inline">
-              <a href="streamo/datasets.html">datasets</a>
-              <a href="streamo-videopoint/datasets.html">VideoPoint</a>
+              <a href="https://4d-visual-pretraining.github.io/">project</a>
+              <a href="https://arxiv.org/abs/2508.17230">arXiv</a>
             </p>
           </div>
         </article>
       </section>
 
       <section>
+        <h2>Ongoing</h2>
+        <article class="work">
+          <div class="work-media">
+            <div class="media-placeholder">Cambrian-T</div>
+          </div>
+          <div class="work-body">
+            <h3>Cambrian-T: A State-Tracking Dataset for Streaming Video Reasoning</h3>
+            <p class="venue">In progress</p>
+            <p class="muted small">A state-tracking dataset with dense video annotations, used to study how
+              dense supervision improves state tracking in streaming video models.</p>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <h2>Honors</h2>
+        <ul class="news">
+          <li><time>2026</time><span>Yao Award Recognition Prize, IIIS, Tsinghua University</span></li>
+          <li><time>2025</time><span>Tsinghua Academic Excellence Scholarship (Tsinghua Friends – ByteDance Group)</span></li>
+          <li><time>2024</time><span>Mr. and Mrs. Huang Yicong Scholarship, Tsinghua University</span></li>
+          <li><time>2023</time><span>Second-class Freshman Scholarship, Tsinghua University</span></li>
+          <li><time>2021</time><span>Gold Medal, China National Olympiad in Informatics (NOI)</span></li>
+        </ul>
+      </section>
+
+      <section>
         <h2>Misc</h2>
-        <p class="muted">
-          <!-- TODO: hobbies / teaching / awards -->
-          Outside research I enjoy …
-        </p>
+        <p class="muted">Outside research, I enjoy bird watching, badminton, and table tennis.</p>
       </section>
 
       <footer>

@@ -226,3 +226,6 @@ footer {
   .lede { font-size: 24px; }
   .work { grid-template-columns: 1fr; gap: 16px; }
 }
+
+.small { font-size: 14px; margin: 0; }
+.news em { font-style: italic; }
