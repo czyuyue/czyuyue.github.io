@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery · Yue Yu</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Yue Yu</a>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wide">
+    <h1 class="page-title">Gallery</h1>
+    <p class="page-sub">Birds, everyday life, and places I pass through. Mostly shot on film. 🐦 🌿</p>
+
+    <!--
+      Each topic is a folder under assets/photos/ (birds, life, scenery); the page lists
+      every image in those folders via the GitHub API, sorted by file name.
+      Captions come from file names: "Kingfisher, Beijing 2026.jpg" -> "Kingfisher, Beijing 2026";
+      camera/scan names like IMG_1234.jpg or 000049320003-1.jpg get no caption.
+      To add a topic, add an entry to TOPICS below and create the folder.
+    -->
+    <nav class="tabs" id="tabs"></nav>
+    <div class="gallery" id="gallery"></div>
+    <p class="page-sub empty" id="empty" hidden>Photos coming soon.</p>
+
+    <footer style="margin-top: 40px">
+      <span>© 2026 Yue Yu</span>
+      <span>All photos by Yue Yu</span>
+    </footer>
+  </main>
+
+  <div class="lightbox" id="lightbox"><img alt=""></div>
+  <script>
+    var TOPICS = [
+      { key: "birds", label: "Birds" },
+      { key: "life", label: "Life" },
+      { key: "scenery", label: "Scenery" }
+    ];
+    var REPO_API = "https://api.github.com/repos/czyuyue/czyuyue.github.io/contents/assets/photos/";
+    var IMG = /\.(jpe?g|png|webp|gif|avif)$/i;
+    var CAMERA = /^(img|dsc|dscf|pxl|mvimg|photo|image)?[_\-\s]?\d[\d_\-\s]*$/i;
+
+    var box = document.getElementById("lightbox");
+    var boxImg = box.querySelector("img");
+    box.addEventListener("click", function () { box.classList.remove("open"); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") box.classList.remove("open"); });
+
+    function captionFor(name) {
+      var stem = name.replace(/\.[^.]+$/, "").replace(/^\d+[_\-\s]+(?=\D)/, "");
+      return CAMERA.test(stem) ? "" : stem.replace(/_+/g, " ");
+    }
+
+    function listTopic(t) {
+      return fetch(REPO_API + t.key)
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .then(function (files) {
+          return files.filter(function (f) { return f.type === "file" && IMG.test(f.name); })
+            .sort(function (a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true }); })
+            .map(function (f) {
+              return { topic: t.key, src: "assets/photos/" + t.key + "/" + encodeURIComponent(f.name), caption: captionFor(f.name) };
+            });
+        })
+        .catch(function () { return []; });
+    }
+
+    var gallery = document.getElementById("gallery");
+    var tabs = document.getElementById("tabs");
+    var empty = document.getElementById("empty");
+
+    Promise.all(TOPICS.map(listTopic)).then(function (lists) {
+      var all = [].concat.apply([], lists);
+      all.forEach(function (p) {
+        var fig = document.createElement("figure");
+        fig.dataset.topic = p.topic;
+        var img = document.createElement("img");
+        img.src = p.src;
+        img.alt = p.caption || "Photo by Yue Yu";
+        img.loading = "lazy";
+        img.addEventListener("click", function () { boxImg.src = img.src; boxImg.alt = img.alt; box.classList.add("open"); });
+        fig.appendChild(img);
+        if (p.caption) {
+          var cap = document.createElement("figcaption");
+          cap.textContent = p.caption;
+          fig.appendChild(cap);
+        }
+        gallery.appendChild(fig);
+      });
+
+      var entries = [{ key: "all", label: "All", n: all.length }].concat(
+        TOPICS.map(function (t, i) { return { key: t.key, label: t.label, n: lists[i].length }; }));
+      entries.forEach(function (e) {
+        var a = document.createElement("a");
+        a.href = "#" + e.key;
+        a.dataset.key = e.key;
+        a.innerHTML = e.label + " <span>" + e.n + "</span>";
+        tabs.appendChild(a);
+      });
+
+      function show() {
+        var key = location.hash.slice(1) || "all";
+        if (!entries.some(function (e) { return e.key === key; })) key = "all";
+        var shown = 0;
+        gallery.querySelectorAll("figure").forEach(function (f) {
+          var on = key === "all" || f.dataset.topic === key;
+          f.hidden = !on;
+          if (on) shown++;
+        });
+        tabs.querySelectorAll("a").forEach(function (a) {
+          a.classList.toggle("active", a.dataset.key === key);
+        });
+        empty.hidden = shown > 0;
+      }
+      window.addEventListener("hashchange", show);
+      show();
+    });
+  </script>
+</body>
+</html>

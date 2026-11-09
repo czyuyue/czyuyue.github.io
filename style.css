@@ -423,3 +423,20 @@ code, .contact code {
   transition: border-color .15s, color .15s, background .15s;
 }
 .btns a:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+
+/* gallery topic tabs */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
+.tabs a {
+  font: 500 14px var(--sans);
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.tabs a span { color: var(--ink-faint); font-size: 12px; margin-left: 2px; }
+.tabs a:hover { color: var(--accent); border-color: var(--accent); }
+.tabs a.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+.tabs a.active span { color: rgba(255,255,255,.75); }
+.gallery figure[hidden] { display: none; }

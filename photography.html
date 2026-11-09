@@ -2,91 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Photography · Yue Yu</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Gallery · Yue Yu</title>
+  <meta http-equiv="refresh" content="0; url=gallery.html">
+  <link rel="canonical" href="gallery.html">
 </head>
-<body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="index.html">Yue Yu</a>
-      <nav>
-        <a href="index.html">About</a>
-        <a href="index.html#publications">Publications</a>
-        <a href="photography.html" aria-current="page">Photography</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-wide">
-    <h1 class="page-title">Photography</h1>
-    <p class="page-sub">Birds, plants, and places. 🐦 🌿</p>
-
-    <!--
-      The gallery shows every image in assets/photos/ (listed via the GitHub API, newest
-      upload order is not available, so files are sorted by name; prefix names with
-      numbers to control order). Captions come from file names:
-        "Kingfisher, Beijing 2026.jpg" -> "Kingfisher, Beijing 2026";
-      camera names like IMG_1234.jpg get no caption.
-      Falls back to assets/photos/index.json if the API is unavailable.
-    -->
-    <div class="gallery" id="gallery"></div>
-
-    <footer style="margin-top: 40px">
-      <span>© 2026 Yue Yu</span>
-      <span>All photos by Yue Yu</span>
-    </footer>
-  </main>
-
-  <div class="lightbox" id="lightbox"><img alt=""></div>
-  <script>
-    var box = document.getElementById("lightbox");
-    var boxImg = box.querySelector("img");
-    function openBox(img) { boxImg.src = img.src; boxImg.alt = img.alt; box.classList.add("open"); }
-    box.addEventListener("click", function () { box.classList.remove("open"); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") box.classList.remove("open"); });
-
-    var gallery = document.getElementById("gallery");
-    var IMG = /\.(jpe?g|png|webp|gif|avif)$/i;
-    var CAMERA = /^(img|dsc|dscf|pxl|mvimg|photo|image)?[_\-\s]?\d[\d_\-\s]*$/i;
-    function captionFor(name) {
-      var stem = name.replace(/\.[^.]+$/, "").replace(/^\d+[_\-\s]+(?=\D)/, "");
-      return CAMERA.test(stem) ? "" : stem.replace(/_+/g, " ");
-    }
-    function render(photos) {
-      if (!photos.length) { gallery.outerHTML = "<p class=\"page-sub\">Photos coming soon.</p>"; return; }
-      photos.forEach(function (p) {
-        var fig = document.createElement("figure");
-        var img = document.createElement("img");
-        img.src = p.src;
-        img.alt = p.caption || "Photo by Yue Yu";
-        img.loading = "lazy";
-        img.addEventListener("click", function () { openBox(img); });
-        fig.appendChild(img);
-        if (p.caption) {
-          var cap = document.createElement("figcaption");
-          cap.textContent = p.caption;
-          fig.appendChild(cap);
-        }
-        gallery.appendChild(fig);
-      });
-    }
-    fetch("https://api.github.com/repos/czyuyue/czyuyue.github.io/contents/assets/photos")
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (files) {
-        render(files.filter(function (f) { return f.type === "file" && IMG.test(f.name); })
-          .sort(function (a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true }); })
-          .map(function (f) { return { src: "assets/photos/" + encodeURIComponent(f.name), caption: captionFor(f.name) }; }));
-      })
-      .catch(function () {
-        fetch("assets/photos/index.json").then(function (r) { return r.json(); })
-          .then(function (list) { render(list.map(function (p) { return { src: encodeURI(p.src), caption: p.caption }; })); })
-          .catch(function () { render([]); });
-      });
-  </script>
-</body>
+<body><p>Moved to <a href="gallery.html">Gallery</a>.</p></body>
 </html>
