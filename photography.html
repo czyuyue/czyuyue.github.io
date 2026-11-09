@@ -27,9 +27,12 @@
     <p class="page-sub">Birds, plants, and places. 🐦 🌿</p>
 
     <!--
-      Photos are listed in assets/photos/index.json, which a GitHub Action rebuilds
-      whenever files are uploaded to assets/photos/ (see .github/workflows/photos.yml).
-      Captions come from file names, e.g. "Kingfisher, Beijing 2026.jpg".
+      The gallery shows every image in assets/photos/ (listed via the GitHub API, newest
+      upload order is not available, so files are sorted by name; prefix names with
+      numbers to control order). Captions come from file names:
+        "Kingfisher, Beijing 2026.jpg" -> "Kingfisher, Beijing 2026";
+      camera names like IMG_1234.jpg get no caption.
+      Falls back to assets/photos/index.json if the API is unavailable.
     -->
     <div class="gallery" id="gallery"></div>
 
@@ -48,28 +51,42 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") box.classList.remove("open"); });
 
     var gallery = document.getElementById("gallery");
-    fetch("assets/photos/index.json", { cache: "no-cache" })
+    var IMG = /\.(jpe?g|png|webp|gif|avif)$/i;
+    var CAMERA = /^(img|dsc|dscf|pxl|mvimg|photo|image)?[_\-\s]?\d[\d_\-\s]*$/i;
+    function captionFor(name) {
+      var stem = name.replace(/\.[^.]+$/, "").replace(/^\d+[_\-\s]+(?=\D)/, "");
+      return CAMERA.test(stem) ? "" : stem.replace(/_+/g, " ");
+    }
+    function render(photos) {
+      if (!photos.length) { gallery.outerHTML = "<p class=\"page-sub\">Photos coming soon.</p>"; return; }
+      photos.forEach(function (p) {
+        var fig = document.createElement("figure");
+        var img = document.createElement("img");
+        img.src = p.src;
+        img.alt = p.caption || "Photo by Yue Yu";
+        img.loading = "lazy";
+        img.addEventListener("click", function () { openBox(img); });
+        fig.appendChild(img);
+        if (p.caption) {
+          var cap = document.createElement("figcaption");
+          cap.textContent = p.caption;
+          fig.appendChild(cap);
+        }
+        gallery.appendChild(fig);
+      });
+    }
+    fetch("https://api.github.com/repos/czyuyue/czyuyue.github.io/contents/assets/photos")
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (photos) {
-        photos.forEach(function (p) {
-          var fig = document.createElement("figure");
-          var img = document.createElement("img");
-          img.src = encodeURI(p.src);
-          img.alt = p.caption || "Photo by Yue Yu";
-          img.loading = "lazy";
-          if (p.w && p.h) img.style.aspectRatio = p.w + " / " + p.h;
-          img.addEventListener("click", function () { openBox(img); });
-          fig.appendChild(img);
-          if (p.caption) {
-            var cap = document.createElement("figcaption");
-            cap.textContent = p.caption;
-            fig.appendChild(cap);
-          }
-          gallery.appendChild(fig);
-        });
-        if (!photos.length) gallery.outerHTML = "<p class=\"page-sub\">Photos coming soon.</p>";
+      .then(function (files) {
+        render(files.filter(function (f) { return f.type === "file" && IMG.test(f.name); })
+          .sort(function (a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true }); })
+          .map(function (f) { return { src: "assets/photos/" + encodeURIComponent(f.name), caption: captionFor(f.name) }; }));
       })
-      .catch(function () { gallery.outerHTML = "<p class=\"page-sub\">Photos coming soon.</p>"; });
+      .catch(function () {
+        fetch("assets/photos/index.json").then(function (r) { return r.json(); })
+          .then(function (list) { render(list.map(function (p) { return { src: encodeURI(p.src), caption: p.caption }; })); })
+          .catch(function () { render([]); });
+      });
   </script>
 </body>
 </html>

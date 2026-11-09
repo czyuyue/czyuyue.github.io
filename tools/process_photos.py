@@ -1,10 +1,10 @@
-"""Normalize uploaded photos and rebuild the gallery manifest.
+"""Normalize photos in assets/photos/ (run locally: python tools/process_photos.py).
 
 For every image in assets/photos/:
   - convert HEIC/PNG/etc. to JPEG,
   - downscale so the long side is at most MAX_SIDE px,
   - strip all metadata (EXIF, incl. GPS location), keeping orientation applied.
-Then write assets/photos/index.json: [{"src": ..., "caption": ..., "w": ..., "h": ...}],
+Then write assets/photos/index.json (fallback list for the gallery): [{"src": ..., "caption": ..., "w": ..., "h": ...}],
 newest first (by the time the file was first added to git).
 
 Captions come from file names: "Kingfisher, Beijing 2026.jpg" -> "Kingfisher, Beijing 2026".
