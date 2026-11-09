@@ -99,7 +99,7 @@ h2 {
 }
 .lede em { font-style: italic; color: var(--accent); }
 
-.intro p:not(.lede) { color: var(--ink-soft); margin: 0; }
+.intro p { margin: 0; font-size: 17px; line-height: 1.75; }
 
 .muted { color: var(--ink-soft); }
 
